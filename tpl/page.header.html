@@ -1,0 +1,67 @@
+
+<!-- <div id="logo" title="Share your links !" onclick="document.location='?';"></div>-->
+
+<div id="menu">
+  <ul>
+      <li><span id="shaarli_title">
+        bookmarks / <a href="{$titleLink}">{$shaarlititle}</a>
+    </span>
+    </li>
+  </ul>
+</div>
+
+
+{if="!empty($_GET['source']) && $_GET['source']=='bookmarklet'"}
+    {ignore} When called as a popup from bookmarklet, do not display menu. {/ignore}
+{else}
+
+<div id="links" class="nomobile">
+    <ul>
+    <li>
+
+        <form method="GET" class="searchform" name="searchform">
+            <input type="text" tabindex="1" id="searchform_value" name="searchterm" placeholder="search bookmarks"
+               {if="!empty($search_term)"}
+                    value="{$search_term}"
+               {/if}
+            >
+        </form>
+    </li>
+
+
+    <li><a href="?" class="nomobile">home</a></li>
+    {if="isLoggedIn()"}
+    <li><a href="?do=logout">logout</a></li>
+    <li><a href="?do=tools">tools</a></li>
+    <li><a href="?do=addlink">add link</a></li>
+    {elseif="$openshaarli"}
+    <li><a href="?do=tools">tools</a></li>
+    <li><a href="?do=addlink">add link</a></li>
+    {else}
+    <li><a href="?do=login">login</a></li>
+    {/if}
+    <li><a href="{$feedurl}?do=rss{$searchcrits}" class="nomobile">rss</a></li>
+    {if="$showatom"}
+    <li><a href="{$feedurl}?do=atom{$searchcrits}" class="nomobile">atom</a></li>
+    {/if}
+    <li><a href="?do=tagcloud">tags</a></li>
+    <li><a href="?do=picwall{$searchcrits}">wall</a></li>
+    <li><a href="?do=daily">daily</a></li>
+    {loop="$plugins_header.buttons_toolbar"}
+        {$value}
+    {/loop}
+{/if}
+</ul>
+</div>
+
+{if="!empty($plugin_errors) && isLoggedIn()"}
+    <ul class="errors">
+        {loop="plugin_errors"}
+            <li>{$value}</li>
+        {/loop}
+    </ul>
+{/if}
+
+<div class="clear"></div>
+
+

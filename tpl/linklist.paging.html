@@ -1,0 +1,10 @@
+<div class="paging">
+    {loop="$action_plugin"}
+        {$value}
+    {/loop}
+    {if="$previous_page_url"} <a href="{$previous_page_url}" class="paging_older">&#171; earlier</a> {if="$next_page_url"}|{/if}{/if}
+    {if="$next_page_url"} <a href="{$next_page_url}" class="paging_newer">later &#187;</a> {/if}
+
+    <div class="paging_current">{if="!empty($linkcount)"}{$linkcount} links total{/if} {if="!empty($privateLinkcount)"}(<a href="?privateonly">{$privateLinkcount} private</a>) {/if}| page {$page_current} of {$page_max} {if="$privateonly"}| Showing only private links. <a href="?privateonly">Show all?</a>{/if}</div>
+
+</div>

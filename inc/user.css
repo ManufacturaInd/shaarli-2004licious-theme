@@ -1,0 +1,110 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.markdown p {
+  padding-left: 20px;
+  margin: 0 !important;
+}
+
+#body-container {
+  box-sizing: border-box,
+  width: 100%;
+  clear: both;
+}
+
+#body-container::before,
+#body-container::after,
+#pageheader::before,
+#pageheader::after,
+#linklist::before,
+#linklist::after,
+#taglist::before,
+#taglist::after {
+  content: " ";
+  display: table;
+}
+
+#body-container::after,
+#pageheader::after,
+#linklist::after,
+#taglist::after {
+  clear: both;
+}
+
+#linklist,
+#taglist {
+  float: left;
+  box-sizing: border-box;
+}
+
+
+#linklist {
+  width: 80%;
+}
+
+#taglist {
+  width: 20%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #eee;
+}
+
+#taglist h5 {
+  padding-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 35px;
+}
+
+#taglist h5,
+#taglist ul {
+  padding-left: 10px;
+}
+
+#taglist li > span.tagnumber {
+  display: inline-block;
+  min-width: 30px;
+  text-align: right;
+}
+
+#taglist li span.tagname {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+#taglist a:visited {
+  color: #0000ff;
+}
+
+/* Edit link form */
+
+#editlinkform label {
+    font-weight: bold;
+    color: #555;
+    display: block;
+    padding: 5px 0 5px 0;
+}
+
+#private-checkbox {
+  display: block;
+  padding-bottom: 15px;
+}
+
+#private-checkbox label {
+  display: inline-block;
+}
+
+/* Overrides for extensions */
+
+div.awesomplete mark {
+  background: #ddd;
+}
+
+.md_help {
+  color: #555 !important;
+  font-size: 8pt;
+  padding-bottom: 5px;
+}
+
