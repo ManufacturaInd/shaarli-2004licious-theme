@@ -1,5 +1,5 @@
-2004cious theme for Shaarli
-===========================
+2004licious theme for Shaarli
+=============================
 
 This [Shaarli](https://github.com/shaarli/shaarli) theme is a humble homage to the early looks of the [del.icio.us](http://del.icio.us) site.
 
@@ -19,7 +19,7 @@ Installation
 
 Just copy the folders as they are in your Shaarli installation. Do keep a backup always, in case you mess something up.
 
-Then add this line to your `data/config.php` file:
+Then add or change this line to your `data/config.php` file:
 
 ```
 $GLOBALS['config']['RAINTPL_TPL'] = 'tpl/2004licious/';
