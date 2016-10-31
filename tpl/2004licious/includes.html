@@ -7,8 +7,8 @@
 <link href="images/2004licious.ico#" rel="shortcut icon" type="image/x-icon" />
 <link type="text/css" rel="stylesheet" href="../../inc/reset.css" />
 <link type="text/css" rel="stylesheet" href="../../inc/shaarli.css" />
-{if="is_file('inc/user.css')"}<link type="text/css" rel="stylesheet" href="../../inc/user.css" />{/if}
 {loop="$plugins_includes.css_files"}
 <link type="text/css" rel="stylesheet" href="{$value}#"/>
 {/loop}
+{if="is_file('inc/user.css')"}<link type="text/css" rel="stylesheet" href="../../inc/user.css" />{/if}
 <link rel="search" type="application/opensearchdescription+xml" href="?do=opensearch#" title="Shaarli search - {$shaarlititle|htmlspecialchars}"/>
