@@ -229,6 +229,11 @@ input, textarea {
     padding: 5px 0;
 }
 
+#footer a,
+#footer a:hover {
+  color: #0000ff;
+}
+
 /* From  user.css */
 * {
   box-sizing: border-box;
