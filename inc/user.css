@@ -3,9 +3,10 @@
 input, textarea {
     font-size: 8pt;
     background-color: #fff;
+    background: #fff;
     box-shadow: none;
     padding: 5px;
-    border-radius: none;
+    border-radius: 0;
     border: none;
     color: #000;
 }
@@ -13,24 +14,26 @@ input, textarea {
 /* Buttons */
 .bigbutton {
     background-color: transparent;
-    background: 0;
-    border-radius: none;
+    background: #fff;
+    color: #606060;
+    border-radius: 0;
     box-shadow: none;
-    margin-left: none;
+    margin-left: 0;
 }
 
 #pageheader #menu {
     float: left;
     display: inline-block;
+    width: auto;
 }
 
 #pageheader a {
     background-color: transparent;
     background: 0;
     box-shadow: none;
-    padding: none;
-    border-radius: none;
-    margin: none;
+    padding: 0;
+    border-radius: 0;
+    margin: 0;
     color: #0000ff;
     text-decoration: none;
     line-height: normal;
@@ -55,6 +58,7 @@ input, textarea {
     padding-left: 4px;
     border-left: 1px solid #000;
     line-height: 1;
+    border-radius: 0;
 }
 
 #pageheader #links ul li:nth-child(2) a {
@@ -63,16 +67,16 @@ input, textarea {
 
 #pageheader {
     background-color: #ddd;
-    background: 0;
+    background: #ddd;
     box-shadow: none;
 }
 
 .linksperpage, .tagfilter, .searchform, .addform {
     background-color: transparent;
-    background: 0;
+    background: #fff;
     display: inline-block;
     box-shadow: none;
-    padding: none;
+    padding: 0;
     border-radius: 0;
     margin: 0;
     width: 100px;
@@ -94,17 +98,17 @@ input, textarea {
 #shaarli_title {
     font-weight: bold;
     font-style: normal;
-    margin-top: none;
+    margin-top: 0;
 }
 
 #shaarli_title a {
-    color: none;
+    color: #0000ff !important;
 }
 
 #pageheader a:visited,
 #pageheader a:hover,
 #pageheader a:active {
-    color: none;
+    color: #0000ff;
     text-decoration: initial;
 }
 
@@ -112,6 +116,7 @@ input, textarea {
 .paging {
     background-color: transparent;
     color: inherit;
+    text-align: left;
 }
 
 .paging a:link {
@@ -131,8 +136,8 @@ input, textarea {
     float: none;
 }
 
-.paging_current { 
-    color: none;
+.paging_current {
+    color: inherit;
 }
 
 .paging_older {
@@ -158,6 +163,10 @@ input, textarea {
     clear: both;
     background-color: transparent;
     background: 0;
+}
+
+.thumbnail {
+  display: none;
 }
 
 .linkdate a {
@@ -330,3 +339,6 @@ div.awesomplete mark {
   padding-bottom: 5px;
 }
 
+.markdown blockquote {
+  padding-left: 0;
+}
