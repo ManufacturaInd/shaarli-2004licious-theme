@@ -1,4 +1,226 @@
+/* From shaarli.css */
 
+input, textarea {
+    font-size: 8pt;
+    background-color: #fff;
+    box-shadow: none;
+    padding: 5px;
+    border-radius: none;
+    border: none;
+    color: #000;
+}
+
+/* Buttons */
+.bigbutton {
+    background-color: transparent;
+    background: 0;
+    border-radius: none;
+    box-shadow: none;
+    margin-left: none;
+}
+
+#pageheader #menu {
+    float: left;
+    display: inline-block;
+}
+
+#pageheader a {
+    background-color: transparent;
+    background: 0;
+    box-shadow: none;
+    padding: none;
+    border-radius: none;
+    margin: none;
+    color: #0000ff;
+    text-decoration: none;
+    line-height: normal;
+}
+
+#pageheader #links {
+    float: right;
+    display: inline-block;
+    text-align: right;
+    padding: 7px 5px 3px 0;
+}
+
+#pageheader #links ul li {
+    list-style: none;
+    display: inline;
+    position: relative;
+    box-sizing: border-box;
+}
+
+#pageheader #links ul li a {
+    display: inline-block;
+    padding-left: 4px;
+    border-left: 1px solid #000;
+    line-height: 1;
+}
+
+#pageheader #links ul li:nth-child(2) a {
+    border-left: 0;
+}
+
+#pageheader {
+    background-color: #ddd;
+    background: 0;
+    box-shadow: none;
+}
+
+.linksperpage, .tagfilter, .searchform, .addform {
+    background-color: transparent;
+    background: 0;
+    display: inline-block;
+    box-shadow: none;
+    padding: none;
+    border-radius: 0;
+    margin: 0;
+    width: 100px;
+    color: #ccc;
+}
+
+.searchform #searchform_value {
+    width: 100%;
+    height: 16px;
+}
+
+.tagfilter {
+    display: inline-block;
+    width: 50%;
+    max-width: 200px;
+    margin-left: none;
+}
+
+#shaarli_title {
+    font-weight: bold;
+    font-style: normal;
+    margin-top: none;
+}
+
+#shaarli_title a {
+    color: none;
+}
+
+#pageheader a:visited,
+#pageheader a:hover,
+#pageheader a:active {
+    color: none;
+    text-decoration: initial;
+}
+
+
+.paging {
+    background-color: transparent;
+    color: inherit;
+}
+
+.paging a:link {
+    color: #0000ff;
+}
+
+.paging a:visited {
+    color: #0000ff;
+}
+
+.paging a:hover,
+.paging a:active {
+    color: none;
+}
+
+.paging_privatelinks {
+    float: none;
+}
+
+.paging_current { 
+    color: none;
+}
+
+.paging_older {
+    margin-right: none;
+}
+
+.paging_newer {
+    margin-left: none;
+}
+
+#editlinkform {
+    width: 100%;
+    background: #eee;
+}
+
+#editlinkform label {
+    color: none;
+}
+
+#linklist li {
+    padding: 4px 10px 5px 20px;
+    border-top: 0;
+    clear: both;
+    background-color: transparent;
+    background: 0;
+}
+
+.linkdate a {
+    color:#aa99ff;
+}
+
+.linktitle {
+    font-size: 12pt;
+    font-weight: normal;
+}
+
+.linktitle a {
+    color: #0000ff;
+}
+
+.linkdate a {
+    background-image: none;
+    padding: 0;
+    text-decoration: initial;
+    color: #aa99ff;
+}
+
+.linkdescription {
+    margin-bottom: 0;
+}
+
+.linktaglist {
+    font-size: 9pt;
+    padding-top: 0;
+    color: #999;
+    padding-left: 20px;
+    line-height: normal;
+}
+
+.linktag {
+    box-shadow: none;
+    padding: 0;
+    height: auto;
+    cursor: auto;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: 3px center;
+    background-color: #ffffff;
+}
+
+.linktag a {
+    color: #aa99ff;
+}
+
+@media handheld, only screen and (max-width: 480px), only screen and (max-device-width: 854px) {
+
+    #paging_older, #paging_newer, .paging_linksperpage a {
+    border: 0;
+    background-color: transparent;
+	color: inherit;
+    }
+}
+
+#pluginsadmin .plugin_parameter {
+    padding: 5px 0;
+}
+
+/* From  user.css */
 * {
   box-sizing: border-box;
 }
