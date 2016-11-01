@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link type="text/css" rel="stylesheet" href="../inc/awesomplete.css" />
+    <link type="text/css" rel="stylesheet" href="../../inc/awesomplete.css" />
     {include="includes"}
 </head>
 <body>
@@ -70,7 +70,7 @@
                 {if="$value.tags"}
                     <div class="linktaglist">
                     to {loop="value.taglist"}<span class="linktag" title="Add tag"><a href="?addtag={$value|urlencode}">{$value}</a></span> {/loop} {if="!$hide_timestamps || isLoggedIn()"}on <span class="linkdate"><a href="?{$value.linkdate|smallHash}">{function="strftime('%Y-%m-%d', $value.timestamp)"}</a></span>{/if}
-                
+
 
                 {loop="$value.link_plugin"}
                     <span>{$value}</span> -
