@@ -332,6 +332,38 @@ input, textarea {
   display: inline-block;
 }
 
+/* Tools pages */
+#toolsdiv a span,
+#configform td,
+#changepasswordform,
+#changetag,
+#uploaddiv {
+  color: #555;
+}
+
+#toolsdiv .smallbutton {
+  background: #fff;
+}
+
+#pluginsadmin input[type="submit"] {
+    border: 1px solid #999;
+}
+
+/* cloudtag */
+#cloudtag {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+}
+
+#cloudtag .count {
+    display: #999;
+}
+
+#cloudtag a {
+    color: #0000ff;
+}
+
 /* Overrides for extensions */
 
 div.awesomplete mark {
