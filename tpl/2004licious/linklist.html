@@ -69,7 +69,7 @@
                 <!-- <a href="{$value.real_url}"><span class="linkurl" title="Short link">{$value.url}</span></a><br> -->
                 {if="$value.tags"}
                     <div class="linktaglist">
-                    to {loop="value.taglist"}<span class="linktag" title="Add tag"><a href="?addtag={$value|urlencode}">{$value}</a></span> {/loop} {if="!$hide_timestamps || isLoggedIn()"}on <span class="linkdate"><a href="?{$value.linkdate|smallHash}">{function="strftime('%Y-%m-%d', $value.timestamp)"}</a></span>{/if}
+                    to {loop="value.taglist"}<span class="linktag" title="Add tag"><a href="?addtag={$value|urlencode}">{$value}</a></span> {/loop} {if="!$GLOBALS['config']['HIDE_TIMESTAMPS'] || isLoggedIn()"}on <span class="linkdate"><a href="?{$value.linkdate|smallHash}">{function="strftime('%Y-%m-%d', $value.timestamp)"}</a></span>{/if}
 
 
                 {loop="$value.link_plugin"}
