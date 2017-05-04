@@ -26,7 +26,7 @@
             {/loop}
 
             <div id="private-checkbox">
-	    {if="($link_is_new && $default_private_links) || $link.private == true"}
+	    {if="($link_is_new && $GLOBALS['privateLinkByDefault']==true) || $link.private == true"}
             <input type="checkbox" checked="checked" name="lf_private" id="lf_private">
             {else}
             <input type="checkbox"  name="lf_private" id="lf_private">
@@ -41,6 +41,10 @@
 	    </form>
 	</div>
 </div>
+{if="$source !== 'firefoxsocialapi'"}
+{include="page.footer"}
+{/if}
+{if="($GLOBALS['config']['OPEN_SHAARLI'] || isLoggedIn())"}
 <script src="inc/awesomplete.min.js#"></script>
 <script src="inc/awesomplete-multiple-tags.js#"></script>
 <script>
