@@ -9,7 +9,7 @@
 		<br><br>
 		<a href="?do=pluginadmin"><b>Plugin administration</b><span>: Enable, disable and configure plugins.</span></a>
     <br><br>
-		{if="!$GLOBALS['config']['OPEN_SHAARLI']"}<a href="?do=changepasswd"><b>Change password</b><span>: Change your password.</span></a>
+		{if="!$openshaarli"}<a href="?do=changepasswd"><b>Change password</b><span>: Change your password.</span></a>
     <br><br>{/if}
 		<a href="?do=changetag"><b>Rename/delete tags</b><span>: Rename or delete a tag in all links</span></a>
     <br><br>
@@ -50,12 +50,15 @@
 				&nbsp;&nbsp;&nbsp;&nbsp;Then click "✚Add Note" button anytime to start composing a private Note (text post) to your Shaarli.
 			</span>
 		</a><br><br>
+
+		{if="$sslenabled"}
 		<a class="smallbutton" onclick="activateFirefoxSocial(this)">
 			<b>✚Add to Firefox social</b>
 		</a>
 		<a href="#">
 			<span>&#x21D0; Click on this button to add Shaarli to the "Share this page" button in Firefox.</span>
 		</a><br><br>
+		{/if}
 
 		{loop="$tools_plugin"}
             {$value}
@@ -64,6 +67,7 @@
 		<div class="clear"></div>
 
 		<script>
+			{if="$sslenabled"}
 			function activateFirefoxSocial(node) {
 				var loc = location.href;
 				var baseURL = loc.substring(0, loc.lastIndexOf("/"));
@@ -79,7 +83,7 @@
 					icon32URL: baseURL + "/images/favicon.ico",
 					icon64URL: baseURL + "/images/favicon.ico",
 
-					shareURL: baseURL + "{noparse}?post=%{url}&title=%{title}&description=%{description}&source=firefoxsocialapi{/noparse}",
+					shareURL: baseURL + "{noparse}?post=%{url}&title=%{title}&description=%{text}&source=firefoxsocialapi{/noparse}",
 					homepageURL: baseURL
 				};
 				node.setAttribute("data-service", JSON.stringify(data));
@@ -87,7 +91,7 @@
 				var activate = new CustomEvent("ActivateSocialFeature");
 				node.dispatchEvent(activate);
 			}
-
+			{/if}
 			function alertBookmarklet() {
 				alert('Drag this link to your bookmarks toolbar, or right-click it and choose Bookmark This Link...');
 				return false;
