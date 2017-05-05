@@ -7,6 +7,8 @@ Created by Joshua Schachter, [del.icio.us](http://del.icio.us) is one of the mon
 
 [Julien Deswaef](http://xuv.be) mentioned that the current version of Delicious is [injecting ads into Delicious RSS feeds](https://twitter.com/xuv/status/790549815000268800), and gave the great advice to run [Shaarli](http://github.com/shaarli/shaarli) instead. After Julien's prodding about [creating a theme inspired by Delicious](https://twitter.com/xuv/status/791643923659755520), we made the most out of a slow Sunday and tried our hand at creating a Shaarli theme -- we attempted to emulate the 2004 look instead.
 
+Authorship and development is shared with Julien Deswaef, who has been active improving the theme and making it work with recent versions of Shaarli.
+
 Screenshots
 -----------
 
