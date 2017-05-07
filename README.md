@@ -18,6 +18,7 @@ Screenshots
 
 Installation
 ------------
+The master branch of this 2004licious theme works with the stable version of Shaarli (for the v0.8 version of Shaarli, see the v8-compat branch of this repository )
 
 Just copy the folders as they are in your Shaarli installation. Do keep a backup always, in case you mess something up.
 
