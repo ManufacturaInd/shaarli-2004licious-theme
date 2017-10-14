@@ -34,14 +34,14 @@
     <li><a href="?do=logout">logout</a></li>
     <li><a href="?do=tools">tools</a></li>
     <li><a href="?do=addlink">add link</a></li>
-    {elseif="$GLOBALS['config']['OPEN_SHAARLI']"}
+    {elseif="$openshaarli"}
     <li><a href="?do=tools">tools</a></li>
     <li><a href="?do=addlink">add link</a></li>
     {else}
     <li><a href="?do=login">login</a></li>
     {/if}
     <li><a href="{$feedurl}?do=rss{$searchcrits}" class="nomobile">rss</a></li>
-    {if="$GLOBALS['config']['SHOW_ATOM']"}
+    {if="$showatom"}
     <li><a href="{$feedurl}?do=atom{$searchcrits}" class="nomobile">atom</a></li>
     {/if}
     <li><a href="?do=tagcloud">tags</a></li>

@@ -18,16 +18,11 @@ Screenshots
 
 Installation
 ------------
-The master branch of this 2004licious theme works with the stable version of Shaarli (for the v0.8 version of Shaarli, see the v8-compat branch of this repository )
+The master branch of this 2004licious theme works with the stable version of Shaarli (v0.9.2 at the time of this writing).
 
-Just copy the folders as they are in your Shaarli installation. Do keep a backup always, in case you mess something up.
+Just clone or download this repository into the `tpl/` folder of your Shaaril installation then go in the `Tools/Configure` menu to activate this theme.
 
-Then add or change this line to your `data/config.php` file:
-
-```
-$GLOBALS['config']['RAINTPL_TPL'] = 'tpl/2004licious/';
-```
-
+Enjoy and don't hesitate to report bugs or suggest changes.
 
 What's not working yet
 ----------------------

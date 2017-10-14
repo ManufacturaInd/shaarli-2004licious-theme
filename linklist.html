@@ -48,11 +48,11 @@
                 {if="isLoggedIn()"}
                     <div class="linkeditbuttons">
                         <form method="GET" class="buttoneditform">
-                            <input type="hidden" name="edit_link" value="{$value.linkdate}">
+                            <input type="hidden" name="edit_link" value="{$value.id}">
                             <input type="image" alt="Edit" src="images/edit_icon.png#" title="Edit" class="button_edit">
                         </form><br>
-                        <form method="POST" class="buttoneditform">
-                            <input type="hidden" name="lf_linkdate" value="{$value.linkdate}">
+                        <form method="GET" class="buttoneditform">
+                            <input type="hidden" name="lf_linkdate" value="{$value.id}">
                             <input type="hidden" name="token" value="{$token}">
                             <input type="hidden" name="delete_link">
                             <input type="image" alt="Delete" src="images/delete_icon.png#" title="Delete"
@@ -69,7 +69,7 @@
                 <!-- <a href="{$value.real_url}"><span class="linkurl" title="Short link">{$value.url}</span></a><br> -->
                 {if="$value.tags"}
                     <div class="linktaglist">
-                    to {loop="value.taglist"}<span class="linktag" title="Add tag"><a href="?addtag={$value|urlencode}">{$value}</a></span> {/loop} {if="!$GLOBALS['config']['HIDE_TIMESTAMPS'] || isLoggedIn()"}on <span class="linkdate"><a href="?{$value.linkdate|smallHash}">{function="strftime('%Y-%m-%d', $value.timestamp)"}</a></span>{/if}
+                    to {loop="value.taglist"}<span class="linktag" title="Add tag"><a href="?addtag={$value|urlencode}">{$value}</a></span> {/loop} {if="!$hide_timestamps || isLoggedIn()"}on <span class="linkdate"><a href="?{$value.linkdate|smallHash}">{function="strftime('%Y-%m-%d', $value.timestamp)"}</a></span>{/if}
 
 
                 {loop="$value.link_plugin"}
