@@ -5,16 +5,16 @@
   <ul>
     <li>
       <span id="shaarli_title">
-        bookmarks /
-        <a href="{$titleLink}">{$shaarlititle}</a> /
-        {if="!empty($linkcount)"}
-        <span class="strong">{$linkcount}</span> {function="t('shaare', 'shaares', $linkcount)"}
-          {if="$privateLinkcount>0"}
-          <span class="strong">{$privateLinkcount}</span> {function="t('private link', 'private links', $privateLinkcount)"}
-          {/if}
-        {/if}
-        </span>
+        bookmarks / <a href="{$titleLink}">{$shaarlititle}</a>
       </span>
+    </li>
+    <li>
+      {if="!empty($linkcount)"}
+      <span class="strong">{$linkcount}</span> {function="t('shaare', 'shaares', $linkcount)"}
+        {if="$privateLinkcount>0"}
+      &amp; <span class="strong">{$privateLinkcount}</span> {function="t('private link', 'private links', $privateLinkcount)"}
+        {/if}
+      {/if}
     </li>
   </ul>
 </div>
