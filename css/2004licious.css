@@ -71,6 +71,11 @@ input, textarea {
     box-shadow: none;
 }
 
+#pageheader .linkcount {
+  padding: 7px 0 0 0px;
+  text-align: center;
+}
+
 .linksperpage, .tagfilter, .searchform, .addform {
     background-color: transparent;
     background: #fff;
