@@ -11,15 +11,6 @@
   </ul>
 </div>
 
-<div class="linkcount">
-{if="!empty($linkcount)"}
-  <span class="strong">{$linkcount}</span> {function="t('shaare', 'shaares', $linkcount)"}
-  {if="$privateLinkcount>0"}
-  + <span class="strong">{$privateLinkcount}</span> {function="t('private link', 'private links', $privateLinkcount)"}
-  {/if}
-{/if}
-</div>
-
 {if="!empty($_GET['source']) && $_GET['source']=='bookmarklet'"}
     {ignore} When called as a popup from bookmarklet, do not display menu. {/ignore}
 {else}
@@ -61,6 +52,15 @@
     {/loop}
 {/if}
 </ul>
+</div>
+
+<div class="linkcount">
+{if="!empty($linkcount)"}
+  <span class="strong">{$linkcount}</span> {function="t('shaare', 'shaares', $linkcount)"}
+  {if="$privateLinkcount>0"}
+  + <span class="strong">{$privateLinkcount}</span> {function="t('private link', 'private links', $privateLinkcount)"}
+  {/if}
+{/if}
 </div>
 
 {if="!empty($plugin_errors) && isLoggedIn()"}
