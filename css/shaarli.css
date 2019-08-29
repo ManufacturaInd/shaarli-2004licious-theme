@@ -101,7 +101,6 @@ a.bigbutton, #pageheader a.bigbutton {
 }
 
 .linkeditbuttons {
-    position: absolute;
     left: 2px;
     padding: 4px 2px 2px 2px;
 
