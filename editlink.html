@@ -31,11 +31,11 @@
             {/loop}
 
             {if="($link_is_new && $default_private_links) || $link.private == true"}
-            <input type="checkbox" checked="checked" name="lf_private" id="lf_private">
-            &nbsp;<label for="lf_private"><i>Private</i></label><br>
+            &nbsp;<label for="lf_private"><i>Private</i></label>
+            <input type="checkbox" checked="checked" name="lf_private" id="lf_private"><br>
             {else}
-            <input type="checkbox"  name="lf_private" id="lf_private">
-            &nbsp;<label for="lf_private"><i>Private</i></label><br>
+            &nbsp;<label for="lf_private"><i>Private</i></label>
+            <input type="checkbox"  name="lf_private" id="lf_private"><br>
             {/if}
             <input type="submit" value="Save" name="save_edit" class="bigbutton">
             <input type="submit" value="Cancel" name="cancel_edit" class="bigbutton">

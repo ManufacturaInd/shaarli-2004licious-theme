@@ -69,7 +69,9 @@
                             <a href="{$link.real_url}">{$link.title}</a>
                         </div>
                         {if="$link.thumbnail"}
-                            <div class="dailyEntryThumbnail">{$link.thumbnail}</div>
+                            <div class="dailyEntryThumbnail">
+                              <img src="../../{$link.thumbnail}">
+                            </div>
                         {/if}
                         <div class="dailyEntryDescription">{$link.formatedDescription}</div>
 

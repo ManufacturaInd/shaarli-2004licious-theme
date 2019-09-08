@@ -22,11 +22,11 @@
 
     {if="count($links)==0"}
         <div id="searchcriteria">Nothing found.</div>
-    {elseif="!empty($search_term) or !empty($search_tags)"}
+    {elseif="!empty($search_tags) or !empty($search_tags)"}
         <div id="searchcriteria">
             {$result_count} results
-            {if="!empty($search_term)"}
-                for <em>{$search_term}</em>
+            {if="!empty($search_tags)"}
+                for <em>{$search_tags}</em>
             {/if}
             {if="!empty($search_tags)"}
                 {$exploded_tags=explode(' ', $search_tags)}
@@ -38,6 +38,17 @@
                 {/loop}
             {/if}
         </div>
+        {if="!empty($visibility)"}
+            {'with status'|t}
+            <span class="label label-private">
+                {$visibility|t}
+            </span>
+        {/if}
+        {if="$untaggedonly"}
+            <span class="label label-private">
+                {'without any tag'|t}
+            </span>
+        {/if}
     {/if}
     <ul>
 
@@ -62,8 +73,7 @@
                     <div class="thumbnail" style="width:{$thumbnails_width}px;height:{$thumbnails_height}px;">
                         <a href="{$value.real_url}">
                           {ignore}RainTPL hack: put the 2 src on two different line to avoid path replace bug{/ignore}
-                          <img data-src="{$value.thumbnail}#" class="b-lazy"
-                            src="#"
+                          <img src="{$value.thumbnail}#"
                             alt="thumbnail" width="{$thumbnails_width}" height="{$thumbnails_height}" />
                           </a>
                     </div>

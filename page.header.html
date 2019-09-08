@@ -47,6 +47,9 @@
     <li><a href="?do=tagcloud">tags</a></li>
     <li><a href="?do=picwall{$searchcrits}">wall</a></li>
     <li><a href="?do=daily">daily</a></li>
+    {if="$thumbnails_enabled"}
+    <li><a href="?do=thumbs_update">thumbs</a></li>
+    {/if}
     {loop="$plugins_header.buttons_toolbar"}
         {$value}
     {/loop}
