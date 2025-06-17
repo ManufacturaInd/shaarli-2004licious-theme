@@ -29,26 +29,26 @@
     </li>
 
 
-    <li><a href="?" class="nomobile">home</a></li>
+    <li><a href="{$base_path}/" class="nomobile">home</a></li>
     {if="$is_logged_in"}
-    <li><a href="?do=logout">logout</a></li>
-    <li><a href="?do=tools">tools</a></li>
-    <li><a href="?do=addlink">add link</a></li>
+    <li><a href="{$base_path}/admin/logout">logout</a></li>
+    <li><a href="{$base_path}/admin/tools">tools</a></li>
+    <li><a href="{$base_path}/admin/add-shaare">add link</a></li>
     {elseif="$openshaarli"}
-    <li><a href="?do=tools">tools</a></li>
-    <li><a href="?do=addlink">add link</a></li>
+    <li><a href="{$base_path}/admin/tools">tools</a></li>
+    <li><a href="{$base_path}/admin/add-shaare">add link</a></li>
     {else}
-    <li><a href="?do=login">login</a></li>
+    <li><a href="{$base_path}/login">login</a></li>
     {/if}
-    <li><a href="{$feedurl}?do=rss{$searchcrits}" class="nomobile">rss</a></li>
+    <li><a href="{$base_path}/feed/rss?{$searchcrits}" class="nomobile">rss</a></li>
     {if="$showatom"}
-    <li><a href="{$feedurl}?do=atom{$searchcrits}" class="nomobile">atom</a></li>
+    <li><a href="{$base_path}/feed/atom?{$searchcrits}" class="nomobile">atom</a></li>
     {/if}
-    <li><a href="?do=tagcloud">tags</a></li>
-    <li><a href="?do=picwall{$searchcrits}">wall</a></li>
-    <li><a href="?do=daily">daily</a></li>
+    <li><a href="{$base_path}/tags/cloud">tags</a></li>
+    <li><a href="{$base_path}/picture-wall?{function="ltrim($searchcrits, '&')"}">wall</a></li>
+    <li><a href="{$base_path}/daily">daily</a></li>
     {if="$thumbnails_enabled"}
-    <li><a href="?do=thumbs_update">thumbs</a></li>
+    <li><a href="{$base_path}/picture-wall?{function="ltrim($searchcrits, '&')"}">thumbs</a></li>
     {/if}
     {loop="$plugins_header.buttons_toolbar"}
         {$value}
