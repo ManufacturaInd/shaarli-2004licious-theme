@@ -1,16 +1,44 @@
 <title>{$pagetitle}</title>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="format-detection" content="telephone=no" />
-<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="referrer" content="same-origin">
-<link rel="alternate" type="application/rss+xml" href="{$feedurl}?do=rss{$searchcrits}#" title="RSS Feed" />
-<link rel="alternate" type="application/atom+xml" href="{$feedurl}?do=atom{$searchcrits}#" title="ATOM Feed" />
-<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-<link type="text/css" rel="stylesheet" href="css/reset.css" />
-<link type="text/css" rel="stylesheet" href="css/shaarli.css" />
-<link type="text/css" rel="stylesheet" href="css/2004licious.css" />
+
+<link rel="alternate" type="application/atom+xml" href="{$feedurl}feed/atom?{$searchcrits}#" title="ATOM Feed" />
+<link rel="alternate" type="application/rss+xml" href="{$feedurl}feed/rss?{$searchcrits}#" title="RSS Feed" />
+
+<link href="{$asset_path}/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+<link type="text/css" rel="stylesheet" href="{$asset_path}/css/reset.css?v={$version_hash}#" />
+<link type="text/css" rel="stylesheet" href="{$asset_path}/css/shaarli.css?v={$version_hash}#" />
+<link type="text/css" rel="stylesheet" href="{$asset_path}/css/2004licious.css?v={$version_hash}#" />
+
 {if="is_file('data/user.css')"}<link type="text/css" rel="stylesheet" href="data/user.css#" />{/if}
+
 {loop="$plugins_includes.css_files"}
 <link type="text/css" rel="stylesheet" href="{$value}#"/>
 {/loop}
-<link rel="search" type="application/opensearchdescription+xml" href="?do=opensearch#" title="Shaarli search - {$shaarlititle|htmlspecialchars}"/>
+
+<link rel="search" type="application/opensearchdescription+xml" href="{$base_path}/open-search#" title="Shaarli search - {$shaarlititle}" />
+
+{if="$template === 'linklist' && ! empty($links) && count($links) === 1"}
+  {$link=reset($links)}
+  <meta property="og:title" content="{$link.title}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{$index_url}shaare/{$link.shorturl}" />
+  {$ogDescription=isset($link.description_src) ? $link.description_src : $link.description}
+  <meta property="og:description" content="{function="substr(strip_tags($ogDescription), 0, 300)"}" />
+  {if="!empty($link.thumbnail)"}
+    <meta property="og:image" content="{$index_url}{$link.thumbnail}" />
+  {/if}
+  {if="!$hide_timestamps || $is_logged_in"}
+    <meta property="article:published_time" content="{$link.created->format(DateTime::ATOM)}" />
+    {if="!empty($link.updated)"}
+      <meta property="article:modified_time" content="{$link.updated->format(DateTime::ATOM)}" />
+    {/if}
+  {/if}
+  {loop="link.taglist"}
+    <meta property="article:tag" content="{$value}" />
+  {/loop}
+{/if} 
