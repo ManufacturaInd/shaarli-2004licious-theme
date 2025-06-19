@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>{include="includes"}
-<script src="inc/blazy-1.3.1.min.js#"></script>
+<head>
+{include="includes"}
 </head>
 <body>
 <div id="pageheader">{include="page.header"}</div>
@@ -34,11 +34,6 @@
 </div>
 
 {include="page.footer"}
-
-<script>
-window.onload = function() {
-  var bLazy = new Blazy();
-}
-</script>
+<script src="{$asset_path}/../default/js/thumbnails.min.js?v={$version_hash}#"></script>
 </body>
 </html>
