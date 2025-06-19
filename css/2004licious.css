@@ -170,6 +170,14 @@ input, textarea {
     background: 0;
 }
 
+#linklist li.private {
+    padding-left: 20px; 
+}
+
+.meta span.private {  
+    color: red;
+}
+
 .linkdate a {
     color:#aa99ff;
 }
@@ -179,7 +187,8 @@ input, textarea {
     font-weight: normal;
 }
 
-.linktitle a {
+.private .linktitle a, 
+.linktitle a  {
     color: #0000ff;
 }
 
@@ -187,18 +196,17 @@ input, textarea {
     background-image: none;
     padding: 0;
     text-decoration: initial;
-    color: #aa99ff;
+    color: #88f;
 }
 
 .linkdescription {
     margin-bottom: 0;
 }
 
-.linktaglist {
+.meta {
     font-size: 9pt;
     padding-top: 0;
     color: #999;
-    padding-left: 20px;
     line-height: normal;
 }
 
@@ -214,7 +222,7 @@ input, textarea {
 }
 
 .linktag a {
-    color: #aa99ff;
+    color: #88f;
 }
 
 @media handheld, only screen and (max-width: 480px), only screen and (max-device-width: 854px) {
@@ -236,12 +244,8 @@ input, textarea {
 }
 
 /* From  user.css */
-* {
-  box-sizing: border-box;
-}
 
 .markdown p {
-  padding-left: 20px;
   margin: 0 !important;
 }
 
