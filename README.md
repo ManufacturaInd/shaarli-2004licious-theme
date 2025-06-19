@@ -18,9 +18,11 @@ Screenshots
 
 Installation
 ------------
-The master branch of this 2004licious theme works with the latest version of Shaarli (v0.9.2 at the time of this writing).
+The master branch of this 2004licious theme works with the latest version of Shaarli (v0.14 at the time of this writing).
 
 Just clone or download this repository into the `tpl/` folder of your Shaaril installation then go in the `Tools/Configure` menu to activate this theme.
+
+This theme relies partially on the `default` theme. So be sure to keep that available in your `tpl/` floder too.
 
 Enjoy and don't hesitate to report bugs or suggest changes.
 
