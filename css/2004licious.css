@@ -371,7 +371,7 @@ input, textarea {
 
 /* Overrides for extensions */
 
-div.awesomplete mark {
+.awesomplete mark {
   background: #ddd;
 }
 
@@ -384,4 +384,42 @@ div.awesomplete mark {
 .markdown blockquote {
   padding-left: 0;
   margin-left: 20px;
+}
+
+.awesomplete [hidden] {
+    display: none;
+}
+
+.awesomplete .visually-hidden {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+.awesomplete {
+    display: inline-block;
+    position: relative;
+}
+
+.awesomplete > input {
+    display: block;
+}
+
+.awesomplete > ul {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    min-width: 100%;
+    box-sizing: border-box;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #fff;
+}
+
+.awesomplete > ul:empty {
+    display: none;
+}
+
+#taglist .filter {
+  padding-left: 30px;
 }
