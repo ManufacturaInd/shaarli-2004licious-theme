@@ -100,8 +100,19 @@
                 {if="$value.tags"}
                 to {loop="value.taglist"}<span class="linktag" title="Add tag"><a href="{$base_path}/add-tag/{$value1.taglist_urlencoded.$key2}">{$value1.taglist_html.$key2}</a></span> {/loop}
                 {/if}
-                {if="!$hide_timestamps || $is_logged_in"}on <span class="linkdate"><a href="?{$value.linkdate|smallHash}">{function="strftime('%Y-%m-%d', $value.timestamp)"}</a></span>{/if}
+
                 
+                {if="!$hide_timestamps || $is_logged_in"}
+                    {$updated=$value.updated_timestamp ? $strEdited. format_date($value.updated) : $strPermalink}
+                    <span title="{$updated}">
+                    on {function="strftime('%Y-%m-%d', $value.timestamp)"}
+                    {if="$value.updated_timestamp"}*{/if}
+                    &middot;
+                    </span>
+                {/if}
+                <a href="{$base_path}/shaare/{$value.shorturl}" title="{$strPermalink}">
+                  {$strPermalinkLc}
+                </a>
 
                 {if="$value.class=='private'"} &middot; <span class="private">not shared</span>{/if}
 
