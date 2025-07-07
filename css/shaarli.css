@@ -261,7 +261,7 @@ a.bigbutton, #pageheader a.bigbutton {
 }
 
 #shaarli_title a {
-    color: #fff !important;
+    color: #fff;
 }
 
 #pageheader a:visited {

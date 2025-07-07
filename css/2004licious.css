@@ -105,7 +105,7 @@ input, textarea {
 }
 
 #shaarli_title a {
-    color: #0000ff !important;
+    color: #0000ff;
 }
 
 #pageheader a:visited,
@@ -127,7 +127,7 @@ input, textarea {
 }
 
 .paging a:visited {
-    color: #0000ff;
+    color: rgb(85, 26, 139);
 }
 
 .paging a:hover,
@@ -187,6 +187,11 @@ input, textarea {
 .private .linktitle a, 
 .linktitle a  {
     color: #0000ff;
+}
+
+.private .linktitle a:visited, 
+.linktitle a:visited  {
+    color: rgb(85, 26, 139);
 }
 
 .linkdate a {
