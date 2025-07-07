@@ -164,7 +164,9 @@
     </div>
 
 
-    {include="page.footer"}
+{include="page.footer"}
+<script src="{$asset_path}/../default/js/thumbnails.min.js?v={$version_hash}#"></script>
+{if="$is_logged_in && $async_metadata"}<script src="{$asset_path}/../default/js/metadata.min.js?v={$version_hash}#"></script>{/if}
 </div>
 
 </body>

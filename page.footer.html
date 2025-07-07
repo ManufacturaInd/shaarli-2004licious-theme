@@ -1,6 +1,6 @@
 <div id="footer">
-  This site runs on <strong><a href="https://github.com/shaarli/Shaarli">Shaarli</a></strong>, the personal, minimalist, super-fast, database free, bookmarking service by the Shaarli community.<br>
-  Proudly retro-themed with <a href="https://github.com/ManufacturaInd/shaarli-2004licious-theme">2004licious</a>
+  This site runs on <strong><a href="https://github.com/shaarli/Shaarli">Shaarli</a></strong> {if="$is_logged_in===true"}({$version}){/if}, the personal, minimalist, super-fast, database free, bookmarking service by the Shaarli community.
+  Proudly retro-themed with <a href="https://github.com/ManufacturaInd/shaarli-2004licious-theme">2004licious</a>.
   {loop="$plugins_footer.text"}
       {$value}
   {/loop}
@@ -28,8 +28,20 @@
 {/if}
 
 {loop="$plugins_footer.js_files"}
-	<script src="{$value}#"></script>
+<script src="{$root_path}/{$value}#"></script>
 {/loop}
+
+<div id="js-translations" class="hidden" aria-hidden="true">
+  <span id="translation-fold">Fold</span>
+  <span id="translation-fold-all">Fold all</span>
+  <span id="translation-expand">Expand</span>
+  <span id="translation-expand-all">Expand all</span>
+  <span id="translation-delete-link">Are you sure you want to delete this link?</span>
+  <span id="translation-delete-tag">Are you sure you want to delete this tag?</span>
+  <span id="translation-shaarli-desc">
+    The personal, minimalist, super fast, database-free, bookmarking service by the Shaarli community
+  </span>
+</div>
 
 <input type="hidden" name="js_base_path" value="{$base_path}" />
 <input type="hidden" name="token" value="{$token}" id="token" />
