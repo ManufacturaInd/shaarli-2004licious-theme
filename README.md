@@ -3,11 +3,8 @@
 
 This [Shaarli](https://github.com/shaarli/shaarli) theme is a humble homage to the early looks of the [del.icio.us](http://del.icio.us) site.
 
-Created by Joshua Schachter, [del.icio.us](http://del.icio.us) is one of the monuments of early Web 2.0 socially-oriented platforms. It now looks and works differently than it used to, after having [changed hands several times](https://en.wikipedia.org/wiki/Delicious_(website)#History). The original del.icio.us layout, with its naked but smart HTML look, is a fond memory of the earlier web days. Both of us were early users of the service, and used it during our college days and beyond to make sense of our web pathways.
+Created by Joshua Schachter, [del.icio.us](https://en.wikipedia.org/wiki/Delicious_(website)) is one of the monuments of early Web 2.0 socially-oriented platforms. The [original del.icio.us layout](https://www.flickr.com/photos/joshu/albums/72157600740166824/), with its naked but smart HTML look, is a fond memory of the earlier web days. This theme tries its best to recreate that feeling.
 
-[Julien Deswaef](http://xuv.be) mentioned that the current version of Delicious is [injecting ads into Delicious RSS feeds](https://twitter.com/xuv/status/790549815000268800), and gave the great advice to run [Shaarli](http://github.com/shaarli/shaarli) instead. After Julien's prodding about [creating a theme inspired by Delicious](https://twitter.com/xuv/status/791643923659755520), we made the most out of a slow Sunday and tried our hand at creating a Shaarli theme -- we attempted to emulate the 2004 look instead.
-
-Authorship and development is shared with Julien Deswaef, who has been active improving the theme and making it work with recent versions of Shaarli.
 
 Screenshots
 -----------
@@ -26,9 +23,20 @@ This theme relies partially on the `default` theme. So be sure to keep that avai
 
 Enjoy and don't hesitate to report bugs or suggest changes.
 
-What's not working yet
-----------------------
+What to expect
+--------------
+This is not a professionally looking theme with all features that the official themes from Shaarli propose.
+It’s more a hacked together set of files to achieve a certain look. Compromises have been done to have the basic
+features work. But it’ll certainly feel more like the web from 2004 than 2024. Mainly the link lists and the edit 
+link pages have been tweaked; the CSS changes made some of the other pages (such as Settings) look pretty off. 
+It’s a constant work in progress. And if you are motivated, feel free to join us by submitting issues or code.
 
-The current state of this theme is the humble result of a day-long hack. Only
-the link lists and the edit link pages have been tweaked; the CSS changes made
-some of the other pages (such as Settings) look pretty off.
+History of this project
+-----------------------
+At Manufactura Independiente, both of us were early users of the del.icio.us service, and used it during our college days and beyond to make sense of our web pathways.
+
+[Julien Deswaef](http://xuv.be) was also an active user of del.icio.us until he switched to [Shaarli](https://github.com/shaarli/shaarli) in 2012.
+
+Around 2020, the then owner of the del.icio.us brand starting injecting ads in the feeds of the long gone users of the service. This triggered a discussion between Julien and Ricardo about reviving the old Delicious look on top of a Shaarli instance. And Ricardo made the most out of a slow Sunday to try his hand at creating a Shaarli theme -- emulating the 2004 look.
+
+Authorship and development is shared with Julien Deswaef, who has been active improving the theme and making it work with recent versions of Shaarli.
