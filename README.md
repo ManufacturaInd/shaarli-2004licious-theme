@@ -37,6 +37,6 @@ At Manufactura Independiente, both of us were early users of the del.icio.us ser
 
 [Julien Deswaef](http://xuv.be) was also an active user of del.icio.us until he switched to [Shaarli](https://github.com/shaarli/shaarli) in 2012.
 
-Around 2020, the then owner of the del.icio.us brand starting injecting ads in the feeds of the long gone users of the service. This triggered a discussion between Julien and Ricardo about reviving the old Delicious look on top of a Shaarli instance. And Ricardo made the most out of a slow Sunday to try his hand at creating a Shaarli theme -- emulating the 2004 look.
+Around 2016, the then owner of the del.icio.us brand starting injecting ads in the feeds of the long gone users of the service. This triggered a discussion between Julien and Ricardo about reviving the old Delicious look on top of a Shaarli instance. Ricardo made the most out of a slow Sunday to try his hand at creating a Shaarli theme -- emulating the 2004 look.
 
 Authorship and development is shared with Julien Deswaef, who has been active improving the theme and making it work with recent versions of Shaarli.
