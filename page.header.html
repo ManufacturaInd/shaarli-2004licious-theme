@@ -35,10 +35,6 @@
     {else}
     <li><a href="{$base_path}/login">login</a></li>
     {/if}
-    <li><a href="{$base_path}/feed/rss?{$searchcrits}" class="nomobile">rss</a></li>
-    {if="$showatom"}
-    <li><a href="{$base_path}/feed/atom?{$searchcrits}" class="nomobile">atom</a></li>
-    {/if}
     <li><a href="{$base_path}/tags/cloud">tags</a></li>
     <li><a href="{$base_path}/picture-wall?{function="ltrim($searchcrits, '&')"}">wall</a></li>
     <li><a href="{$base_path}/daily">daily</a></li>
