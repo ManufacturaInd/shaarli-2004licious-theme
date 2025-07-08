@@ -137,8 +137,13 @@
 
     {include="linklist.paging"}
 
-    <div id="links_per_page">
-        Show <a href="?linksperpage=10">10</a>, <a href="?linksperpage=25">25</a>, <a href="?linksperpage=50">50</a>, <a href="?linksperpage=100">100</a>, <a href="?linksperpage=200">200</a>, <a href="?linksperpage=500">500</a> items per page.
+    <div class="linksperpage">
+        <span>» Showing {$links_per_page} items per page. </span>
+        Show
+        <a href="{$base_path}/links-per-page?nb=20">20</a>,
+        <a href="{$base_path}/links-per-page?nb=50">50</a>,
+        <a href="{$base_path}/links-per-page?nb=100">100</a>
+        items per page.
     </div>
 </div>
 

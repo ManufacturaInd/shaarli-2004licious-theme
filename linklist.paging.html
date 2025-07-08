@@ -1,32 +1,25 @@
 <div class="paging">
-{if="$is_logged_in"}
-    <div class="paging_privatelinks">
-        <!--<a href="?privateonly">
-		{if="$privateonly"}
-		<img src="images/private_16x16_active.png#" width="16" height="16" title="Click to see all links" alt="Click to see all links">
-		{else}
-		<img src="images/private_16x16.png#" width="16" height="16" title="Click to see only private links" alt="Click to see only private links">
-		{/if}
-		</a>
-        --> 
-
-    </div>
-{/if}
+{if="!empty($action_plugin)"}
     {loop="$action_plugin"}
-      <div class="paging_privatelinks">
+        {$value.attr.class=isset($value.attr.class) ? $value.attr.class : ''}
+        {$value.attr.class=!empty($value.on) ? $value.attr.class .' filter-on' : $value.attr.class .' filter-off'}
         <a
-          {loop="$value.attr"}
+            {loop="$value.attr"}
             {$key}="{$value}"
-          {/loop}>
-          {$value.html}
+            {/loop}>
+            {$value.html}
         </a>
-      </div>
     {/loop}
-    <div class="paging_linksperpage">
-        Links per page: <a href="?linksperpage=20">20</a> <a href="?linksperpage=50">50</a> <a href="?linksperpage=100">100</a>
-        <form method="GET" class="linksperpage"><input type="text" name="linksperpage" size="2"></form>
+{/if}
+
+    <div class="linklist-pages pure-u-1-3">
+        {if="$next_page_url"}<a href="{$next_page_url}" class="paging_newer">{/if}
+        « earlier
+        {if="$next_page_url"}</a>{/if}
+        |
+        {if="$previous_page_url"}<a href="{$previous_page_url}" class="paging_older">{/if}
+        later »
+        {if="$previous_page_url"}</a>{/if}
+        {if="$page_max>1"}<span class="strong"> page {$page_current} of {$page_max}</span>{/if}
     </div>
-    {if="$previous_page_url"} <a href="{$previous_page_url}" class="paging_older">&#x25C4;Older</a> {/if}
-    <div class="paging_current">page {$page_current} / {$page_max} </div>
-    {if="$next_page_url"} <a href="{$next_page_url}" class="paging_newer">Newer&#x25BA;</a> {/if}
 </div>
