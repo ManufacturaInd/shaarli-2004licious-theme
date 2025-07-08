@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>{include="includes"}</head>
+<body>
+<div id="pageheader">
+	{include="page.header"}
+</div>
+<div class="toolsdiv">
+  <div class="page-form server-tables-page">
+    <h2 class="window-title">Server administration</h2>
+
+    <h3 class="window-subtitle">General</h3>
+
+    <div class="server-row">
+      <div class="server-label">
+        <p>Index URL</p>
+      </div>
+      <div>
+        <p><a href="{$index_url}" title="{$pagetitle}">{$index_url}</a></p>
+      </div>
+    </div>
+    <div class="server-row">
+      <div class="server-label">
+        <p>Base path</p>
+      </div>
+      <div>
+        <p>{$base_path}</p>
+      </div>
+    </div>
+    <div class="server-row">
+      <div class="server-label">
+        <p>Client IP</p>
+      </div>
+      <div>
+        <p>{$client_ip}</p>
+      </div>
+    </div>
+    <div class="server-row">
+      <div class="server-label">
+        <p>Trusted reverse proxies</p>
+      </div>
+      <div>
+        {if="count($trusted_proxies) > 0"}
+        <p>
+          {loop="$trusted_proxies"}
+          {$value}<br>
+          {/loop}
+        </p>
+        {else}
+        <p>N/A</p>
+        {/if}
+      </div>
+    </div>
+
+    {include="server.requirements"}
+
+    <h3 class="window-subtitle">Version</h3>
+
+    <div class="server-row">
+      <div class="server-label">
+        <p>Current version</p>
+      </div>
+      <div class=>
+        <p>{$current_version}</p>
+      </div>
+    </div>
+
+    <div class="server-row">
+      <div class="server-label">
+        <p>Latest release</p>
+      </div>
+      <div>
+        <p>
+          <a href="{$release_url}" title="Visit releases page on Github">
+            {$latest_version}
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <h3 class="window-subtitle">Thumbnails</h3>
+
+    <div class="server-row">
+      <div class="server-label">
+        <p>Thumbnails status</p>
+      </div>
+      <div>
+        <p>
+          {if="$thumbnails_mode==='all'"}
+            All
+          {elseif="$thumbnails_mode==='common'"}
+            Only common media hosts
+          {else}
+            None
+          {/if}
+        </p>
+      </div>
+    </div>
+
+    {if="$thumbnails_mode!=='none'"}
+    <div class="center tools-item">
+      <a href="{$base_path}/admin/thumbnails" title="Synchronize all link thumbnails">
+        <span>Synchronize thumbnails</span>
+      </a>
+    </div>
+    {/if}
+
+    <h3 class="window-subtitle">Cache</h3>
+
+    <div class="center tools-item">
+      <a href="{$base_path}/admin/clear-cache?type=main">
+        <span>Clear main cache</span>
+      </a>
+    </div>
+
+    <div class="center tools-item">
+      <a href="{$base_path}/admin/clear-cache?type=thumbnails">
+        <span>Clear thumbnails cache</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+{include="page.footer"}
+
+</body>
+</html>

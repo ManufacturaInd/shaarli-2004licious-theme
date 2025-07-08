@@ -1,0 +1,62 @@
+<div class="server-tables">
+  <h3 class="window-subtitle">Permissions</h3>
+
+  {if="count($permissions) > 0"}
+    <p class="center">
+      There are permissions that need to be fixed.
+    </p>
+
+    <p>
+      {loop="$permissions"}
+        <div class="center">{$value}</div>
+      {/loop}
+    </p>
+  {else}
+    <p class="center">
+      All read/write permissions are properly set.
+    </p>
+  {/if}
+
+  <h3 class="window-subtitle">PHP</h3>
+
+  <p class="center">
+    <strong>Running PHP {$php_version}</strong>
+    {if="$php_has_reached_eol"}
+    End of life: {$php_eol}
+    {else}
+    {/if}
+  </p>
+
+  <table class="center">
+    <thead>
+      <tr>
+        <th>Extension</th>
+        <th>Usage</th>
+        <th>Status</th>
+        <th>Loaded</th>
+      </tr>
+    </thead>
+    <tbody>
+      {loop="$php_extensions"}
+        <tr>
+          <td>{$value.name}</td>
+          <td>{$value.desc}</td>
+          <td>{$value.required ? t('Required') : t('Optional')}</td>
+          <td>
+            {if="$value.loaded"}
+              {$classLoaded="fa-color-green"}
+              {$strLoaded=t('Loaded')}
+            {else}
+              {$strLoaded=t('Not loaded')}
+              {if="$value.required"}
+                {$classLoaded="fa-color-red"}
+              {else}
+                {$classLoaded="fa-color-orange"}
+              {/if}
+            {/if}
+          </td>
+        </tr>
+      {/loop}
+    </tbody>
+  </table>
+</div>
