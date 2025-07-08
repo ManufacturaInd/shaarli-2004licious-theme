@@ -167,6 +167,11 @@ input, textarea {
     background: 0;
 }
 
+.thumbnail {
+  float: left;
+  margin-left: 0;
+}
+
 #linklist li.private {
     padding-left: 20px; 
 }
@@ -371,8 +376,6 @@ input, textarea {
     color: #0000ff;
 }
 
-/* Overrides for extensions */
-
 .awesomplete mark {
   background: #ddd;
 }
@@ -424,4 +427,8 @@ input, textarea {
 
 #taglist .filter {
   padding-left: 30px;
+}
+
+.rssinfo img {
+  vertical-align: bottom;
 }
