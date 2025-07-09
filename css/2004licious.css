@@ -6,6 +6,14 @@ td, tr, th {
   border-width: 1px 0 1px 0;
 }
 
+th {
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
 h3 {
   font-size: 1.3em;
 }
