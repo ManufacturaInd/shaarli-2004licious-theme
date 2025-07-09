@@ -1,16 +1,5 @@
 /* From shaarli.css */
 
-input, textarea {
-    font-size: 8pt;
-    background-color: #fff;
-    background: #fff;
-    box-shadow: none;
-    padding: 5px;
-    border-radius: 0;
-    border: none;
-    color: #000;
-}
-
 /* Buttons */
 .bigbutton {
     background-color: transparent;
@@ -43,7 +32,7 @@ input, textarea {
     float: right;
     display: inline-block;
     text-align: right;
-    padding: 7px 5px 3px 0;
+    padding: 12.5px 5px 3px 0;
 }
 
 #pageheader #links ul li {
@@ -61,7 +50,7 @@ input, textarea {
     border-radius: 0;
 }
 
-#pageheader #links ul li:nth-child(2) a {
+#pageheader #links ul li:nth-child(1) a {
     border-left: 0;
 }
 
@@ -102,6 +91,8 @@ input, textarea {
     font-weight: bold;
     font-style: normal;
     margin-top: 0;
+    font-size: 130%;
+    line-height: 1.8em;
 }
 
 #shaarli_title a {
@@ -133,22 +124,6 @@ input, textarea {
 .paging a:hover,
 .paging a:active {
     color: none;
-}
-
-.paging_privatelinks {
-    float: none;
-}
-
-.paging_current {
-    color: inherit;
-}
-
-.paging_older {
-    margin-right: none;
-}
-
-.paging_newer {
-    margin-left: none;
 }
 
 #editlinkform, #headerform {
@@ -233,16 +208,19 @@ input, textarea {
 }
 
 @media handheld, only screen and (max-width: 480px), only screen and (max-device-width: 854px) {
-
     #paging_older, #paging_newer, .paging_linksperpage a {
-    border: 0;
-    background-color: transparent;
-	color: inherit;
+      border: 0;
+      background-color: transparent;
+      color: inherit;
     }
 }
 
 #pluginsadmin .plugin_parameter {
     padding: 5px 0;
+}
+
+.linksperpage, .rssinfo {
+  margin-left: 10px;
 }
 
 #footer a,

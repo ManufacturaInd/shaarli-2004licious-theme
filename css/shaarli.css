@@ -247,6 +247,7 @@ a.bigbutton, #pageheader a.bigbutton {
 
 .paging {
     padding: 5px;
+    padding-left: 0;
     background-color: #777;
     color: #ccc;
     text-align: center;
@@ -275,9 +276,8 @@ a.bigbutton, #pageheader a.bigbutton {
 }
 
 .paging_linksperpage {
-    float: right;
     padding-right: 5px;
-    margin: 0px 10px 2px 0px;
+    margin: 0px 10px 2px 15px;
 }
 
 .paging_linksperpage form.linksperpage {
@@ -299,7 +299,7 @@ a.bigbutton, #pageheader a.bigbutton {
 }
 
 .paging_newer {
-    margin-left: 15px;
+    margin-left: 10px;
 }
 
 #headerform {

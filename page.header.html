@@ -2,8 +2,19 @@
   <ul>
     <li>
       <span id="shaarli_title">
-        bookmarks / <a href="{$titleLink}">{$shaarlititle}</a>
+        sha.ar.li / <a href="{$titleLink}">{$shaarlititle}</a> /
       </span>
+      {if="!empty($_GET['source']) && $_GET['source']=='bookmarklet'"}
+      {ignore} When called as a popup from bookmarklet, do not display menu. {/ignore}
+      {else}
+      <form method="GET" class="searchform" name="searchform">
+            <input type="text" tabindex="1" id="searchform_value" name="searchterm" placeholder="search bookmarks"
+              {if="!empty($search_term)"}
+                    value="{$search_term}"
+              {/if}
+            >
+      </form>
+      {/if}
     </li>
   </ul>
 </div>
@@ -11,20 +22,9 @@
 {if="!empty($_GET['source']) && $_GET['source']=='bookmarklet'"}
     {ignore} When called as a popup from bookmarklet, do not display menu. {/ignore}
 {else}
-
-<div id="links" class="nomobile">
+<div id="links">
   <ul>
-    <li>
-        <form method="GET" class="searchform" name="searchform">
-            <input type="text" tabindex="1" id="searchform_value" name="searchterm" placeholder="search bookmarks"
-              {if="!empty($search_term)"}
-                    value="{$search_term}"
-              {/if}
-            >
-        </form>
-    </li>
-
-    <li><a href="{$base_path}/" class="nomobile">home</a></li>
+    <li><a href="{$base_path}/">home</a></li>
     {if="$is_logged_in"}
     <li><a href="{$base_path}/admin/logout">logout</a></li>
     <li><a href="{$base_path}/admin/tools">tools</a></li>
@@ -36,7 +36,6 @@
     <li><a href="{$base_path}/login">login</a></li>
     {/if}
     <li><a href="{$base_path}/tags/cloud">tags</a></li>
-    <li><a href="{$base_path}/picture-wall?{function="ltrim($searchcrits, '&')"}">wall</a></li>
     <li><a href="{$base_path}/daily">daily</a></li>
     {if="$thumbnails_enabled"}
     <li><a href="{$base_path}/picture-wall?{function="ltrim($searchcrits, '&')"}">thumbs</a></li>
@@ -44,18 +43,9 @@
       {loop="$plugins_header.buttons_toolbar"}
         {$value}
       {/loop}
-    {/if}
   </ul>
 </div>
-
-<div class="linkcount">
-{if="!empty($linkcount)"}
-  <span class="strong">{$linkcount}</span> {function="t('shaare', 'shaares', $linkcount)"}
-  {if="$privateLinkcount>0"}
-  + <span class="strong">{$privateLinkcount}</span> {function="t('private link', 'private links', $privateLinkcount)"}
-  {/if}
 {/if}
-</div>
 
 {if="!empty($plugin_errors) && $is_logged_in"}
 <ul class="errors">
