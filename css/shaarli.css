@@ -8,16 +8,12 @@ body {
 }
 
 input, textarea {
-    background-color: #dedede;
-    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#dedede), to(#ffffff));
-    background: -webkit-linear-gradient(#dedede, #ffffff);
-    background: -moz-linear-gradient(#dedede, #ffffff);
-    background: -ms-linear-gradient(#dedede, #ffffff);
-    background: -o-linear-gradient(#dedede, #ffffff);
-    background: linear-gradient(#dedede, #ffffff);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 8pt;
+    background-color: #fff;
+    background: #fff;
+    box-shadow: none;
     padding: 5px;
-    border-radius: 3px 3px 3px 3px;
+    border-radius: 0;
     border: none;
     color: #000;
 }
@@ -48,12 +44,6 @@ strong {
 /* Buttons */
 .bigbutton, #pageheader a.bigbutton  {
     background-color: #c0c0c0;
-    background: -moz-linear-gradient(#c0c0c0, #ffffff) repeat scroll 0 0 transparent;
-    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#c0c0c0), to(#ffffff));
-    background: -webkit-linear-gradient(#c0c0c0, #ffffff);
-    background: -ms-linear-gradient(#c0c0c0, #ffffff);
-    background: -o-linear-gradient(#c0c0c0, #ffffff);
-    background: linear-gradient(#c0c0c0, #ffffff);
     border-radius: 3px 3px 3px 3px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
     cursor: pointer;
@@ -73,12 +63,6 @@ a.bigbutton, #pageheader a.bigbutton {
 
 .smallbutton {
     background-color: #c0c0c0;
-    background: -moz-linear-gradient(#c0c0c0, #ffffff) repeat scroll 0 0 transparent;
-    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#c0c0c0), to(#ffffff));
-    background: -webkit-linear-gradient(#c0c0c0, #ffffff);
-    background: -ms-linear-gradient(#c0c0c0, #ffffff);
-    background: -o-linear-gradient(#c0c0c0, #ffffff);
-    background: linear-gradient(#c0c0c0, #ffffff);
     border-radius: 3px 3px 3px 3px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
     cursor: pointer;
@@ -103,11 +87,6 @@ a.bigbutton, #pageheader a.bigbutton {
 .linkeditbuttons {
     left: 2px;
     padding: 4px 2px 2px 2px;
-
-    -webkit-border-radius: 0px 6px 6px 0px;
-    -moz-border-radius: 0px 6px 6px 0px;
-    -o-border-radius: 0px 6px 6px 0px;
-    -ms-border-radius: 0px 6px 6px 0px;
     border-radius: 0px 6px 6px 0px;
 }
 
@@ -140,12 +119,6 @@ a.bigbutton, #pageheader a.bigbutton {
 
 #pageheader a {
     background-color: #333333;
-    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#333333), to(#000000));
-    background: -webkit-linear-gradient(#333333, #000000);
-    background: -moz-linear-gradient(#333333, #000000);
-    background: -ms-linear-gradient(#333333, #000000);
-    background: -o-linear-gradient(#333333, #000000);
-    background: linear-gradient(#333333, #000000);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     padding: 5px;
     border-radius: 3px 3px 3px 3px;
@@ -167,12 +140,6 @@ a.bigbutton, #pageheader a.bigbutton {
 
 #pageheader {
     background-color: #333333;
-    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#333333), to(#111111));
-    background: -webkit-linear-gradient(#333333, #111111);
-    background: -moz-linear-gradient(#333333, #111111);
-    background: -ms-linear-gradient(#333333, #111111);
-    background: -o-linear-gradient(#333333, #111111);
-    background: linear-gradient(#333333, #111111);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     width: auto;
     padding: 0 10px 5px 10px;
@@ -240,12 +207,6 @@ a.bigbutton, #pageheader a.bigbutton {
 
 .tagfilter input.bigbutton, .searchform input.bigbutton, .addform input.bigbutton {
     background-color: #dedede;
-    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#dedede), to(#ffffff));
-    background: -webkit-linear-gradient(#dedede, #ffffff);
-    background: -moz-linear-gradient(#dedede, #ffffff);
-    background: -ms-linear-gradient(#dedede, #ffffff);
-    background: -o-linear-gradient(#dedede, #ffffff);
-    background: linear-gradient(#dedede, #ffffff);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     padding: 0 5px 0 5px;
     margin: 5px 0 5px 0;
@@ -396,19 +357,7 @@ a.bigbutton, #pageheader a.bigbutton {
     border-top: 1px solid #bbb;
     clear: both;
     background-color: #F2F2F2;
-    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#F2F2F2), to(#ffffff));
-    background: -webkit-linear-gradient(#F2F2F2, #ffffff);
-    background: -moz-linear-gradient(#F2F2F2, #ffffff);
-    background: -ms-linear-gradient(#F2F2F2, #ffffff);
-    background: -o-linear-gradient(#F2F2F2, #ffffff);
-    background: linear-gradient(#F2F2F2, #ffffff);
 }
-
-/*
-#linklist li.publicLinkHightLight:hover, #linklist li:hover {
-    background: #E9FFCE;
-}
-*/
 
 .linkdate {
     font-size:8pt;
@@ -492,12 +441,6 @@ a.bigbutton, #pageheader a.bigbutton {
 .linktag {
     font-size: 9pt;
     background-color: #F2F2F2;
-    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#F2F2F2), to(#ffffff));
-    background: -webkit-linear-gradient(#F2F2F2, #ffffff);
-    background: -moz-linear-gradient(#F2F2F2, #ffffff);
-    background: -ms-linear-gradient(#F2F2F2, #ffffff);
-    background: -o-linear-gradient(#F2F2F2, #ffffff);
-    background: linear-gradient(#F2F2F2, #ffffff);
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
     padding: 3px 5px 3px 20px;
     height: 20px;
@@ -664,17 +607,6 @@ a.bigbutton, #pageheader a.bigbutton {
     box-shadow: 0.5px 0.5px 0.5px 1px #dde4e6;
 }
 
-/* If you want thumbnails on the left:
-.thumbnail {
-    float: left;
-    margin-right: 10px;
-}
-.linkcontainer {
-    position: static;
-    margin-left: 130px;
-}
-*/
-
 /* --- Picture wall CSS --- */
 #picwall_container {
     color: #fff;
@@ -696,9 +628,6 @@ a.bigbutton, #pageheader a.bigbutton {
 }
 
 .b-lazy {
-    -webkit-transition: opacity 500ms ease-in-out;
-    -moz-transition: opacity 500ms ease-in-out;
-    -o-transition: opacity 500ms ease-in-out;
     transition: opacity 500ms ease-in-out;
     opacity: 0;
 }
@@ -744,17 +673,6 @@ a.bigbutton, #pageheader a.bigbutton {
 }
 
 div.daily {
-    font-family: Georgia, 'DejaVu Serif', Norasi, serif;
-    background-color: #E6D6BE;
-    /* Background paper texture by BashCorpo:
-       http://www.bashcorpo.dk/textures.php
-       http://bashcorpo.deviantart.com/art/Grungy-paper-texture-v-5-22966998  */
-    background-image: url("../images/Paper_texture_v5_by_bashcorpo_w1000.jpg");
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    position: relative;
     border-bottom: 2px solid black;
 }
 
