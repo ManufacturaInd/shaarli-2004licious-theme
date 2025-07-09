@@ -186,7 +186,8 @@ h3 {
 }
 
 .private .linktitle a, 
-.linktitle a  {
+.linktitle a,
+.linktitle a:hover  {
     color: #0000ff;
 }
 
