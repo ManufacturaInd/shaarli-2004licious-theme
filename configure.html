@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>{include="includes"}</head>
-<body onload="document.configform.title.focus();">
+<body>
 <div id="pageheader">
   {include="page.header"}
-  <form method="POST" action="#" name="configform" id="configform">
+</div>
+
+  <form method="POST" action="{$base_path}/admin/configure" name="configform" id="configform">
     <input type="hidden" name="token" value="{$token}">
     <table id="configuration_table">
 
@@ -115,6 +117,14 @@
         </td>
       </tr>
       <tr>
+        <td valign="top"><b>Retreive description:</b></td>
+        <td>
+          <input type="checkbox" name="retrieveDescription" id="retrieveDescription"
+                 {if="$retrieve_description"}checked{/if}/>
+          <label for="updateCheck">&nbsp;Automatically retrieve description for new bookmarks</label>
+        </td>
+      </tr>
+      <tr>
         <td valign="top"><b>Enable REST API</b></td>
         <td>
           <input type="checkbox" name="enableApi" id="enableApi"
@@ -126,6 +136,29 @@
         <td valign="top"><b>API secret</b></td>
         <td>
           <input type="text" name="apiSecret" id="apiSecret" size="50" value="{$api_secret}" />
+        </td>
+      </tr>
+      <tr>
+        <td valign="top"><b>Enable thumbnails</b></td>
+        <td>
+          <select name="enableThumbnails" id="enableThumbnails" class="align">
+            <option value="all"    {if="$thumbnails_mode=='all'"}selected{/if}>
+              All
+            </option>
+            <option value="common" {if="$thumbnails_mode=='common'"}selected{/if}>
+              Only common media hosts
+            </option>
+            <option value="none"   {if="$thumbnails_mode=='none'"}selected{/if}>
+              None
+            </option>
+          </select>
+          <label for="enableApi">&nbsp;
+            {if="! $gd_enabled"}
+              {'You need to enable the extension <code>php-gd</code> to use thumbnails.'|t}
+            {elseif="$thumbnails_enabled"} 
+              <a href="{$base_path}/admin/thumbnails">Synchronize thumbnails</a>
+            {/if}
+          </label>
         </td>
       </tr>
 
