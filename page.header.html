@@ -2,7 +2,20 @@
   <ul>
     <li>
       <span id="shaarli_title">
-        sha.ar.li / <a href="{$titleLink}">{$shaarlititle}</a> /
+        sha.ar.li / <a href="{$titleLink}">{$shaarlititle}</a> / 
+        {if="!empty($search_tags)"}
+          tag / 
+          {$exploded_tags=tags_str2array($search_tags, $tags_separator)}
+          {loop="$exploded_tags"}
+          <a href="{$base_path}/?searchtags={$value}">
+          {$value}
+          </a>
+          {/loop}
+        /
+        {/if} 
+        {if="!empty($search_term)"}
+          search /
+        {/if} 
       </span>
       {if="!empty($_GET['source']) && $_GET['source']=='bookmarklet'"}
       {ignore} When called as a popup from bookmarklet, do not display menu. {/ignore}
