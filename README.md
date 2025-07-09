@@ -38,6 +38,7 @@ It’s a constant work in progress and if you are motivated, feel free to join u
 Supported or tested plugins
 ---------------------------
  - qrcode
+ - archiveorg
 
 History of this project
 -----------------------
