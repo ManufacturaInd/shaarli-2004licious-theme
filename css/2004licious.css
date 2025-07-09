@@ -151,6 +151,10 @@
     padding-left: 20px; 
 }
 
+.meta div {
+  display: inline-block;
+}
+
 .meta span.private {  
     color: red;
 }
