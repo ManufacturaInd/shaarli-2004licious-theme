@@ -17,6 +17,7 @@ h2 {
 h3 {
   font-size: 1.3em;
 }
+
 /* Buttons */
 .bigbutton {
     background-color: transparent;
@@ -24,13 +25,18 @@ h3 {
     color: #606060;
     border-radius: 0;
     box-shadow: none;
-    margin-left: 0;
+    margin-left: 0;Fs
 }
 
-#pageheader #menu {
-    float: left;
+#pageheader #menu,
+#pageheader #shaarli_title,
+#pageheader #menu_filter  {
     display: inline-block;
     width: auto;
+}
+
+#pageheader #menu_filter form{
+    vertical-align: bottom;
 }
 
 #pageheader a {
@@ -94,7 +100,6 @@ h3 {
 
 .searchform #searchform_value {
     width: 100%;
-    height: 16px;
 }
 
 .tagfilter {
@@ -107,8 +112,6 @@ h3 {
 #shaarli_title {
     font-weight: bold;
     font-style: normal;
-    margin-top: 0;
-    font-size: 130%;
     line-height: 1.8em;
 }
 

@@ -23,10 +23,9 @@ a {
 }
 
 h1 {
-    font-size: 20pt;
+    font-size: 1.6em;
     font-weight: bold;
     font-style: italic;
-    margin-bottom: 20px;
 }
 
 em {
@@ -123,7 +122,6 @@ a.bigbutton, #pageheader a.bigbutton {
     padding: 5px;
     border-radius: 3px 3px 3px 3px;
     margin: 10px 3px 3px 3px;
-    color: #A2DD42;
     text-decoration: none;
     line-height: 2.5;
     white-space: nowrap;
@@ -142,7 +140,7 @@ a.bigbutton, #pageheader a.bigbutton {
     background-color: #333333;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     width: auto;
-    padding: 0 10px 5px 10px;
+    padding: 5px 10px;
     margin: auto;
 }
 
@@ -187,10 +185,6 @@ a.bigbutton, #pageheader a.bigbutton {
 
 .linksperpage input {
     padding: 0;
-}
-
-.searchform #searchform_value {
-    width: 30%;
 }
 
 .tagfilter {
