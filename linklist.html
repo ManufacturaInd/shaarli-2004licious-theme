@@ -81,7 +81,6 @@
                     to {loop="value.taglist"}<span class="linktag" title="Add tag"><a href="{$base_path}/add-tag/{$value1.taglist_urlencoded.$key2}">{$value1.taglist_html.$key2}</a></span> {/loop}
                     {/if}
 
-                    
                     {if="!$hide_timestamps || $is_logged_in"}
                         {$updated=$value.updated_timestamp ? $strEdited. format_date($value.updated) : $strPermalink}
                         <span title="{$updated}">
