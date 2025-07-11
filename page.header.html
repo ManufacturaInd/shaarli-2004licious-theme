@@ -20,11 +20,11 @@
     {else}
     <div id="menu_filter">
       <form method="GET" class="searchform" name="searchform">
-        <input type="text" tabindex="1" id="searchform_value" name="searchterm" placeholder="search bookmarks"
-          {if="!empty($search_term)"}
-                value="{$search_term}"
-          {/if}
-        >
+          <input type="text" tabindex="1" id="searchform_value" name="searchterm" placeholder="search" class="input"
+            {if="!empty($search_term)"}
+                  value="{$search_term}"
+            {/if}
+          >
       </form>
     </div>
     {/if}

@@ -25,7 +25,7 @@ h3 {
     color: #606060;
     border-radius: 0;
     box-shadow: none;
-    margin-left: 0;Fs
+    margin-left: 0;
 }
 
 #pageheader #menu,
@@ -35,9 +35,20 @@ h3 {
     width: auto;
 }
 
-#pageheader #menu_filter form{
-    vertical-align: bottom;
+#pageheader #menu_filter input{
+  font-weight: bold;
+  font-size: 1.6em;
+  line-height: 1em;
+  padding: 0 5px;
+  width: auto;
+  border: 1px solid #999;
+  border-radius: 3px;
 }
+
+#menu_filter input::placeholder {
+  opacity: 1;
+  color: #ccc;
+} 
 
 #pageheader a {
     background-color: transparent;
