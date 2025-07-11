@@ -1,8 +1,10 @@
-/* Main theme colors. Will be overwritten by the default colors plugin */
 :root {
+  /* Main theme colors. Will be overwritten by the default colors plugin */
   --main-color: blue;
   --background-color: white;
   --dark-main-color: purple;
+  /* These will be deduced from main */
+  --secondary-color: rgb( from var(--main-color) r g b / 50% ); 
 }
 
 /* tweaked from shaarli.css */
@@ -676,10 +678,6 @@ div.dailyAbout {
     text-align: center;
 }
 
-div.dailyAbout a {
-    color: #890500;
-}
-
 div.dailyAbout img {
     position: relative;
     top: 3px;
@@ -713,10 +711,6 @@ div.dailyEntry {
     border-top: 1px solid #555;
 }
 
-div.dailyEntry a {
-    text-decoration: none;
-    color: #890500;
-}
 
 div.dailyEntryTags {
     font-size: 7.75pt;
@@ -1056,9 +1050,6 @@ ul.errors {
     width: 40%;
 }
 
-#pluginsadmin a {
-    color: #486D08;
-}
 
 #pluginsadmin a.arrow {
     color: black;
@@ -1273,10 +1264,6 @@ h3 {
     color: red;
 }
 
-.linkdate a {
-    color:#aa99ff;
-}
-
 .linktitle {
     font-size: 12pt;
     font-weight: normal;
@@ -1291,13 +1278,6 @@ h3 {
 .private .linktitle a:visited, 
 .linktitle a:visited  {
     color: var(--dark-main-color);
-}
-
-.linkdate a {
-    background-image: none;
-    padding: 0;
-    text-decoration: initial;
-    color: #88f;
 }
 
 .linkdescription {
@@ -1323,7 +1303,7 @@ h3 {
 }
 
 .meta a {
-    color: #88f;
+    color: var(--secondary-color);
 }
 
 @media handheld, only screen and (max-width: 480px), only screen and (max-device-width: 854px) {
