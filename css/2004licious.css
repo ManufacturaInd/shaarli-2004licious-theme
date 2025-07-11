@@ -363,7 +363,6 @@ a.bigbutton, #pageheader a.bigbutton {
 }
 
 #linklist li.private {
-    background: url('../images/private.png') no-repeat 4px center;
     padding-left: 30px;
 }
 
