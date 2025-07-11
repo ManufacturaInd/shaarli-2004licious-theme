@@ -20,8 +20,8 @@ input, textarea {
     background: var(--background-color);
     box-shadow: none;
     padding: 5px;
-    border-radius: 0;
-    border: none;
+    border-radius: 3px;
+    border: 1px solid #666;
     color: #000;
 }
 
@@ -139,15 +139,6 @@ a.bigbutton, #pageheader a.bigbutton {
     white-space: nowrap;
 }
 
-#pageheader #linkcount {
-    float: right;
-    font-style: italic;
-    color: #bbb;
-    text-align: right;
-    padding-right: 5px;
-    margin: 3px 3px 0px 0px;
-}
-
 #pageheader {
     background-color: #333333;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
@@ -169,10 +160,6 @@ a.bigbutton, #pageheader a.bigbutton {
     clear: none;
 }
 
-#toolsdiv a span {
-    color: #ffffff;
-}
-
 .linksperpage, .tagfilter, .searchform, .addform {
     background-color: #dedede;
     display: inline;
@@ -185,7 +172,6 @@ a.bigbutton, #pageheader a.bigbutton {
 }
 
 .linksperpage {
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
     padding: 3px;
 }
 
@@ -231,20 +217,6 @@ a.bigbutton, #pageheader a.bigbutton {
     color: #fff;
 }
 
-#pageheader a:visited {
-    color: #98C943;
-    text-decoration: none;
-}
-
-#pageheader a:hover {
-    color: #FFFFC9;
-    text-decoration: none;
-}
-
-#pageheader a:active {
-    color: #bbb;
-    text-decoration: none;
-}
 
 #searchcriteria {
     padding: 4px 0px 5px 5px;
@@ -254,8 +226,6 @@ a.bigbutton, #pageheader a.bigbutton {
 .paging {
     padding: 5px;
     padding-left: 0;
-    background-color: #777;
-    color: #ccc;
     text-align: center;
     clear: both;
 }
@@ -1262,7 +1232,7 @@ h3 {
 }
 
 .paging a:visited {
-    color: rgb(85, 26, 139);
+    color: var(--dark-main-color);
 }
 
 .paging a:hover,
@@ -1320,7 +1290,7 @@ h3 {
 
 .private .linktitle a:visited, 
 .linktitle a:visited  {
-    color: rgb(85, 26, 139);
+    color: var(--dark-main-color);
 }
 
 .linkdate a {
@@ -1478,10 +1448,6 @@ h3 {
 #changetag,
 #uploaddiv {
   color: #555;
-}
-
-#toolsdiv .smallbutton {
-  background: #fff;
 }
 
 #pluginsadmin input[type="submit"] {
