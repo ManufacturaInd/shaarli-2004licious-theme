@@ -14,10 +14,10 @@
 <link type="text/css" rel="stylesheet" href="{$asset_path}/css/reset.css?v={$version_hash}#" />
 <link type="text/css" rel="stylesheet" href="{$asset_path}/css/2004licious.css?v={$version_hash}#" />
 
-{if="is_file('data/user.css')"}<link type="text/css" rel="stylesheet" href="data/user.css#" />{/if}
+{if="is_file('data/user.css')"}<link type="text/css" rel="stylesheet" href="{$base_path}/data/user.css#" />{/if}
 
 {loop="$plugins_includes.css_files"}
-<link type="text/css" rel="stylesheet" href="{$value}#"/>
+<link type="text/css" rel="stylesheet" href="{$base_path}/{$value}#"/>
 {/loop}
 
 <link rel="search" type="application/opensearchdescription+xml" href="{$base_path}/open-search#" title="Shaarli search - {$shaarlititle}" />
