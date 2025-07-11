@@ -419,11 +419,6 @@ a.bigbutton, #pageheader a.bigbutton {
 
 .linkdescription a {
     text-decoration: none;
-    color: #3465A4;
-}
-
-.linkdescription a:hover {
-    color: #F57900;
 }
 
 .linktaglist {
