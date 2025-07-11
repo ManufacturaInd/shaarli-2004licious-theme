@@ -4,10 +4,12 @@
       {if="!empty($search_tags)"}
         tag / 
         {$exploded_tags=tags_str2array($search_tags, $tags_separator)}
+        {$tag_counter=count($exploded_tags)}
         {loop="$exploded_tags"}
         <a href="{$base_path}/?searchtags={$value}">
         {$value}
         </a>
+        {if="$tag_counter - 1 != $counter"} + {/if}
         {/loop}
       /
       {/if} 
