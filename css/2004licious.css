@@ -1,16 +1,23 @@
+/* Main theme colors. Will be overwritten by the default colors plugin */
+:root {
+  --main-color: blue;
+  --background-color: white;
+  --dark-main-color: purple;
+}
+
 /* tweaked from shaarli.css */
 
 body {
     font-family: arial, sans-serif;
     font-size: 10pt;
-    background-color: #ffffff;
+    background-color: var(--background-color);
     word-wrap: break-word;
 }
 
 input, textarea {
     font-size: 8pt;
-    background-color: #fff;
-    background: #fff;
+    background-color: var(--background-color);
+    background: var(--background-color);
     box-shadow: none;
     padding: 5px;
     border-radius: 0;
@@ -19,7 +26,12 @@ input, textarea {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none
+    color: var(--main-color);
+}
+
+a:visited {
+    color: var(--dark-main-color);
 }
 
 h1 {
@@ -784,10 +796,6 @@ div.dailyNoEntry {
     text-align: right;
 }
 
-.white {
-    color: white;
-}
-
 /* For lazy images loading in picture wall.
    Using http://www.appelsiini.net/projects/lazyload
 */
@@ -1162,7 +1170,7 @@ h3 {
     padding: 0;
     border-radius: 0;
     margin: 0;
-    color: #0000ff;
+    color: var(--main-color);
     text-decoration: none;
     line-height: normal;
 }
@@ -1232,13 +1240,13 @@ h3 {
 }
 
 #shaarli_title a {
-    color: #0000ff;
+    color: var(--main-color);
 }
 
 #pageheader a:visited,
 #pageheader a:hover,
 #pageheader a:active {
-    color: #0000ff;
+    color: var(--main-color);
     text-decoration: initial;
 }
 
@@ -1250,7 +1258,7 @@ h3 {
 }
 
 .paging a:link {
-    color: #0000ff;
+    color: var(--main-color);
 }
 
 .paging a:visited {
@@ -1307,7 +1315,7 @@ h3 {
 .private .linktitle a, 
 .linktitle a,
 .linktitle a:hover  {
-    color: #0000ff;
+    color: var(--main-color);
 }
 
 .private .linktitle a:visited, 
@@ -1366,7 +1374,7 @@ h3 {
 
 #footer a,
 #footer a:hover {
-  color: #0000ff;
+  color: var(--main-color);
 }
 
 /* From  user.css */
@@ -1442,7 +1450,7 @@ h3 {
 }
 
 #taglist a:visited {
-  color: #0000ff;
+  color: var(--main-color);
 }
 
 /* Edit link form */
@@ -1492,7 +1500,7 @@ h3 {
 }
 
 #cloudtag a {
-    color: #0000ff;
+    color: var(--main-color);
 }
 
 .awesomplete mark {
