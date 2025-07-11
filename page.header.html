@@ -13,21 +13,26 @@
       {/if} 
       {if="!empty($search_term)"}
         search /
+      {/if}
+      {if="$template != 'linklist'"}
+        {$template} /
       {/if} 
     </h1>
     {if="!empty($_GET['source']) && $_GET['source']=='bookmarklet'"}
     {ignore} When called as a popup from bookmarklet, do not display menu. {/ignore}
     {else}
-    <div id="menu_filter">
-      <form method="GET" class="searchform" name="searchform">
-          <input type="text" tabindex="1" id="searchform_value" name="searchterm" placeholder="search" class="input"
-            {if="!empty($search_term)"}
-                  value="{$search_term}"
-            {/if}
-          >
-          <input type="hidden" name="searchtags" value="{$search_tags}">
-      </form>
-    </div>
+      {if="$template === 'linklist'"}
+      <div id="menu_filter">
+        <form method="GET" class="searchform" name="searchform">
+            <input type="text" tabindex="1" id="searchform_value" name="searchterm" placeholder="search" class="input"
+              {if="!empty($search_term)"}
+                    value="{$search_term}"
+              {/if}
+            >
+            <input type="hidden" name="searchtags" value="{$search_tags}">
+        </form>
+      </div>
+      {/if}
     {/if}
 </div>
 
