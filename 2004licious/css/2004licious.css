@@ -20,7 +20,6 @@ body {
 input, textarea {
     font-size: 8pt;
     background-color: var(--background-color);
-    background: var(--background-color);
     box-shadow: none;
     padding: 5px;
     border-radius: 3px;
@@ -56,7 +55,7 @@ strong {
 }
 
 /* Buttons */
-.bigbutton, #pageheader a.bigbutton  {
+.bigbutton  {
     background-color: #c0c0c0;
     border-radius: 3px;
     box-shadow: 0 1px 1px rgb(0 0 0 / 50%);
@@ -70,7 +69,7 @@ strong {
     display: inline-block;
 }
 
-a.bigbutton, #pageheader a.bigbutton {
+a.bigbutton {
     height: 22px;
     line-height: 22px;
 }
