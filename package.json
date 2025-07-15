@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "stylelint": "^16.21.1",
+    "stylelint-config-standard": "^38.0.0"
+  },
+  "scripts": {
+    "lint": "npx stylelint \"2004licious/css/*.css\" "
+  }
+}

@@ -3,6 +3,7 @@
   --main-color: blue;
   --background-color: white;
   --dark-main-color: purple;
+
   /* These will be deduced from main */
   --secondary-color: rgb( from var(--main-color) r g b / 50% ); 
 }
@@ -28,7 +29,7 @@ input, textarea {
 }
 
 a {
-    text-decoration: none
+    text-decoration: none;
     color: var(--main-color);
 }
 
@@ -57,8 +58,8 @@ strong {
 /* Buttons */
 .bigbutton, #pageheader a.bigbutton  {
     background-color: #c0c0c0;
-    border-radius: 3px 3px 3px 3px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 50%);
     cursor: pointer;
     height: 24px;
     padding: 0 5px;
@@ -76,8 +77,8 @@ a.bigbutton, #pageheader a.bigbutton {
 
 .smallbutton {
     background-color: #c0c0c0;
-    border-radius: 3px 3px 3px 3px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 50%);
     cursor: pointer;
     height: 20px;
     margin-left: 5px;
@@ -99,15 +100,15 @@ a.bigbutton, #pageheader a.bigbutton {
 
 .linkeditbuttons {
     left: 2px;
-    padding: 4px 2px 2px 2px;
-    border-radius: 0px 6px 6px 0px;
+    padding: 4px 2px 2px;
+    border-radius: 0 6px 6px 0;
 }
 
 #pageheader #logo {
     background-image: url('../../../images/logo.png');
     background-repeat: no-repeat;
     float: left;
-    margin: 0 10px 0 10px;
+    margin: 0 10px;
     width: 105px;
     height: 55px;
     cursor: pointer;
@@ -119,7 +120,7 @@ a.bigbutton, #pageheader a.bigbutton {
 
 #pageheader #menu ul {
     margin: auto;
-    padding: 7px 0px 0px 0px;
+    padding: 7px 0 0;
     float: none;
 }
 
@@ -131,19 +132,19 @@ a.bigbutton, #pageheader a.bigbutton {
 }
 
 #pageheader a {
-    background-color: #333333;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    background-color: #333;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 50%);
     padding: 5px;
-    border-radius: 3px 3px 3px 3px;
-    margin: 10px 3px 3px 3px;
+    border-radius: 3px;
+    margin: 10px 3px 3px;
     text-decoration: none;
     line-height: 2.5;
     white-space: nowrap;
 }
 
 #pageheader {
-    background-color: #333333;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    background-color: #333;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 50%);
     width: auto;
     padding: 5px 10px;
     margin: auto;
@@ -165,11 +166,11 @@ a.bigbutton, #pageheader a.bigbutton {
 .linksperpage, .tagfilter, .searchform, .addform {
     background-color: #dedede;
     display: inline;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 2px rgb(0 0 0 / 50%);
     padding: 5px;
     border: none;
-    border-radius: 3px 3px 3px 3px;
-    margin: 10px 3px 3px 3px;
+    border-radius: 3px;
+    margin: 10px 3px 3px;
     color: #cecece;
 }
 
@@ -201,11 +202,11 @@ a.bigbutton, #pageheader a.bigbutton {
 
 .tagfilter input.bigbutton, .searchform input.bigbutton, .addform input.bigbutton {
     background-color: #dedede;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-    padding: 0 5px 0 5px;
-    margin: 5px 0 5px 0;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 50%);
+    padding: 0 5px;
+    margin: 5px 0;
     height: 20px;
-    border-radius: 3px 3px 3px 3px;
+    border-radius: 3px;
     cursor: pointer;
 }
 
@@ -221,7 +222,7 @@ a.bigbutton, #pageheader a.bigbutton {
 
 
 #searchcriteria {
-    padding: 4px 0px 5px 5px;
+    padding: 4px 0 5px 5px;
     font-weight: bold;
 }
 
@@ -255,7 +256,7 @@ a.bigbutton, #pageheader a.bigbutton {
 
 .paging_linksperpage {
     padding-right: 5px;
-    margin: 0px 10px 2px 15px;
+    margin: 0 10px 2px 15px;
 }
 
 .paging_linksperpage form.linksperpage {
@@ -269,7 +270,7 @@ a.bigbutton, #pageheader a.bigbutton {
 .paging_current {
     display: inline;
     color: #fff;
-    padding: 0 20 0 20;
+    padding: 0 20;
 }
 
 .paging_older {
@@ -281,8 +282,8 @@ a.bigbutton, #pageheader a.bigbutton {
 }
 
 #headerform {
-    color: #000000;
-    padding: 5px 5px 5px 5px;
+    color: #000;
+    padding: 5px;
     clear: both;
 }
 
@@ -296,21 +297,21 @@ a.bigbutton, #pageheader a.bigbutton {
     margin-right: 10px;
 }
 
-#headerform label[for=longlastingsession] {
+#headerform label[for="longlastingsession"] {
     display: block;
     width: 100%;
     margin-top: 5px;
 }
 
 #toolsdiv {
-    color: #ffffff;
-    padding: 5px 5px 5px 5px;
+    color: #fff;
+    padding: 5px;
     clear: left;
 }
 
 #uploaddiv {
-    color: #ffffff;
-    padding: 5px 5px 5px 5px;
+    color: #fff;
+    padding: 5px;
     clear: left;
 }
 
@@ -323,7 +324,7 @@ a.bigbutton, #pageheader a.bigbutton {
 
 #editlinkform label {
     cursor: pointer;
-    color: #ffffff;
+    color: #fff;
 }
 
 #editlinkform textarea, #editlinkform .lf_input {
@@ -412,8 +413,7 @@ a.bigbutton, #pageheader a.bigbutton {
 
 .linktag {
     font-size: 9pt;
-    background-color: #F2F2F2;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 2px rgb(0 0 0 / 50%);
     padding: 3px 5px 3px 20px;
     height: 20px;
     border-radius: 3px;
@@ -421,7 +421,7 @@ a.bigbutton, #pageheader a.bigbutton {
     background-image: url('../images/tag_blue.png');
     background-repeat: no-repeat;
     background-position: 3px center;
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
 .linktag:hover {
@@ -464,7 +464,7 @@ a.bigbutton, #pageheader a.bigbutton {
     color: #888;
     clear: both;
     max-width: 30em;
-    margin: 15px auto 15px auto;
+    margin: 15px auto;
 }
 
 #footer a {
@@ -472,7 +472,7 @@ a.bigbutton, #pageheader a.bigbutton {
 }
 
 #footer a:hover {
-    color: #000000;
+    color: #000;
 }
 
 #newversion {
@@ -481,7 +481,7 @@ a.bigbutton, #pageheader a.bigbutton {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 2 7 2 7;
+    padding: 2 7;
     font-size: 9pt;
 }
 
@@ -522,7 +522,7 @@ a.bigbutton, #pageheader a.bigbutton {
 #installform td {
     font-size: 10pt;
     color: black;
-    padding: 10px 5px 10px 5px;
+    padding: 10px 5px;
     clear: left;
 }
 
@@ -532,13 +532,13 @@ a.bigbutton, #pageheader a.bigbutton {
 
 #changepasswordform {
     color: #ccc;
-    padding: 10px 5px 10px 5px;
+    padding: 10px 5px;
     clear: left;
 }
 
 #changetag {
     color: #ccc;
-    padding: 10px 5px 10px 5px;
+    padding: 10px 5px;
     clear: left;
 }
 
@@ -557,21 +557,22 @@ a.bigbutton, #pageheader a.bigbutton {
 #changetag li {
     color: #000;
 }
+
 #configform td {
     color: #ccc;
     font-size: 10pt;
-    padding: 10px 5px 10px 5px;
+    padding: 10px 5px;
 }
 
 #configform {
     color: #ccc;
-    padding: 10px 5px 10px 5px;
+    padding: 10px 5px;
     clear: left;
 }
 
 .thumbnail {
     float: right;
-    margin: 0px 10px 0px 10px;
+    margin: 0 10px;
 }
 
 .thumbnail img {
@@ -603,6 +604,7 @@ a.bigbutton, #pageheader a.bigbutton {
     transition: opacity 500ms ease-in-out;
     opacity: 0;
 }
+
 .b-lazy.b-loaded {
     opacity: 1;
 }
@@ -633,15 +635,17 @@ a.bigbutton, #pageheader a.bigbutton {
     color: #fff;
     text-align: left;
     background-color: transparent;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgb(0 0 0 / 40%);
+
     /* FF3+, Saf3+, Opera 10.10+, Chrome, IE9 */
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#66000000, endColorstr=#66000000);
+
     /* IE6IE9 */
-    text-shadow: 2px 2px 1px #000000;
+    text-shadow: 2px 2px 1px #000;
 }
 
 #linklist li.publicLinkHightLight {
-    background: #ffffff;
+    background: #fff;
 }
 
 div.daily {
@@ -674,7 +678,7 @@ div.dailyAbout {
     position: absolute;
     left: 10px;
     top: 15px;
-    padding: 5px 5px 5px 5px;
+    padding: 5px;
     text-align: center;
 }
 
@@ -694,14 +698,14 @@ div.dailyTitle {
     font-weight: bold;
     font-size: 44pt;
     text-align: center;
-    padding: 10px 20px 0px 20px;
+    padding: 10px 20px 0;
 }
 
 div.dailyDate {
     font-size: 12pt;
     font-weight: bold;
     text-align: center;
-    padding: 0px 20px 30px 20px;
+    padding: 0 20px 30px;
 }
 
 /* Individual entries in "Daily": */
@@ -728,9 +732,9 @@ div.dailyEntryLinkdate {
 div.dailyEntryThumbnail {
     width: 100%;
     text-align: center;
-    background-color: rgb(128, 128, 128);
-    background: url(../images/50pc_transparent.png);
-    padding: 4px 0px 2px 0px;
+    background-color: rgb(128 128 128);
+    background: url("../images/50pc_transparent.png");
+    padding: 4px 0 2px;
 }
 
 div.dailyEntryDescription {
@@ -742,7 +746,7 @@ div.dailyEntryDescription {
 
 div.dailyNoEntry {
     text-align: center;
-    padding: 40px 0px 90px 0px;
+    padding: 40px 0 90px;
 }
 
 .daily #closing {
@@ -803,7 +807,7 @@ div.dailyNoEntry {
     }
 
     #linklist li {
-	padding: 2 0 10 0;
+	padding: 2 0 10;
 	border-top: 2px solid #000;
 	clear: both;
     }
@@ -832,7 +836,7 @@ div.dailyNoEntry {
     }
 }
 
-@media handheld, only screen and (max-width: 480px), only screen and (max-device-width: 854px) {
+@media handheld, only screen and (width <= 480px), only screen and (device-width <= 854px) {
     /* A few fixes for mobile devices (far from perfect). */
 
     .tagfilter div.awesomplete {
@@ -853,7 +857,7 @@ div.dailyNoEntry {
 
     #pageheader #menu a {
 	padding: 5px;
-	border-radius: 3px 3px 3px 3px;
+	border-radius: 3px;
 	margin: 3px;
     }
 
@@ -865,22 +869,22 @@ div.dailyNoEntry {
     padding-bottom: 10px;
     }
 
-    #headerform label input[type=text],
-    #headerform label input[type=password]{
+    #headerform label input[type="text"],
+    #headerform label input[type="password"]{
     float: right;
     width: 70%;
     }
 
     .searchform, .tagfilter {
 	display: block !important;
-	margin: 0px 3px 7px 0px !important;
-	padding: 0px !important;
+	margin: 0 3px 7px 0 !important;
+	padding: 0 !important;
 	width: 97% !important;
     }
 
     .searchform input, .tagfilter input {
-	margin: 0px !important;
-	padding: 0px !important;
+	margin: 0 !important;
+	padding: 0 !important;
 	display: inline !important;
     }
 
@@ -901,7 +905,7 @@ div.dailyNoEntry {
 	position: relative;
 	float: left;
 	top: -10px;
-	left: 0px;
+	left: 0;
     }
 
     .paging_privatelinks {
@@ -916,21 +920,21 @@ div.dailyNoEntry {
 
     #paging_older, #paging_newer, .paging_linksperpage a {
 	border: 1px solid black;
-	padding: 3px 5px 3px 5px;
+	padding: 3px 5px;
 	background-color: #666;
 	color: #fff;
-	border-radius: 3px 3px 3px 3px;
+	border-radius: 3px;
     }
 
     .thumbnail {
 	float: none;
 	height: auto;
-	margin: 0px;
+	margin: 0;
 	text-align: center;
     }
 
     #cloudtag {
-	padding: 0px;
+	padding: 0;
     }
 
     div.dailyAbout {
@@ -938,26 +942,26 @@ div.dailyNoEntry {
 	position: relative;
 	width: 100%;
 	clear: both;
-	padding: 0px;
-	top: 0px;
-	left: 0px;
+	padding: 0;
+	top: 0;
+	left: 0;
     }
 
     #daily_col1, #daily_col2, #daily_col3 {
 	float: none;
 	width: 100%;
-	padding: 0px;
+	padding: 0;
     }
 
     div.dailyTitle {
 	font-size: 18pt;
 	margin-top: 5px;
-	padding: 0px;
+	padding: 0;
     }
 
     div.dailyDate {
 	font-size: 11pt;
-	padding: 0px;
+	padding: 0;
 	display: block;
     }
 
@@ -977,7 +981,7 @@ div.dailyNoEntry {
 
 /* Highlight search results */
 .highlight {
-    background-color: #FFFF33;
+    background-color: #FF3;
 }
 
 .center {
@@ -1030,7 +1034,7 @@ ul.errors {
     padding: 5px 0;
 }
 
-#pluginsadmin input[type=submit] {
+#pluginsadmin input[type="submit"] {
     margin: 10px 0;
 }
 
@@ -1057,7 +1061,6 @@ ul.errors {
 
 /* 404 page */
 .error-container {
-
     margin: 50px;
     margin-top: 20px;
 }
@@ -1076,7 +1079,7 @@ ul.errors {
 td, tr, th {
   padding: 5px;
   border: 1px solid #666;
-  border-width: 1px 0 1px 0;
+  border-width: 1px 0;
 }
 
 th {
@@ -1169,7 +1172,7 @@ h3 {
 }
 
 #pageheader .linkcount {
-  padding: 7px 0 0 0px;
+  padding: 7px 0 0;
   text-align: center;
 }
 
@@ -1299,14 +1302,14 @@ h3 {
     background-image: none;
     background-repeat: no-repeat;
     background-position: 3px center;
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
 .meta a {
     color: var(--secondary-color);
 }
 
-@media handheld, only screen and (max-width: 480px), only screen and (max-device-width: 854px) {
+@media handheld, only screen and (width <= 480px), only screen and (device-width <= 854px) {
     #paging_older, #paging_newer, .paging_linksperpage a {
       border: 0;
       background-color: transparent;
@@ -1409,7 +1412,7 @@ h3 {
     font-weight: bold;
     color: #555;
     display: block;
-    padding: 5px 0 5px 0;
+    padding: 5px 0;
 }
 
 #private-checkbox {
