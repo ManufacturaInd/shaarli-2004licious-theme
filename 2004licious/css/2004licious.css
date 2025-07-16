@@ -87,16 +87,6 @@ a.bigbutton {
     border-width: 1px;
 }
 
-/* Small tab on the left of each link with edit/delete buttons. */
-.button_edit, .button_delete {
-    border-radius: 0;
-    box-shadow: none;
-    border-style: none;
-    border-width: 0;
-    padding: 0;
-    background: none;
-}
-
 .linkeditbuttons {
     left: 2px;
     padding: 4px 2px 2px;
@@ -128,6 +118,23 @@ a.bigbutton {
     display: inline;
     position: relative;
     box-sizing: border-box;
+}
+
+.paging a:link {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.paging a:visited {
+    color: #ccc;
+}
+
+.paging a:hover {
+    color: #FFFFC9;
+}
+
+.paging a:active {
+    color: #fff;
 }
 
 #pageheader a {
@@ -191,10 +198,6 @@ a.bigbutton {
     margin-left:24px;
 }
 
-.tagfilter #tagfilter_value {
-    display: inline;
-}
-
 .tagfilter li {
     color: black;
 }
@@ -209,16 +212,16 @@ a.bigbutton {
     cursor: pointer;
 }
 
-#shaarli_title {
+#shaarli-title {
     font-weight: bold;
-    font-style: italic;
+    font-style: normal;
+    line-height: 1.8em;
     margin-top: 0;
 }
 
-#shaarli_title a {
-    color: #fff;
+#shaarli-title a {
+    color: var(--main-color);
 }
-
 
 #searchcriteria {
     padding: 4px 0 5px 5px;
@@ -232,51 +235,24 @@ a.bigbutton {
     clear: both;
 }
 
-.paging a:link {
-    color: #ccc;
-    text-decoration: none;
-}
-
-.paging a:visited {
-    color: #ccc;
-}
-
-.paging a:hover {
-    color: #FFFFC9;
-}
-
-.paging a:active {
-    color: #fff;
-}
-
-.paging_privatelinks {
-    float: left;
-}
-
-.paging_linksperpage {
+.paging-linksperpage {
     padding-right: 5px;
     margin: 0 10px 2px 15px;
 }
 
-.paging_linksperpage form.linksperpage {
+.paging-linksperpage form.linksperpage {
     display: inline;
 }
 
-.paging_linksperpage form.linksperpage input {
+.paging-linksperpage form.linksperpage input {
     height: 15px;
 }
 
-.paging_current {
-    display: inline;
-    color: #fff;
-    padding: 0 20;
-}
-
-.paging_older {
+.paging-older {
     margin-right: 15px;
 }
 
-.paging_newer {
+.paging-newer {
     margin-left: 10px;
 }
 
@@ -480,7 +456,7 @@ a.bigbutton {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 2 7;
+    padding: 2px 7px;
     font-size: 9pt;
 }
 
@@ -732,7 +708,6 @@ div.dailyEntryThumbnail {
     width: 100%;
     text-align: center;
     background-color: rgb(128 128 128);
-    background: url("../images/50pc_transparent.png");
     padding: 4px 0 2px;
 }
 
@@ -896,10 +871,6 @@ div.dailyNoEntry {
 	width: 70% !important;
     }
 
-    #tagfilter_value {
-	width: 70% !important;
-    }
-
     div.qrcode {
 	position: relative;
 	float: left;
@@ -907,17 +878,13 @@ div.dailyNoEntry {
 	left: 0;
     }
 
-    .paging_privatelinks {
-	float: none;
-    }
-
-    .paging_linksperpage {
+    .paging-linksperpage {
 	float: none;
 	margin-bottom: 10px;
 	font-size: smaller;
     }
 
-    #paging_older, #paging_newer, .paging_linksperpage a {
+    .paging-linksperpage a {
 	border: 1px solid black;
 	padding: 3px 5px;
 	background-color: #666;
@@ -1104,7 +1071,7 @@ h3 {
 }
 
 #pageheader #menu,
-#pageheader #shaarli_title,
+#pageheader #shaarli-title,
 #pageheader #menu_filter  {
     display: inline-block;
     width: auto;
@@ -1196,16 +1163,6 @@ h3 {
     margin-left: none;
 }
 
-#shaarli_title {
-    font-weight: bold;
-    font-style: normal;
-    line-height: 1.8em;
-}
-
-#shaarli_title a {
-    color: var(--main-color);
-}
-
 #pageheader a:visited,
 #pageheader a:hover,
 #pageheader a:active {
@@ -1228,17 +1185,8 @@ h3 {
     color: var(--dark-main-color);
 }
 
-.paging a:hover,
-.paging a:active {
-    color: none;
-}
-
 #editlinkform, #headerform {
     background: #eee;
-}
-
-#editlinkform label {
-    color: none;
 }
 
 #linklist li {
@@ -1309,7 +1257,7 @@ h3 {
 }
 
 @media handheld, only screen and (width <= 480px), only screen and (device-width <= 854px) {
-    #paging_older, #paging_newer, .paging_linksperpage a {
+    .paging-linksperpage a {
       border: 0;
       background-color: transparent;
       color: inherit;

@@ -14,18 +14,18 @@
 
     <div class="linklist-pages">
         {if="$next_page_url"}<a href="{$next_page_url}">{/if}
-        <span class="paging_newer">
+        <span class="paging-newer">
         « earlier
         </span>
         {if="$next_page_url"}</a>{/if}
         |
         {if="$previous_page_url"}<a href="{$previous_page_url}">{/if}
-        <span class="paging_older">
+        <span class="paging-older">
         later »
         </span>
         {if="$previous_page_url"}</a>{/if}
 
-        <span class="paging_linksperpage">
+        <span class="paging-linksperpage">
         {if="!empty($linkcount)"}
         {$linkcount} {function="t('item', 'items', $linkcount)"}
             {if="$privateLinkcount>0"}
