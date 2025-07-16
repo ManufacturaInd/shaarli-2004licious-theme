@@ -95,16 +95,6 @@ a.bigbutton {
     border-radius: 0 6px 6px 0;
 }
 
-#pageheader #logo {
-    background-image: url('../../../images/logo.png');
-    background-repeat: no-repeat;
-    float: left;
-    margin: 0 10px;
-    width: 105px;
-    height: 55px;
-    cursor: pointer;
-}
-
 #pageheader #menu {
     width: 100%;
 }
@@ -131,16 +121,7 @@ a.bigbutton {
     color: #ccc;
 }
 
-.paging a:hover {
-    color: #FFFFC9;
-}
-
-.paging a:active {
-    color: #fff;
-}
-
 #pageheader a {
-    background-color: #333;
     box-shadow: 0 1px 2px rgb(0 0 0 / 50%);
     padding: 5px;
     border-radius: 3px;
@@ -341,34 +322,9 @@ a.bigbutton {
     font-weight: bold;
 }
 
-.linktitle a {
-    text-decoration: none;
-    color: #80AD48;
-}
-
-.linktitle a:hover {
-    color: #F57900;
-}
-
 .linkdate {
     font-size: 8pt;
     color: #888;
-}
-
-.linkdate a {
-    background-image: url('../images/calendar.png');
-    padding: 2px 0 3px 20px;
-    background-repeat: no-repeat;
-    text-decoration: none;
-    color: #E28E3F;
-}
-
-.linkdate a:hover {
-    color: #F57900 }
-
-.linkurl {
-    font-size: 8pt;
-    color: #4BAA74;
 }
 
 .linkdescription {
@@ -395,9 +351,6 @@ a.bigbutton {
     height: 20px;
     border-radius: 3px;
     cursor: pointer;
-    background-image: url('../images/tag_blue.png');
-    background-repeat: no-repeat;
-    background-position: 3px center;
     background-color: #fff;
 }
 
@@ -442,14 +395,6 @@ a.bigbutton {
     clear: both;
     max-width: 30em;
     margin: 15px auto;
-}
-
-#footer a {
-    color: #486D08;
-}
-
-#footer a:hover {
-    color: #000;
 }
 
 #newversion {
