@@ -1,9 +1,14 @@
 {
   "devDependencies": {
+    "cssnano": "^7.1.0",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "postcss-import": "^16.1.1",
     "stylelint": "^16.21.1",
     "stylelint-config-standard": "^38.0.0"
   },
   "scripts": {
-    "lint": "npx stylelint \"2004licious/css/*.css\" "
+    "lint": "npx stylelint \"2004licious/css/*.css\" ",
+    "build": "npx postcss css/2004licious.css -o 2004licious/css/2004licious.css",
   }
 }
