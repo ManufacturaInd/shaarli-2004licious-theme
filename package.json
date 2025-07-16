@@ -8,7 +8,7 @@
     "stylelint-config-standard": "^38.0.0"
   },
   "scripts": {
-    "lint": "npx stylelint \"2004licious/css/*.css\" ",
-    "build": "npx postcss css/2004licious.css -o 2004licious/css/2004licious.css",
+    "lint": "npx stylelint \"css/*.css\"",
+    "build": "npx postcss css/2004licious.css -o 2004licious/css/2004licious.css"
   }
 }
