@@ -27,9 +27,9 @@
 
         <span class="paging-linksperpage">
         {if="!empty($linkcount)"}
-        {$linkcount} {function="t('item', 'items', $linkcount)"}
-            {if="$privateLinkcount>0"}
-            + {$privateLinkcount} {function="t('private item', 'private items', $privateLinkcount)"}
+        {$linkcount} {function="t('bookmark', 'bookmarks', $linkcount)"}
+            {if="$privateLinkcount>0 && $is_logged_in"}
+            + {$privateLinkcount} {function="t('private bookmark', 'private bookmarks', $privateLinkcount)"}
             {/if}
         total
         {/if}
