@@ -1,4 +1,4 @@
-@import url("reset.css");
+@import "reset.css";
 
 :root {
   /* Main theme colors. Will be overwritten by the default colors plugin */
@@ -1204,7 +1204,7 @@ ul.errors {
   vertical-align: bottom;
 }
 
-@import url("mobile.css");
-@import url("print.css");
+@import "mobile.css";
+@import "print.css";
 
 
