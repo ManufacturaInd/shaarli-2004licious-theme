@@ -1,0 +1,59 @@
+@media print {
+  html {
+    border: none;
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  body {
+    font-size: 12pt;
+    width: auto !important;
+    margin: auto !important;
+  }
+
+  /* Minimum numer of lines to display when splitting a paragraph
+    over two pages */
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+
+  a {
+    color: #000 !important;
+    text-decoration: none !important;
+  }
+
+  #pageheader, .paging, #linklist li form, #footer {
+    display: none;
+  }
+
+  #linklist li {
+    padding: 2px 0 10px;
+    border-top: 2px solid #000;
+    clear: both;
+  }
+
+  #linklist li.private {
+    background-color: transparent;
+    border-left: 0;
+  }
+
+  .linkdate {
+    line-height: 2;
+  }
+
+  .linkurl {
+    color: #000;
+  }
+
+  .linkdescription {
+    font-size: 10pt;
+  }
+
+  .linktag {
+    border: 1px solid black;
+    font-style: italic;
+    font-size: 8pt;
+  }
+}
+

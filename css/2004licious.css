@@ -11,7 +11,6 @@
 }
 
 /* tweaked from shaarli.css */
-
 body {
     font-family: arial, sans-serif;
     font-size: 10pt;
@@ -38,18 +37,36 @@ a:visited {
     color: var(--dark-main-color);
 }
 
-h1 {
-    font-size: 1.6em;
-    font-weight: bold;
-    font-style: italic;
-}
-
 em {
     font-style: italic;
 }
 
 strong {
     font-weight: bold;
+}
+
+td, tr, th {
+  padding: 5px;
+  border: 1px solid #666;
+  border-width: 1px 0;
+}
+
+th {
+  font-weight: bold;
+}
+
+h1 {
+    font-size: 1.6em;
+    font-weight: bold;
+    font-style: italic;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.3em;
 }
 
 .hidden {
@@ -698,196 +715,6 @@ div.dailyNoEntry {
     vertical-align: top;
 }
 
-@media print {
-    html {
-	border: none;
-	background: #fff !important;
-	color: #000 !important;
-    }
-
-    body {
-	font-size: 12pt;
-	width: auto !important;
-	margin: auto !important;
-    }
-
-    /* Minimum numer of lines to display when splitting a paragraph
-       over two pages */
-    p {
-	orphans: 3;
-	widows: 3;
-    }
-
-    a {
-	color: #000 !important;
-	text-decoration: none !important;
-    }
-
-    #pageheader, .paging, #linklist li form, #footer {
-	display: none;
-    }
-
-    #linklist li {
-	padding: 2 0 10;
-	border-top: 2px solid #000;
-	clear: both;
-    }
-
-    #linklist li.private {
-	background-color: none;
-	border-left: 0;
-    }
-
-    .linkdate {
-	line-height: 2;
-    }
-
-    .linkurl {
-	color: #000;
-    }
-
-    .linkdescription {
-	font-size: 10pt;
-    }
-
-    .linktag {
-	border: 1px solid black;
-	font-style: italic;
-	font-size: 8pt;
-    }
-}
-
-@media handheld, only screen and (width <= 480px), only screen and (device-width <= 854px) {
-    /* A few fixes for mobile devices (far from perfect). */
-
-    .tagfilter div.awesomplete {
-        width: 70%;
-    }
-
-    .nomobile {
-	display: none;
-    }
-
-    #logo {
-	display: none;
-    }
-
-    #pageheader #menu ul {
-        text-align: center;
-    }
-
-    #pageheader #menu a {
-	padding: 5px;
-	border-radius: 3px;
-	margin: 3px;
-    }
-
-    #headerform label {
-    width: 100%;
-    display: block;
-    height: auto;
-    line-height: 25px;
-    padding-bottom: 10px;
-    }
-
-    #headerform label input[type="text"],
-    #headerform label input[type="password"]{
-    float: right;
-    width: 70%;
-    }
-
-    .searchform, .tagfilter {
-	display: block !important;
-	margin: 0 3px 7px 0 !important;
-	padding: 0 !important;
-	width: 97% !important;
-    }
-
-    .searchform input, .tagfilter input {
-	margin: 0 !important;
-	padding: 0 !important;
-	display: inline !important;
-    }
-
-    .tagfilter input.bigbutton, .searchform input.bigbutton, .addform input.bigbutton, a.bigbutton {
-	width: 30%;
-	font-size: smaller;
-    }
-
-    #searchform_value {
-	width: 70% !important;
-    }
-
-    div.qrcode {
-	position: relative;
-	float: left;
-	top: -10px;
-	left: 0;
-    }
-
-    .paging-linksperpage {
-	float: none;
-	margin-bottom: 10px;
-	font-size: smaller;
-    }
-
-    .paging-linksperpage a {
-	border: 1px solid black;
-	padding: 3px 5px;
-	background-color: #666;
-	color: #fff;
-	border-radius: 3px;
-    }
-
-    .thumbnail {
-	float: none;
-	height: auto;
-	margin: 0;
-	text-align: center;
-    }
-
-    #cloudtag {
-	padding: 0;
-    }
-
-    div.dailyAbout {
-	float: none;
-	position: relative;
-	width: 100%;
-	clear: both;
-	padding: 0;
-	top: 0;
-	left: 0;
-    }
-
-    #daily_col1, #daily_col2, #daily_col3 {
-	float: none;
-	width: 100%;
-	padding: 0;
-    }
-
-    div.dailyTitle {
-	font-size: 18pt;
-	margin-top: 5px;
-	padding: 0;
-    }
-
-    div.dailyDate {
-	font-size: 11pt;
-	padding: 0;
-	display: block;
-    }
-
-    div.dailyEntryTitle {
-	font-size: 16pt;
-	font-weight: bold;
-    }
-
-    div.dailyEntryDescription {
-	font-size: 10pt;
-    }
-}
-
 #toolsdiv a.button-description {
 	clear: none;
 }
@@ -987,24 +814,6 @@ ul.errors {
 .linklist-plugin-icon {
     width: 13px;
     height: 13px;
-}
-
-td, tr, th {
-  padding: 5px;
-  border: 1px solid #666;
-  border-width: 1px 0;
-}
-
-th {
-  font-weight: bold;
-}
-
-h2 {
-  font-size: 1.5em;
-}
-
-h3 {
-  font-size: 1.3em;
 }
 
 /* Buttons */
@@ -1203,14 +1012,6 @@ h3 {
     color: var(--secondary-color);
 }
 
-@media handheld, only screen and (width <= 480px), only screen and (device-width <= 854px) {
-    .paging-linksperpage a {
-      border: 0;
-      background-color: transparent;
-      color: inherit;
-    }
-}
-
 #pluginsadmin .plugin_parameter {
     padding: 5px 0;
 }
@@ -1402,3 +1203,9 @@ h3 {
 .rssinfo img {
   vertical-align: bottom;
 }
+
+@import url("mobile.css");
+
+@import url("print.css");
+
+
