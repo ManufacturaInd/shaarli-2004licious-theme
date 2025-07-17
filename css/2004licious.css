@@ -1128,8 +1128,11 @@ ul.errors {
   color: #555;
 }
 
-#pluginsadmin input[type="submit"] {
-    border: 1px solid #999;
+.page-form input[type="submit"] {
+    border: 2px outset;
+    border-radius: 0px;
+    background: buttonface;
+    min-width: 80px;
 }
 
 /* cloudtag */
