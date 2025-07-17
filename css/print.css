@@ -1,14 +1,14 @@
 @media print {
   html {
-    border: none;
     background: #fff !important;
+    border: none;
     color: #000 !important;
   }
 
   body {
     font-size: 12pt;
-    width: auto !important;
     margin: auto !important;
+    width: auto !important;
   }
 
   /* Minimum numer of lines to display when splitting a paragraph
@@ -28,9 +28,9 @@
   }
 
   #linklist li {
-    padding: 2px 0 10px;
     border-top: 2px solid #000;
     clear: both;
+    padding: 2px 0 10px;
   }
 
   #linklist li.private {
@@ -52,8 +52,8 @@
 
   .linktag {
     border: 1px solid black;
-    font-style: italic;
     font-size: 8pt;
+    font-style: italic;
   }
 }
 

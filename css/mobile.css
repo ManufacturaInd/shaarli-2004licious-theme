@@ -18,17 +18,17 @@
 	}
 
 	#pageheader #menu a {
-		padding: 5px;
 		border-radius: 3px;
 		margin: 3px;
+		padding: 5px;
 	}
 
 	#headerform label {
-		width: 100%;
 		display: block;
 		height: auto;
 		line-height: 25px;
 		padding-bottom: 10px;
+		width: 100%;
 	}
 
 	#headerform label input[type="text"],
@@ -45,14 +45,14 @@
 	}
 
 	.searchform input, .tagfilter input {
+		display: inline !important;
 		margin: 0 !important;
 		padding: 0 !important;
-		display: inline !important;
 	}
 
 	.tagfilter input.bigbutton, .searchform input.bigbutton, .addform input.bigbutton, a.bigbutton {
-			width: 30%;
 			font-size: smaller;
+			width: 30%;
 	}
 
 	#searchform_value {
@@ -60,24 +60,24 @@
 	}
 
 	div.qrcode {
-		position: relative;
 		float: left;
-		top: -10px;
 		left: 0;
+		position: relative;
+		top: -10px;
 	}
 
 	.paging-linksperpage {
 		float: none;
-		margin-bottom: 10px;
 		font-size: smaller;
+		margin-bottom: 10px;
 	}
 
 	.paging-linksperpage a {
-		border: 0;
-		padding: 3px 5px;
 		background-color: transparent;
-		color: inherit;
+		border: 0;
 		border-radius: 3px;
+		color: inherit;
+		padding: 3px 5px;
 	}
 
 	.thumbnail {
@@ -92,19 +92,19 @@
 	}
 
 	div.dailyAbout {
-		float: none;
-		position: relative;
-		width: 100%;
 		clear: both;
-		padding: 0;
-		top: 0;
+		float: none;
 		left: 0;
+		padding: 0;
+		position: relative;
+		top: 0;
+		width: 100%;
 	}
 
 	#daily_col1, #daily_col2, #daily_col3 {
 		float: none;
-		width: 100%;
 		padding: 0;
+		width: 100%;
 	}
 
 	div.dailyTitle {
@@ -114,9 +114,9 @@
 	}
 
 	div.dailyDate {
+		display: block;
 		font-size: 11pt;
 		padding: 0;
-		display: block;
 	}
 
 	div.dailyEntryTitle {

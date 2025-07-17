@@ -12,25 +12,25 @@
 
 /* tweaked from shaarli.css */
 body {
+    background-color: var(--background-color);
     font-family: arial, sans-serif;
     font-size: 10pt;
-    background-color: var(--background-color);
     word-wrap: break-word;
 }
 
 input, textarea {
-    font-size: 8pt;
     background-color: var(--background-color);
-    box-shadow: none;
-    padding: 5px;
-    border-radius: 3px;
     border: 1px solid #666;
+    border-radius: 3px;
+    box-shadow: none;
     color: #000;
+    font-size: 8pt;
+    padding: 5px;
 }
 
 a {
-    text-decoration: none;
     color: var(--main-color);
+    text-decoration: none;
 }
 
 a:visited {
@@ -46,9 +46,9 @@ strong {
 }
 
 td, tr, th {
-  padding: 5px;
   border: 1px solid #666;
   border-width: 1px 0;
+  padding: 5px;
 }
 
 th {
@@ -57,8 +57,8 @@ th {
 
 h1 {
     font-size: 1.6em;
-    font-weight: bold;
     font-style: italic;
+    font-weight: bold;
 }
 
 h2 {
@@ -77,15 +77,15 @@ h3 {
 .bigbutton  {
     background-color: #c0c0c0;
     border-radius: 3px;
-    box-shadow: 0 1px 1px rgb(0 0 0 / 50%);
-    cursor: pointer;
-    height: 24px;
-    padding: 0 5px;
-    margin: 0 5px 0 0;
-    color: #606060;
     border-style: outset;
     border-width: 1px;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 50%);
+    color: #606060;
+    cursor: pointer;
     display: inline-block;
+    height: 24px;
+    margin: 0 5px 0 0;
+    padding: 0 5px;
 }
 
 a.bigbutton {
@@ -96,20 +96,20 @@ a.bigbutton {
 .smallbutton {
     background-color: #c0c0c0;
     border-radius: 3px;
+    border-style: outset;
+    border-width: 1px;
     box-shadow: 0 1px 1px rgb(0 0 0 / 50%);
+    color: #606060;
     cursor: pointer;
     height: 20px;
     margin-left: 5px;
     padding: 0 5px;
-    color: #606060;
-    border-style: outset;
-    border-width: 1px;
 }
 
 .linkeditbuttons {
+    border-radius: 0 6px 6px 0;
     left: 2px;
     padding: 4px 2px 2px;
-    border-radius: 0 6px 6px 0;
 }
 
 #pageheader #menu {
@@ -117,16 +117,16 @@ a.bigbutton {
 }
 
 #pageheader #menu ul {
+    float: none;
     margin: auto;
     padding: 7px 0 0;
-    float: none;
 }
 
 #pageheader #menu ul li {
-    list-style: none;
-    display: inline;
-    position: relative;
     box-sizing: border-box;
+    display: inline;
+    list-style: none;
+    position: relative;
 }
 
 .paging a:link {
@@ -139,26 +139,26 @@ a.bigbutton {
 }
 
 #pageheader a {
-    box-shadow: 0 1px 2px rgb(0 0 0 / 50%);
-    padding: 5px;
     border-radius: 3px;
-    margin: 10px 3px 3px;
-    text-decoration: none;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 50%);
     line-height: 2.5;
+    margin: 10px 3px 3px;
+    padding: 5px;
+    text-decoration: none;
     white-space: nowrap;
 }
 
 #pageheader {
     background-color: #333;
     box-shadow: 0 1px 2px rgb(0 0 0 / 50%);
-    width: auto;
-    padding: 5px 10px;
     margin: auto;
+    padding: 5px 10px;
+    width: auto;
 }
 
 #pageheader .search {
-    width: 100%;
     white-space: nowrap;
+    width: 100%;
 }
 
 #toolsdiv a {
@@ -171,13 +171,13 @@ a.bigbutton {
 
 .linksperpage, .tagfilter, .searchform, .addform {
     background-color: #dedede;
-    display: inline;
-    box-shadow: 0 1px 2px rgb(0 0 0 / 50%);
-    padding: 5px;
     border: none;
     border-radius: 3px;
-    margin: 10px 3px 3px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 50%);
     color: #cecece;
+    display: inline;
+    margin: 10px 3px 3px;
+    padding: 5px;
 }
 
 .linksperpage {
@@ -204,17 +204,17 @@ a.bigbutton {
 
 .tagfilter input.bigbutton, .searchform input.bigbutton, .addform input.bigbutton {
     background-color: #dedede;
-    box-shadow: 0 1px 2px rgb(0 0 0 / 50%);
-    padding: 0 5px;
-    margin: 5px 0;
-    height: 20px;
     border-radius: 3px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 50%);
     cursor: pointer;
+    height: 20px;
+    margin: 5px 0;
+    padding: 0 5px;
 }
 
 #shaarli-title {
-    font-weight: bold;
     font-style: normal;
+    font-weight: bold;
     line-height: 1.8em;
     margin-top: 0;
 }
@@ -224,20 +224,20 @@ a.bigbutton {
 }
 
 #searchcriteria {
-    padding: 4px 0 5px 5px;
     font-weight: bold;
+    padding: 4px 0 5px 5px;
 }
 
 .paging {
+    clear: both;
     padding: 5px;
     padding-left: 0;
     text-align: center;
-    clear: both;
 }
 
 .paging-linksperpage {
-    padding-right: 5px;
     margin: 0 10px 2px 15px;
+    padding-right: 5px;
 }
 
 .paging-linksperpage form.linksperpage {
@@ -257,14 +257,14 @@ a.bigbutton {
 }
 
 #headerform {
+    clear: both;
     color: #000;
     padding: 5px;
-    clear: both;
 }
 
 #headerform input.linkurl {
-    width: 50%;
     font-size: inherit;
+    width: 50%;
 }
 
 #headerform label {
@@ -274,32 +274,32 @@ a.bigbutton {
 
 #headerform label[for="longlastingsession"] {
     display: block;
-    width: 100%;
     margin-top: 5px;
+    width: 100%;
 }
 
 #toolsdiv {
+    clear: left;
     color: #fff;
     padding: 5px;
-    clear: left;
 }
 
 #uploaddiv {
+    clear: left;
     color: #fff;
     padding: 5px;
-    clear: left;
 }
 
 #editlinkform {
+    clear: left;
     height: 100%;
     padding: 5px 5px 5px 15px;
     width: 80%;
-    clear: left;
 }
 
 #editlinkform label {
-    cursor: pointer;
     color: #fff;
+    cursor: pointer;
 }
 
 #editlinkform textarea, #editlinkform .lf_input {
@@ -307,15 +307,15 @@ a.bigbutton {
 }
 
 #linklist li {
-    padding: 4px 10px 15px 20px;
+    background-color: #F2F2F2;
     border-top: 1px solid #bbb;
     clear: both;
-    background-color: #F2F2F2;
+    padding: 4px 10px 15px 20px;
 }
 
 .linkdate {
-    font-size:8pt;
     color:#888;
+    font-size:8pt;
 }
 
 .linkdate a {
@@ -340,15 +340,15 @@ a.bigbutton {
 }
 
 .linkdate {
-    font-size: 8pt;
     color: #888;
+    font-size: 8pt;
 }
 
 .linkdescription {
     color: #000;
-    margin-top: 0;
-    margin-bottom: 12px;
     font-weight: normal;
+    margin-bottom: 12px;
+    margin-top: 0;
     overflow: auto;
 }
 
@@ -357,18 +357,18 @@ a.bigbutton {
 }
 
 .linktaglist {
-    padding-top: 10px;
     line-height: 200%;
+    padding-top: 10px;
 }
 
 .linktag {
-    font-size: 9pt;
-    box-shadow: 0 0 2px rgb(0 0 0 / 50%);
-    padding: 3px 5px 3px 20px;
-    height: 20px;
-    border-radius: 3px;
-    cursor: pointer;
     background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgb(0 0 0 / 50%);
+    cursor: pointer;
+    font-size: 9pt;
+    height: 20px;
+    padding: 3px 5px 3px 20px;
 }
 
 .linktag:hover {
@@ -383,18 +383,18 @@ a.bigbutton {
 
 .linktag .remove {
     border-left: 1px solid #aaa;
-    padding-left: 5px;
     color:#6767A7;
+    padding-left: 5px;
 }
 
 .linkshort {
-    font-size: 8pt;
     color: #888;
+    font-size: 8pt;
 }
 
 .linkshort a {
-    text-decoration: none;
     color: #393964;
+    text-decoration: none;
 }
 
 .linkshort a:hover {
@@ -406,22 +406,22 @@ a.bigbutton {
 }
 
 #footer {
-    font-size: 8pt;
-    text-align: center;
-    color: #888;
     clear: both;
-    max-width: 30em;
+    color: #888;
+    font-size: 8pt;
     margin: 15px auto;
+    max-width: 30em;
+    text-align: center;
 }
 
 #newversion {
     background-color: #FFFFA0;
     color: #000;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 2px 7px;
     font-size: 9pt;
+    padding: 2px 7px;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 #newversion #version_id {
@@ -459,10 +459,10 @@ a.bigbutton {
 }
 
 #installform td {
-    font-size: 10pt;
-    color: black;
-    padding: 10px 5px;
     clear: left;
+    color: black;
+    font-size: 10pt;
+    padding: 10px 5px;
 }
 
 #installform input.bigbutton {
@@ -470,15 +470,15 @@ a.bigbutton {
 }
 
 #changepasswordform {
+    clear: left;
     color: #ccc;
     padding: 10px 5px;
-    clear: left;
 }
 
 #changetag {
+    clear: left;
     color: #ccc;
     padding: 10px 5px;
-    clear: left;
 }
 
 #changetag #totag {
@@ -504,9 +504,9 @@ a.bigbutton {
 }
 
 #configform {
+    clear: left;
     color: #ccc;
     padding: 10px 5px;
-    clear: left;
 }
 
 .thumbnail {
@@ -521,27 +521,27 @@ a.bigbutton {
 
 /* --- Picture wall CSS --- */
 #picwall_container {
-    color: #fff;
     background-color: #000;
     clear: both;
+    color: #fff;
 }
 
 .picwall_pictureframe {
     background-color: #000;
-    z-index: 5;
-    position: relative;
     display: table-cell;
-    vertical-align: middle;
-    width: 90px;
+    float: left;
     height: 90px;
     overflow: hidden;
+    position: relative;
     text-align: center;
-    float: left;
+    vertical-align: middle;
+    width: 90px;
+    z-index: 5;
 }
 
 .b-lazy {
-    transition: opacity 500ms ease-in-out;
     opacity: 0;
+    transition: opacity 500ms ease-in-out;
 }
 
 .b-lazy.b-loaded {
@@ -549,9 +549,9 @@ a.bigbutton {
 }
 
 .picwall_pictureframe img {
-    max-width: 100%;
-    height: auto;
     color: transparent;
+    height: auto;
+    max-width: 100%;
 } /* Adapt the width of the image */
 
 .picwall_pictureframe a {
@@ -564,23 +564,23 @@ a.bigbutton {
 }
 
 .picwall_pictureframe:hover span.info {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 90px;
-    font-weight: bold;
-    font-size: 8pt;
-    color: #fff;
-    text-align: left;
     background-color: transparent;
     background-color: rgb(0 0 0 / 40%);
+    color: #fff;
+    display: block;
 
     /* FF3+, Saf3+, Opera 10.10+, Chrome, IE9 */
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#66000000, endColorstr=#66000000);
+    font-size: 8pt;
+    font-weight: bold;
+    left: 0;
+    position: absolute;
+    text-align: left;
 
     /* IE6IE9 */
     text-shadow: 2px 2px 1px #000;
+    top: 0;
+    width: 90px;
 }
 
 #linklist li.publicLinkHightLight {
@@ -593,9 +593,9 @@ div.daily {
 
 #daily_col1 {
     float: left;
+    padding-left: 1%;
     position: relative;
     width: 33%;
-    padding-left: 1%;
 }
 
 #daily_col2 {
@@ -611,22 +611,22 @@ div.daily {
 }
 
 div.dailyAbout {
-    float: left;
     border: 1px solid black;
+    float: left;
     font-size: 8pt;
-    position: absolute;
     left: 10px;
-    top: 15px;
     padding: 5px;
+    position: absolute;
     text-align: center;
+    top: 15px;
 }
 
 div.dailyAbout img {
+    height: 14px;
+    margin-right: 4px;
     position: relative;
     top: 3px;
-    margin-right: 4px;
     width: 14px;
-    height: 14px;
 }
 
 div.dailyEntryPermalink {
@@ -634,24 +634,24 @@ div.dailyEntryPermalink {
 }
 
 div.dailyTitle {
-    font-weight: bold;
     font-size: 44pt;
-    text-align: center;
+    font-weight: bold;
     padding: 10px 20px 0;
+    text-align: center;
 }
 
 div.dailyDate {
     font-size: 12pt;
     font-weight: bold;
-    text-align: center;
     padding: 0 20px 30px;
+    text-align: center;
 }
 
 /* Individual entries in "Daily": */
 div.dailyEntry {
-    margin: 5px 10px 2px 5px;
-    font-size: 11pt;
     border-top: 1px solid #555;
+    font-size: 11pt;
+    margin: 5px 10px 2px 5px;
 }
 
 
@@ -669,28 +669,28 @@ div.dailyEntryLinkdate {
 }
 
 div.dailyEntryThumbnail {
-    width: 100%;
-    text-align: center;
     background-color: rgb(128 128 128);
     padding: 4px 0 2px;
+    text-align: center;
+    width: 100%;
 }
 
 div.dailyEntryDescription {
-    margin-top: 10px;
     margin-bottom: 30px;
-    text-align: justify;
+    margin-top: 10px;
     overflow: auto;
+    text-align: justify;
 }
 
 div.dailyNoEntry {
-    text-align: center;
     padding: 40px 0 90px;
+    text-align: center;
 }
 
 .daily #closing {
     clear: both;
-    text-align: center;
     padding-bottom: 20px;
+    text-align: center;
 }
 
 /* Common CSS screwdriver */
@@ -734,8 +734,8 @@ ul.errors {
 }
 
 #pluginsadmin {
-    width: 80%;
     padding: 20px 0 0 20px;
+    width: 80%;
 }
 
 #pluginsadmin section {
@@ -760,9 +760,9 @@ ul.errors {
 }
 
 #pluginsadmin table, #pluginsadmin th, #pluginsadmin td {
-    border-width: 1px 0;
-    border-style: solid;
     border-color: #c0c0c0;
+    border-style: solid;
+    border-width: 1px 0;
 }
 
 #pluginsadmin table th {
@@ -783,10 +783,10 @@ ul.errors {
 }
 
 #pluginsadmin .plugin_parameter {
-    padding: 10px 0;
-    border-width: 1px 0;
-    border-style: solid;
     border-color: #c0c0c0;
+    border-style: solid;
+    border-width: 1px 0;
+    padding: 10px 0;
 }
 
 #pluginsadmin .float_label {
@@ -806,23 +806,23 @@ ul.errors {
 }
 
 .error-container h1 {
-    text-decoration: none;
-    font-style: normal;
     color: #80AD48;
+    font-style: normal;
+    text-decoration: none;
 }
 
 .linklist-plugin-icon {
-    width: 13px;
     height: 13px;
+    width: 13px;
 }
 
 /* Buttons */
 .bigbutton {
-    background-color: transparent;
     background: #fff;
-    color: #606060;
+    background-color: transparent;
     border-radius: 0;
     box-shadow: none;
+    color: #606060;
     margin-left: 0;
 }
 
@@ -834,53 +834,53 @@ ul.errors {
 }
 
 #pageheader #menu_filter input{
-  font-weight: bold;
+  background: transparent;
+  border: 1px solid #999;
+  border-radius: 2px;
   font-size: 1.6em;
+  font-weight: bold;
   line-height: 1em;
   padding: 0 5px;
   width: auto;
-  border: 1px solid #999;
-  border-radius: 2px;
-  background: transparent;
 }
 
 #menu_filter input::placeholder {
-  opacity: 1;
   color: #999;
+  opacity: 1;
 } 
 
 #pageheader a {
-    background-color: transparent;
     background: 0;
-    box-shadow: none;
-    padding: 0;
+    background-color: transparent;
     border-radius: 0;
-    margin: 0;
+    box-shadow: none;
     color: var(--main-color);
-    text-decoration: none;
     line-height: normal;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
 }
 
 #pageheader #links {
-    float: right;
     display: inline-block;
-    text-align: right;
+    float: right;
     padding: 10px 5px 3px 0;
+    text-align: right;
 }
 
 #pageheader #links ul li {
-    list-style: none;
-    display: inline;
-    position: relative;
     box-sizing: border-box;
+    display: inline;
+    list-style: none;
+    position: relative;
 }
 
 #pageheader #links ul li a {
-    display: inline-block;
-    padding-left: 4px;
     border-left: 1px solid #000;
-    line-height: 1;
     border-radius: 0;
+    display: inline-block;
+    line-height: 1;
+    padding-left: 4px;
 }
 
 #pageheader #links ul li:nth-child(1) a {
@@ -888,8 +888,8 @@ ul.errors {
 }
 
 #pageheader {
-    background-color: #ddd;
     background: #ddd;
+    background-color: #ddd;
     box-shadow: none;
 }
 
@@ -900,12 +900,12 @@ ul.errors {
 
 .linksperpage, .tagfilter, .searchform, .addform {
     background: inherit;
-    display: inline-block;
-    box-shadow: none;
-    padding: 0;
     border-radius: 0;
-    margin: 0;
+    box-shadow: none;
     color: #000;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
 }
 
 .searchform #searchform_value {
@@ -914,9 +914,9 @@ ul.errors {
 
 .tagfilter {
     display: inline-block;
-    width: 50%;
-    max-width: 200px;
     margin-left: none;
+    max-width: 200px;
+    width: 50%;
 }
 
 #pageheader a:visited,
@@ -946,11 +946,11 @@ ul.errors {
 }
 
 #linklist li {
-    padding: 4px 10px 5px 20px;
+    background: 0;
+    background-color: transparent;
     border-top: 0;
     clear: both;
-    background-color: transparent;
-    background: 0;
+    padding: 4px 10px 5px 20px;
 }
 
 .thumbnail {
@@ -991,21 +991,21 @@ ul.errors {
 }
 
 .meta {
-    font-size: 9pt;
-    padding-top: 0;
     color: #999;
+    font-size: 9pt;
     line-height: normal;
+    padding-top: 0;
 }
 
 .linktag {
-    box-shadow: none;
-    padding: 0;
-    height: auto;
-    cursor: auto;
-    background-image: none;
-    background-repeat: no-repeat;
-    background-position: 3px center;
     background-color: #fff;
+    background-image: none;
+    background-position: 3px center;
+    background-repeat: no-repeat;
+    box-shadow: none;
+    cursor: auto;
+    height: auto;
+    padding: 0;
 }
 
 .meta a {
@@ -1033,8 +1033,8 @@ ul.errors {
 
 #body-container {
   box-sizing: border-box;
-  width: 100%;
   clear: both;
+  width: 100%;
 }
 
 #body-container::before,
@@ -1058,8 +1058,8 @@ ul.errors {
 
 #linklist,
 #taglist {
-  float: left;
   box-sizing: border-box;
+  float: left;
 }
 
 
@@ -1068,17 +1068,17 @@ ul.errors {
 }
 
 #taglist {
-  width: 20%;
-  padding-top: 10px;
-  padding-bottom: 10px;
   background-color: #eee;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 20%;
 }
 
 #taglist h5 {
-  padding-top: 10px;
   font-size: 16px;
   font-weight: bold;
   margin-left: 35px;
+  padding-top: 10px;
 }
 
 #taglist h5,
@@ -1104,9 +1104,9 @@ ul.errors {
 /* Edit link form */
 
 #editlinkform label {
-    font-weight: bold;
     color: #555;
     display: block;
+    font-weight: bold;
     padding: 5px 0;
 }
 
@@ -1158,8 +1158,8 @@ ul.errors {
 }
 
 .markdown blockquote {
-  padding-left: 0;
   margin-left: 20px;
+  padding-left: 0;
 }
 
 .awesomplete [hidden] {
@@ -1167,8 +1167,8 @@ ul.errors {
 }
 
 .awesomplete .visually-hidden {
-    position: absolute;
     clip: rect(0, 0, 0, 0);
+    position: absolute;
 }
 
 .awesomplete {
@@ -1181,15 +1181,15 @@ ul.errors {
 }
 
 .awesomplete > ul {
-    position: absolute;
-    left: 0;
-    z-index: 1;
-    min-width: 100%;
-    box-sizing: border-box;
-    list-style: none;
-    padding: 0;
-    margin: 0;
     background: #fff;
+    box-sizing: border-box;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    min-width: 100%;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
 }
 
 .awesomplete > ul:empty {
@@ -1205,7 +1205,6 @@ ul.errors {
 }
 
 @import url("mobile.css");
-
 @import url("print.css");
 
 
