@@ -11,6 +11,7 @@
   },
   "scripts": {
     "lint": "npx stylelint \"css/*.css\"",
-    "build": "npx postcss css/2004licious.css -o 2004licious/css/2004licious.min.css"
+    "build": "npx postcss css/2004licious.css -o 2004licious/css/2004licious.min.css",
+    "watch": "npx postcss -w css/2004licious.css -o 2004licious/css/2004licious.min.css"
   }
 }
