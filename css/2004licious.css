@@ -28,6 +28,13 @@ input, textarea {
     padding: 5px;
 }
 
+input[type="submit"] {
+    border: 2px outset;
+    border-radius: 0px;
+    background: rgb(202, 198, 187);
+    min-width: 80px;
+}
+
 a {
     color: var(--main-color);
     text-decoration: none;
@@ -1126,13 +1133,6 @@ ul.errors {
 #changetag,
 #uploaddiv {
   color: #555;
-}
-
-.page-form input[type="submit"] {
-    border: 2px outset;
-    border-radius: 0px;
-    background: buttonface;
-    min-width: 80px;
 }
 
 /* cloudtag */
