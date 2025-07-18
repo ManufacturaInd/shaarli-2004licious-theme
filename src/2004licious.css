@@ -70,47 +70,21 @@ h1 {
 
 h2 {
   font-size: 1.5em;
+  line-height: 2em;
 }
 
 h3 {
   font-size: 1.3em;
+  line-height: 1.8em;
+}
+
+h4 {
+  font-size: 1.15em;
+  line-height: 1.3em;
 }
 
 .hidden {
     display: none;
-}
-
-/* Buttons */
-.bigbutton  {
-    background-color: #c0c0c0;
-    border-radius: 3px;
-    border-style: outset;
-    border-width: 1px;
-    box-shadow: 0 1px 1px rgb(0 0 0 / 50%);
-    color: #606060;
-    cursor: pointer;
-    display: inline-block;
-    height: 24px;
-    margin: 0 5px 0 0;
-    padding: 0 5px;
-}
-
-a.bigbutton {
-    height: 22px;
-    line-height: 22px;
-}
-
-.smallbutton {
-    background-color: #c0c0c0;
-    border-radius: 3px;
-    border-style: outset;
-    border-width: 1px;
-    box-shadow: 0 1px 1px rgb(0 0 0 / 50%);
-    color: #606060;
-    cursor: pointer;
-    height: 20px;
-    margin-left: 5px;
-    padding: 0 5px;
 }
 
 .linkeditbuttons {
@@ -173,7 +147,7 @@ a.bigbutton {
 }
 
 .tools-item {
-  margin: 2px 0;
+  margin: 5px 0;
 }
 
 .linksperpage, .tagfilter, .searchform, .addform {
@@ -1024,6 +998,15 @@ ul.errors {
 
 .markdown p {
   margin: 0 !important;
+}
+
+.markdown li {
+  list-style: bullet;
+  padding-left: 5px;
+}
+
+.markdown ul {
+  padding-left: 20px;
 }
 
 #body-container {
