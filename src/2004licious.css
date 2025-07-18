@@ -1,4 +1,4 @@
-@import "reset.css";
+@import url("reset.css");
 
 :root {
   /* Main theme colors. Will be overwritten by the default colors plugin */
@@ -29,9 +29,9 @@ input, textarea {
 }
 
 input[type="submit"] {
+    background: rgb(202 198 187);
     border: 2px outset;
     border-radius: 0;
-    background: rgb(202, 198, 187);
     min-width: 80px;
 }
 
@@ -1178,7 +1178,7 @@ ul.errors {
   vertical-align: bottom;
 }
 
-@import "mobile.css";
-@import "print.css";
+@import url("mobile.css");
+@import url("print.css");
 
 
