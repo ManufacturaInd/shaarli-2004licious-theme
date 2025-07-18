@@ -10,7 +10,7 @@
     "stylelint-order": "^7.0.0"
   },
   "scripts": {
-    "lint": "npx stylelint \"css/*.css\"",
+    "lint": "npx stylelint \"src/*.css\"",
     "build": "npx postcss src/2004licious.css -o 2004licious/css/2004licious.min.css",
     "watch": "npx postcss -w src/2004licious.css -o 2004licious/css/2004licious.min.css"
   }
