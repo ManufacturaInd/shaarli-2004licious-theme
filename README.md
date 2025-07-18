@@ -51,7 +51,7 @@ college days and beyond to make sense of our web pathways.
 Around 2016, the then owner of the del.icio.us domain started injecting ads in the feeds of the long gone users 
 of the service. This triggered a discussion between Julien and Ricardo about reviving the old Delicious look on 
 top of a Shaarli instance. Ricardo made the most out of a slow Sunday to try his hand at creating a Shaarli 
-theme -- emulating the 2004 look.
+theme -- emulating del.icio.us’ 2004 look.
 
 Authorship and development is shared with Julien Deswaef, who has been active improving the theme and making it 
 work with recent versions of Shaarli.
