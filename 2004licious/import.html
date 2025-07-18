@@ -2,9 +2,7 @@
 <html>
 <head>{include="includes"}</head>
 <body onload="document.uploadform.filetoupload.focus();">
-<div id="pageheader">
-  {include="page.header"}
-</div>
+{include="page.header"}
 <div class="toolbox">
   Import Netscape HTML bookmarks (as exported from Firefox/Chrome/Opera/Delicious/Diigo...) (Max: {$maxfilesize} bytes).
   <form method="POST" action="?do=import" enctype="multipart/form-data"

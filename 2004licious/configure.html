@@ -2,10 +2,8 @@
 <html>
 <head>{include="includes"}</head>
 <body>
-<div id="pageheader">
-  {include="page.header"}
-</div>
-
+{include="page.header"}
+<div class="toolbox">
   <form method="POST" action="{$base_path}/admin/configure" name="configform" id="configform">
     <input type="hidden" name="token" value="{$token}">
     <table id="configuration_table">
@@ -164,7 +162,7 @@
 
       <tr>
         <td></td>
-        <td class="right"><input type="submit" name="Save" value="Save config" class="bigbutton"></td>
+        <td><input type="submit" name="Save" value="Save config"></td>
       </tr>
     </table>
   </form>

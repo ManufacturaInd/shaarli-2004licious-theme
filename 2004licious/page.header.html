@@ -1,4 +1,5 @@
-<div id="menu">
+<div id="pageheader">
+  <div id="menu">
     <h1 id="shaarli-title">
       <a href="{$titleLink}">{$shaarlititle}</a> / 
       {if="!empty($search_tags)"}
@@ -36,47 +37,47 @@
       </div>
       {/if}
     {/if}
-</div>
+  </div>
 
-{if="!empty($_GET['source']) && $_GET['source']=='bookmarklet'"}
-    {ignore} When called as a popup from bookmarklet, do not display menu. {/ignore}
-{else}
-<div id="links">
-  <ul>
-    <li><a href="{$base_path}/">home</a></li>
-    {if="$is_logged_in || $openshaarli"}
-    <li><a href="{$base_path}/admin/add-shaare">add bookmark</a></li>
-    <li><a href="{$base_path}/admin/tools">tools</a></li>
-    {/if}
-    <li><a href="{$base_path}/tags/cloud">tags</a></li>
-    <li><a href="{$base_path}/daily">daily</a></li>
-    {if="$thumbnails_enabled"}
-    <li><a href="{$base_path}/picture-wall?{function="ltrim($searchcrits, '&')"}">thumbs</a></li>
-    {/if}
-    {loop="$plugins_header.buttons_toolbar"}
-    <li class="shaarli-menu-plugin">
-      <a
-        {loop="$value.attr"}
-          {$key}="{$value}"
-        {/loop}>
-        {$value.html}
-      </a>
-    </li>
+  {if="!empty($_GET['source']) && $_GET['source']=='bookmarklet'"}
+      {ignore} When called as a popup from bookmarklet, do not display menu. {/ignore}
+  {else}
+  <div id="links">
+    <ul>
+      <li><a href="{$base_path}/">home</a></li>
+      {if="$is_logged_in || $openshaarli"}
+      <li><a href="{$base_path}/admin/add-shaare">add bookmark</a></li>
+      <li><a href="{$base_path}/admin/tools">tools</a></li>
+      {/if}
+      <li><a href="{$base_path}/tags/cloud">tags</a></li>
+      <li><a href="{$base_path}/daily">daily</a></li>
+      {if="$thumbnails_enabled"}
+      <li><a href="{$base_path}/picture-wall?{function="ltrim($searchcrits, '&')"}">thumbs</a></li>
+      {/if}
+      {loop="$plugins_header.buttons_toolbar"}
+      <li class="shaarli-menu-plugin">
+        <a
+          {loop="$value.attr"}
+            {$key}="{$value}"
+          {/loop}>
+          {$value.html}
+        </a>
+      </li>
+      {/loop}
+      {if="$is_logged_in"}
+      <li><a href="{$base_path}/admin/logout">logout</a></li>
+      {else}
+      <li><a href="{$base_path}/login">login</a></li>
+      {/if}
+    </ul>
+  </div>
+  {/if}
+
+  {if="!empty($plugin_errors) && $is_logged_in"}
+  <ul class="errors">
+    {loop="plugin_errors"}
+      <li>{$value}</li>
     {/loop}
-    {if="$is_logged_in"}
-    <li><a href="{$base_path}/admin/logout">logout</a></li>
-    {else}
-    <li><a href="{$base_path}/login">login</a></li>
-    {/if}
   </ul>
+  {/if}
 </div>
-{/if}
-
-{if="!empty($plugin_errors) && $is_logged_in"}
-<ul class="errors">
-  {loop="plugin_errors"}
-    <li>{$value}</li>
-  {/loop}
-</ul>
-{/if}
-

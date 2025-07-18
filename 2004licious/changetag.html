@@ -4,9 +4,9 @@
 {include="includes"}
 </head>
 <body onload="document.changetag.fromtag.focus();">
-<div id="pageheader">
 {include="page.header"}
-	<form method="POST" action="" name="changetag" id="changetag">
+<div class="toolbox">
+    <form method="POST" action="" name="changetag" id="changetag">
         <input type="hidden" name="token" value="{$token}">
         <div>
             <label for="fromtag">Tag:</label>
@@ -21,13 +21,12 @@
         <div>
             <input type="text" name="totag" id="totag">
             <input type="submit" name="renametag" value="Rename tag" class="bigbutton">
-	&nbsp;&nbsp;or&nbsp; <input type="submit" name="deletetag" value="Delete tag" class="bigbutton" onClick="return confirmDeleteTag();">
+    &nbsp;&nbsp;or&nbsp; <input type="submit" name="deletetag" value="Delete tag" class="bigbutton" onClick="return confirmDeleteTag();">
         </div>
     </form>
     <div class="clear white">(Case sensitive)</div>
 </div>
 <script>function confirmDeleteTag() { var agree=confirm("Are you sure you want to delete this tag from all links ?"); if (agree) return true ; else return false ; }</script>
-</div>
 {include="page.footer"}
 </body>
 </html>

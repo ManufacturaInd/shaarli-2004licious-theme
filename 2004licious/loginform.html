@@ -2,17 +2,15 @@
 <html>
 <head>{include="includes"}</head>
 <body
-{if="$user_can_login"}
-  {if="empty($username)"}
-    onload="document.loginform.login.focus();"
-  {else}
-    onload="document.loginform.password.focus();"
+  {if="$user_can_login"}
+    {if="empty($username)"}
+      onload="document.loginform.login.focus();"
+    {else}
+      onload="document.loginform.password.focus();"
+    {/if}
   {/if}
-{/if}>
-<div id="pageheader">
-  {include="page.header"}
-</div>
-
+>
+{include="page.header"}
 <div id="login-form" class="toolbox">
   <form method="post" name="loginform">
     <label for="login">Login: <input type="text" id="login" name="login" tabindex="1"

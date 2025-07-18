@@ -6,9 +6,7 @@
 {include="includes"}
 </head>
 <body>
-<div id="pageheader">
-  {include="page.header"}
-</div>
+{include="page.header"}
 {else}
   {ignore}Lil hack: when included in a loop in batch mode, `$value` is assigned by RainTPL with template vars.{/ignore}
   {function="extract($value) ? '' : ''"}
