@@ -12,98 +12,99 @@
   </div>
 </noscript>
 
-<form method="POST" action="{$base_path}/admin/plugins" name="pluginform" id="pluginform" class="pluginform-container">
-  <div class="page-form page-form-complete">
-    <h2 class="window-title">{'Plugin administration'|t}</h2>
+<div class="toolbox">
+  <form method="POST" action="{$base_path}/admin/plugins" name="pluginform" id="pluginform" class="pluginform-container">
+    <div class="page-form page-form-complete">
+      <h2 class="window-title">{'Plugin administration'|t}</h2>
 
-    <section id="enabled_plugins">
-      <h3 class="window-subtitle">{'Enabled Plugins'|t}</h3>
+      <section id="enabled_plugins">
+        <h3 class="window-subtitle">{'Enabled Plugins'|t}</h3>
 
-      <div>
-        {if="count($enabledPlugins)==0"}
-          <p class="center">{'No plugin enabled.'|t}</p>
-        {else}
-        <table id="plugin_table">
-          <thead>
-            <tr>
-              <th class="center">{'Enabled'|t}</th>
-              <th>{'Name'|t}</th>
-              <th>{'Description'|t}</th>
-              <th class="center">{'Order'|t}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {loop="$enabledPlugins"}
-              <tr data-line="{$key}" data-order="{$counter}" class="main-row">
-                <td class="center"><input type="checkbox" name="{$key}" id="{$key}" checked="checked"></td>
-                <td class="center">
-                  <label for="{$key}"><strong>{function="str_replace('_', ' ', $key)"}</strong></label>
-                </td>
-                <td><label for="{$key}">{$value.description}</label></td>
-                <td class="center">
-                  {if="count($enabledPlugins)>1"}
-                  <a href="#" class="order order-up">▲</a>
-                  <a href="#" class="order order-down">▼</a>
-                  {/if}
-                  <input type="hidden" name="order_{$key}" value="{$counter}">
-                </td>
-              </tr>
-              <tr data-line="{$key}" data-order="{$counter}" class="mobile-row">
-                <td colspan="4"><label for="{$key}">{$value.description}</label></td>
-              </tr>
-            {/loop}
-          </tbody>
-        </table>
-        {/if}
-      </div>
-    </section>
-
-    <section id="disabled_plugins">
-      <h3 class="window-subtitle">{'Disabled Plugins'|t}</h3>
-
-      <div>
-        {if="count($disabledPlugins)==0"}
-          <p class="center">{'No plugin disabled.'|t}</p>
-        {else}
-        <table>
-          <thead>
-            <tr>
-              <th class="center">{'Enabled'|t}</th>
-              <th>{'Name'|t}</th>
-              <th>{'Description'|t}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {loop="$disabledPlugins"}
-              <tr class="main-row">
-                <td class="center"><input type="checkbox" name="{$key}" id="{$key}"></td>
-                <td class="center">
-                  <label for="{$key}"><strong>{function="str_replace('_', ' ', $key)"}</strong></label>
-                </td>
-                <td>
-                  <label for="{$key}">{$value.description}</label>
-                </td>
-              </tr>
+        <div>
+          {if="count($enabledPlugins)==0"}
+            <p class="center">{'No plugin enabled.'|t}</p>
+          {else}
+          <table id="plugin_table">
+            <thead>
               <tr>
-                <td colspan="3"><label for="{$key}">{$value.description}</label></td>
+                <th class="center">{'Enabled'|t}</th>
+                <th>{'Name'|t}</th>
+                <th>{'Description'|t}</th>
+                <th class="center">{'Order'|t}</th>
               </tr>
-            {/loop}
-          </tbody>
-        </table>
-        {/if}
-      </div>
-    </section>
+            </thead>
+            <tbody>
+              {loop="$enabledPlugins"}
+                <tr data-line="{$key}" data-order="{$counter}" class="main-row">
+                  <td class="center"><input type="checkbox" name="{$key}" id="{$key}" checked="checked"></td>
+                  <td class="center">
+                    <label for="{$key}"><strong>{function="str_replace('_', ' ', $key)"}</strong></label>
+                  </td>
+                  <td><label for="{$key}">{$value.description}</label></td>
+                  <td class="center">
+                    {if="count($enabledPlugins)>1"}
+                    <a href="#" class="order order-up">▲</a>
+                    <a href="#" class="order order-down">▼</a>
+                    {/if}
+                    <input type="hidden" name="order_{$key}" value="{$counter}">
+                  </td>
+                </tr>
+                <tr data-line="{$key}" data-order="{$counter}" class="mobile-row">
+                  <td colspan="4"><label for="{$key}">{$value.description}</label></td>
+                </tr>
+              {/loop}
+            </tbody>
+          </table>
+          {/if}
+        </div>
+      </section>
 
-    <div class="center more">
-      {"More plugins available"|t}
-      <a href="{$root_path}/doc/html/Community-and-related-software/#third-party-plugins">{"in the documentation"|t}</a>.
+      <section id="disabled_plugins">
+        <h3 class="window-subtitle">{'Disabled Plugins'|t}</h3>
+
+        <div>
+          {if="count($disabledPlugins)==0"}
+            <p class="center">{'No plugin disabled.'|t}</p>
+          {else}
+          <table>
+            <thead>
+              <tr>
+                <th class="center">{'Enabled'|t}</th>
+                <th>{'Name'|t}</th>
+                <th>{'Description'|t}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {loop="$disabledPlugins"}
+                <tr class="main-row">
+                  <td class="center"><input type="checkbox" name="{$key}" id="{$key}"></td>
+                  <td class="center">
+                    <label for="{$key}"><strong>{function="str_replace('_', ' ', $key)"}</strong></label>
+                  </td>
+                  <td>
+                    <label for="{$key}">{$value.description}</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="3"><label for="{$key}">{$value.description}</label></td>
+                </tr>
+              {/loop}
+            </tbody>
+          </table>
+          {/if}
+        </div>
+      </section>
+
+      <div class="more">
+        {"More plugins available"|t}
+        <a href="{$root_path}/doc/html/Community-and-related-software/#third-party-plugins">{"in the documentation"|t}</a>.
+      </div>
+      <div>
+        <input type="submit" value="{'Save'|t}" name="save">
+      </div>
+      <input type="hidden" name="token" value="{$token}">
     </div>
-    <div class="center">
-      <input type="submit" value="{'Save'|t}" name="save">
-    </div>
-</div>
-  <input type="hidden" name="token" value="{$token}">
-</form>
+  </form>
 
 <form action="{$base_path}/admin/plugins" method="POST">
   <div class="page-form page-form-light">
@@ -111,7 +112,7 @@
     <section id="plugin_parameters">
       <div>
         {if="count($enabledPlugins)==0"}
-          <p class="center">{'No plugin enabled.'|t}</p>
+          <p>{'No plugin enabled.'|t}</p>
         {else}
           {$nbParameters=0}
           {loop="$enabledPlugins"}
@@ -138,9 +139,9 @@
             {/if}
           {/loop}
           {if="$nbParameters===0"}
-            <p class="center">{'No parameter available.'|t}</p>
+            <p>{'No parameter available.'|t}</p>
           {else}
-            <div class="center">
+            <div>
               <input type="submit" name="parameters_form" value="{'Save'|t}"/>
             </div>
           {/if}

@@ -7,10 +7,7 @@
 <div id="pageheader">
   {include="page.header"}
 </div>
-
-<div id="body-container">
 <div id="linklist">
-
     {include="linklist.paging"}
 
     <div id="plugin_zone_start_linklist" class="plugin_zone">
@@ -165,7 +162,6 @@
 {include="page.footer"}
 <script src="{$asset_path}/../default/js/thumbnails.min.js?v={$version_hash}#"></script>
 {if="$is_logged_in && $async_metadata"}<script src="{$asset_path}/../default/js/metadata.min.js?v={$version_hash}#"></script>{/if}
-</div>
 
 </body>
 </html>

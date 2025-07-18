@@ -168,12 +168,8 @@ a.bigbutton {
     width: 100%;
 }
 
-#toolsdiv a {
-    clear: both;
-}
-
-#toolsdiv #bookmark {
-    clear: none;
+.toolbox {
+  padding: 10px;
 }
 
 .linksperpage, .tagfilter, .searchform, .addform {

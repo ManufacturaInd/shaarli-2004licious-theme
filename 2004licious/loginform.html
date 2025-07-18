@@ -11,22 +11,23 @@
 {/if}>
 <div id="pageheader">
   {include="page.header"}
+</div>
 
-  <div id="headerform">
-      <form method="post" name="loginform">
-        <label for="login">Login: <input type="text" id="login" name="login" tabindex="1"
-           {if="!empty($username)"}value="{$username}"{/if}>
-        </label>
-        <label for="password">Password: <input type="password" id="password" name="password" tabindex="2">
-        </label>
-        <input type="submit" value="Login" class="bigbutton" tabindex="4">
-        <label for="longlastingsession">
-          <input type="checkbox" name="longlastingsession" id="longlastingsession" tabindex="3">
-          Stay signed in (Do not check on public computers)</label>
-        <input type="hidden" name="token" value="{$token}">
-        {if="$returnurl"}<input type="hidden" name="returnurl" value="{$returnurl}">{/if}
-      </form>
-  </div>
+<div id="login-form" class="toolbox">
+  <form method="post" name="loginform">
+    <label for="login">Login: <input type="text" id="login" name="login" tabindex="1"
+       {if="!empty($username)"}value="{$username}"{/if}>
+    </label>
+    <label for="password">Password: <input type="password" id="password" name="password" tabindex="2">
+    </label>
+    <input type="submit" value="Login" tabindex="4">
+    <label for="longlastingsession">
+      <input type="checkbox" name="longlastingsession" id="longlastingsession" tabindex="3">
+      Stay signed in (Do not check on public computers)
+    </label>
+    <input type="hidden" name="token" value="{$token}">
+    {if="$returnurl"}<input type="hidden" name="returnurl" value="{$returnurl}">{/if}
+  </form>
 </div>
 
 {include="page.footer"}

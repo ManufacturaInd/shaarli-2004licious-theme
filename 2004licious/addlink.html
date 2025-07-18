@@ -5,16 +5,14 @@
 <div id="pageheader">
   {include="page.header"}
 </div>
-<div id="body-container">
-	<div id="headerform">
-		<form method="GET" action="{$base_path}/admin/shaare" name="addform" class="addform">
-			<div>
-				<label for="shaare">{'URL or leave empty to post a note'|t}</label>
-			</div>
-			<input type="text" name="post" id="shaare" class="autofocus">
-			<input type="submit" value="Add link">
-    </form>
-	</div>
+<div class="toolbox">
+	<form method="GET" action="{$base_path}/admin/shaare" name="addform" class="addform">
+		<div>
+			<label for="shaare">{'URL or leave empty to post a note'|t}</label>
+		</div>
+		<input type="text" name="post" id="shaare" class="autofocus">
+		<input type="submit" value="Add link">
+	</form>
 </div>
 {include="page.footer"}
 </body>
