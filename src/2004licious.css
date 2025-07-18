@@ -30,7 +30,7 @@ input, textarea {
 
 input[type="submit"] {
     border: 2px outset;
-    border-radius: 0px;
+    border-radius: 0;
     background: rgb(202, 198, 187);
     min-width: 80px;
 }
@@ -172,6 +172,10 @@ a.bigbutton {
   padding: 10px;
 }
 
+.tools-item {
+  margin: 2px 0;
+}
+
 .linksperpage, .tagfilter, .searchform, .addform {
     background-color: #dedede;
     border: none;
@@ -279,18 +283,6 @@ a.bigbutton {
     display: block;
     margin-top: 5px;
     width: 100%;
-}
-
-#toolsdiv {
-    clear: left;
-    color: #fff;
-    padding: 5px;
-}
-
-#uploaddiv {
-    clear: left;
-    color: #fff;
-    padding: 5px;
 }
 
 #editlinkform {
