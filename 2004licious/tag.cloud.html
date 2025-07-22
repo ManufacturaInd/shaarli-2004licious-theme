@@ -3,6 +3,7 @@
 <head>{include="includes"}</head>
 <body>
 {include="page.header"}
+{include="tag.sort"}
 <div>
     <div id="plugin_zone_start_tagcloud" class="plugin_zone">
     {loop="$plugin_start_zone"}
@@ -11,13 +12,13 @@
     </div>
 
     <div id="cloudtag">
-    {loop="$tags"}
-        <a href="?addtag={$key|urlencode}" class="count">{$value.count}</a><a
-            href="?searchtags={$key|urlencode}" style="font-size:{$value.size}em;">{$key}</a>
+      {loop="tags"}
+        <a href="{$base_path}/?searchtags={$tags_url.$key1}{$tags_separator|urlencode}{$search_tags_url}" style="font-size:{$value.size}em;">{$key}</a
+        ><a href="{$base_path}/add-tag/{$tags_url.$key1}" title="{'Filter by tag'|t}" class="count">{$value.count}</a>
         {loop="$value.tag_plugin"}
-            {$value}
+          {$value}
         {/loop}
-    {/loop}
+      {/loop}
     </div>
 
     <div id="plugin_zone_end_tagcloud" class="plugin_zone">
@@ -26,6 +27,7 @@
     {/loop}
     </div>
 </div>
+{include="tag.sort"}
 {include="page.footer"}
 </body>
 </html>
