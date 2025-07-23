@@ -43,17 +43,15 @@
           <td>{$value.desc}</td>
           <td>{$value.required ? t('Required') : t('Optional')}</td>
           <td>
-            {if="$value.loaded"}
-              {$classLoaded="fa-color-green"}
-              {$strLoaded=t('Loaded')}
+          {if="$value.loaded"}
+              &check;
+          {else}
+            {if="$value.required"}
+              &excl;
             {else}
-              {$strLoaded=t('Not loaded')}
-              {if="$value.required"}
-                {$classLoaded="fa-color-red"}
-              {else}
-                {$classLoaded="fa-color-orange"}
-              {/if}
+              &not;
             {/if}
+          {/if}
           </td>
         </tr>
       {/loop}
