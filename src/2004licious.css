@@ -44,6 +44,10 @@ a:visited {
     color: var(--dark-main-color);
 }
 
+del {
+    text-decoration: line-through;
+}
+
 em {
     font-style: italic;
 }
