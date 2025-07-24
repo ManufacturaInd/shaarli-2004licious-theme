@@ -77,11 +77,15 @@
                     {/if}
 
                     {if="!$hide_timestamps || $is_logged_in"}
-                        {$updated=$value.updated_timestamp ? $strEdited. format_date($value.updated) : $strPermalink}
+                        {$updated=$value.updated_timestamp ? "edited" : "created"}
+                        {$datetime=Date(DATE_W3C, $value.timestamp)}
                         <span title="{$updated}">
-                        on {function="strftime('%Y-%m-%d', $value.timestamp)"}
-                        {if="$value.updated_timestamp"}*{/if}
-                        &hellip;
+                            on <time datetime="{$datetime}">{function="strftime('%Y-%m-%d', $value.timestamp)"}</time>
+                            {if="$value.updated_timestamp"}
+                                {$datetime=Date(DATE_W3C, $value.updated_timestamp)}
+                                <time datetime="{$datetime}">&ast;</time>
+                            {/if}
+                            &hellip;
                         </span>
                     {/if}
                     
