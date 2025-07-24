@@ -13,18 +13,10 @@
 {/if}
 
     <div class="linklist-pages">
-        {if="$next_page_url"}<a href="{$next_page_url}">{/if}
-        <span class="paging-newer">
-        « earlier
-        </span>
-        {if="$next_page_url"}</a>{/if}
-        |
-        {if="$previous_page_url"}<a href="{$previous_page_url}">{/if}
-        <span class="paging-older">
-        later »
-        </span>
-        {if="$previous_page_url"}</a>{/if}
-
+        <nav>
+            {if="$next_page_url"}<a href="{$next_page_url}">{/if}« earlier{if="$next_page_url"}</a>{/if} |
+            {if="$previous_page_url"}<a href="{$previous_page_url}">{/if}later »{if="$previous_page_url"}</a>{/if}
+        </nav>
         <span class="paging-linksperpage">
         {if="!empty($linkcount)"}
         {$linkcount} {function="t('bookmark', 'bookmarks', $linkcount)"}

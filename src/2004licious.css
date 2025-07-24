@@ -87,6 +87,11 @@ h4 {
   line-height: 1.3em;
 }
 
+nav {
+  display: inline-block;
+  margin-left: 10px;
+}
+
 .hidden {
     display: none;
 }
@@ -112,15 +117,6 @@ h4 {
     display: inline;
     list-style: none;
     position: relative;
-}
-
-.paging a:link {
-    color: #ccc;
-    text-decoration: none;
-}
-
-.paging a:visited {
-    color: #ccc;
 }
 
 #pageheader a {
@@ -231,14 +227,6 @@ h4 {
 
 .paging-linksperpage form.linksperpage input {
     height: 15px;
-}
-
-.paging-older {
-    margin-right: 15px;
-}
-
-.paging-newer {
-    margin-left: 10px;
 }
 
 #headerform {
