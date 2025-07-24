@@ -1,8 +1,7 @@
-{$countTags=count($tags)}
 <div class="tag-sort">
   <nav>
     » view as <a href="{$base_path}/tags/cloud">cloud</a> | <a href="{$base_path}/tags/list?sort=alpha">list(alpha)</a> | <a href="{$base_path}/tags/list?sort=usage">list(freq)</a>
-  </nav> 
-  {$countTags} tags total
+  </nav>
+  {function="count($tags)"} tags total
 </div>
 
