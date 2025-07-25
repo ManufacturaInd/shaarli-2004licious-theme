@@ -5,15 +5,13 @@
 {include="page.header"}
 {include="tag.sort"}
 <div>
-    {$countTags=count($tags)}
-    <h2 class="window-title">{'Tag cloud'|t} - {$countTags} {'tags'|t}</h2>
     <div id="plugin_zone_start_tagcloud" class="plugin_zone">
     {loop="$plugin_start_zone"}
         {$value}
     {/loop}
     </div>
 
-    <div id="taglist">
+    <div id="list-tag">
       {loop="tags"}
         <div class="tag-list-item" data-tag="{$key}" data-tag-url="{$tags_url.$key1}">
             <a href="{$base_path}/add-tag/{$tags_url.$key1}" title="{'Filter by tag'|t}" class="count">{$value}</a>

@@ -252,10 +252,6 @@ nav {
     padding-left: 30px;
 }
 
-.private .linktitle a {
-    color: #969696;
-}
-
 .linktitle {
     font-size: 14pt;
     font-weight: bold;
@@ -977,7 +973,6 @@ ul.errors {
   float: left;
 }
 
-
 #linklist {
   width: 80%;
 }
@@ -989,13 +984,13 @@ ul.errors {
   width: 20%;
 }
 
-#taglist h5 {
+#taglist-title {
   font-size: 16px;
   font-weight: bold;
-  margin-left: 35px;
+  margin: 0 0 0 35px;
+  padding-left: 10px;
 }
 
-#taglist h5,
 #taglist ul {
   padding-left: 10px;
 }
