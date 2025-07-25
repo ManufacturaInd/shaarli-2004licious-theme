@@ -6,6 +6,8 @@
   --dark-main-color: purple;  /* visited links */
 
   /* Fixed or deduced colors from main theme */
+  --main-text: black;
+  --secondary-text: #999;
   --secondary-color: rgb( from var(--main-color) r g b / 50% ); /* meta links */
   --header-background: rgb(213 213 213);
   --tool-background: rgb(234 234 234);

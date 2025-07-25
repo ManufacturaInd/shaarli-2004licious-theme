@@ -102,10 +102,6 @@ nav {
     display: none;
 }
 
-#pageheader #menu {
-    width: 100%;
-}
-
 #pageheader #menu ul {
     float: none;
     margin: auto;
@@ -115,30 +111,12 @@ nav {
 #pageheader #menu ul li {
     box-sizing: border-box;
     display: inline;
-    list-style: none;
     position: relative;
-}
-
-#pageheader a {
-    border-radius: 3px;
-    box-shadow: 0 1px 2px rgb(0 0 0 / 50%);
-    line-height: 2.5;
-    margin: 10px 3px 3px;
-    padding: 5px;
-    text-decoration: none;
-    white-space: nowrap;
 }
 
 #pageheader {
     background-color: var(--header-background);
-    margin: auto;
     padding: 5px 10px;
-    width: auto;
-}
-
-#pageheader .search {
-    white-space: nowrap;
-    width: 100%;
 }
 
 .toolbox {
@@ -150,7 +128,7 @@ nav {
   margin: 5px 0;
 }
 
-.linksperpage, .tagfilter, .searchform, .addform {
+.tagfilter, .searchform, .addform {
     border: none;
     border-radius: 3px;
     display: inline;
@@ -158,18 +136,10 @@ nav {
     padding: 5px;
 }
 
-.linksperpage {
-    padding: 3px;
-}
-
-.linksperpage input, .tagfilter input, .searchform input, .addform input {
+.tagfilter input, .searchform input, .addform input {
     border: none;
     box-shadow: none;
     padding: 5px;
-}
-
-.linksperpage input {
-    padding: 0;
 }
 
 .tagfilter {
@@ -178,16 +148,6 @@ nav {
 
 .tagfilter li {
     color: black;
-}
-
-.tagfilter input.bigbutton, .searchform input.bigbutton, .addform input.bigbutton {
-    background-color: #dedede;
-    border-radius: 3px;
-    box-shadow: 0 1px 2px rgb(0 0 0 / 50%);
-    cursor: pointer;
-    height: 20px;
-    margin: 5px 0;
-    padding: 0 5px;
 }
 
 #shaarli-title {
@@ -216,7 +176,6 @@ nav {
 
 #headerform {
     clear: both;
-    color: #000;
     padding: 5px;
 }
 
@@ -244,29 +203,21 @@ nav {
     padding: 4px 10px 15px 20px;
 }
 
-#linklist li.private {
-    padding-left: 30px;
-}
-
 #linklist li {
     padding-left: 30px;
 }
 
 .linktitle {
-    font-size: 14pt;
+    font-size: 1.2em;
     font-weight: bold;
 }
 
 .linkdate {
     color: #888;
-    font-size: 8pt;
 }
 
 .linkdescription {
-    color: #000;
     font-weight: normal;
-    margin-bottom: 12px;
-    margin-top: 0;
     overflow: auto;
 }
 
@@ -277,30 +228,6 @@ nav {
 .linktaglist {
     line-height: 200%;
     padding-top: 10px;
-}
-
-.linktag {
-    border-radius: 3px;
-    cursor: pointer;
-    font-size: 9pt;
-    height: 20px;
-    padding: 3px 5px 3px 20px;
-}
-
-.linktag:hover {
-    border-color: #555573;
-    color: #000;
-}
-
-.linktag a {
-    color: #777;
-    text-decoration: none;
-}
-
-.linktag .remove {
-    border-left: 1px solid #aaa;
-    color:#6767A7;
-    padding-left: 5px;
 }
 
 .linkshort {
@@ -864,6 +791,17 @@ ul.errors {
     padding-left: 20px; 
 }
 
+.meta {
+  color: var(--secondary-text);
+  font-size: 0.9em;
+  line-height: normal;
+}
+
+.meta a,
+.meta a:visited {
+  color: var(--secondary-color);
+}
+
 .meta div {
   display: inline-block;
 }
@@ -886,32 +824,6 @@ ul.errors {
 .private .linktitle a:visited, 
 .linktitle a:visited  {
     color: var(--dark-main-color);
-}
-
-.linkdescription {
-    margin-bottom: 0;
-}
-
-.meta {
-    color: #999;
-    font-size: 9pt;
-    line-height: normal;
-    padding-top: 0;
-}
-
-.linktag {
-    background-color: #fff;
-    background-image: none;
-    background-position: 3px center;
-    background-repeat: no-repeat;
-    box-shadow: none;
-    cursor: auto;
-    height: auto;
-    padding: 0;
-}
-
-.meta a {
-    color: var(--secondary-color);
 }
 
 #pluginsadmin .plugin_parameter {
@@ -946,25 +858,6 @@ ul.errors {
   box-sizing: border-box;
   clear: both;
   width: 100%;
-}
-
-#body-container::before,
-#body-container::after,
-#pageheader::before,
-#pageheader::after,
-#linklist::before,
-#linklist::after,
-#taglist::before,
-#taglist::after {
-  content: " ";
-  display: table;
-}
-
-#body-container::after,
-#pageheader::after,
-#linklist::after,
-#taglist::after {
-  clear: both;
 }
 
 #linklist,
