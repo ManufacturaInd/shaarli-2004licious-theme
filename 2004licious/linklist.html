@@ -3,8 +3,8 @@
 <head>
     {include="includes"}
 </head>
-<body>
-{include="page.header"}
+<body itemscope itemtype="https://schema.org/CollectionPage">
+    {include="page.header"}
 <div id="linklist">
     {include="linklist.paging"}
 
@@ -15,57 +15,39 @@
     </div>
 
     {if="count($links)==0"}
-        <div id="searchcriteria">Nothing found.</div>
-    {elseif="!empty($search_term) or $search_tags !== '' or !empty($visibility) or $untaggedonly"}
-        <div id="searchcriteria">
-            {$result_count} results
-            {if="!empty($search_tags)"}
-                for <em>{$search_tags}</em>
-            {/if}
-            {if="!empty($search_tags)"}
-                {$exploded_tags=tags_str2array($search_tags, $tags_separator)}
-                {'tagged'|t}
-                {loop="$exploded_tags"}
-                    <span class="label label-tag" title="{'Remove tag'|t}">
-                        <a href="{$base_path}/remove-tag/{function="$search_tags_url.$key1"}" aria-label="{'Remove tag'|t}">
-                        {$value} <span class="remove">x</span>
-                        </a>
-                    </span>
-                {/loop}
-            {/if}
-        </div>
+    <div id="searchcriteria">Nothing found.</div>
     {/if}
+    
     <ul>
+    {ignore}Set translation here, for performances{/ignore}
+    {$strPrivate=t('Private')}
+    {$strEdit=t('Edit')}
+    {$strDelete=t('Delete')}
+    {$strFold=t('Fold')}
+    {$strEdited=t('Edited: ')}
+    {$strPermalink=t('Permalink')}
+    {$strPermalinkLc=t('permalink')}
+    {$strAddTag=t('Add tag')}
+    {$strToggleSticky=t('Toggle sticky')}
+    {$strSticky=t('Sticky')}
+    {ignore}End of translations{/ignore}
 
-        {ignore}Set translation here, for performances{/ignore}
-        {$strPrivate=t('Private')}
-        {$strEdit=t('Edit')}
-        {$strDelete=t('Delete')}
-        {$strFold=t('Fold')}
-        {$strEdited=t('Edited: ')}
-        {$strPermalink=t('Permalink')}
-        {$strPermalinkLc=t('permalink')}
-        {$strAddTag=t('Add tag')}
-        {$strToggleSticky=t('Toggle sticky')}
-        {$strSticky=t('Sticky')}
-        {ignore}End of translations{/ignore}
-
-        {loop="links"}
+    {loop="links"}
         <li{if="$value.class"} class="{$value.class}"{/if}>
             {if="$thumbnails_enabled && !empty($value.thumbnail)"}
             <div class="thumbnail" style="width:{$thumbnails_width}px;height:{$thumbnails_height}px;">
                 <a href="{$value.real_url}">
-                  {ignore}RainTPL hack: put the 2 src on two different line to avoid path replace bug{/ignore}
-                  <img src="{$value.thumbnail}#"
+                {ignore}RainTPL hack: put the 2 src on two different line to avoid path replace bug{/ignore}
+                <img src="{$value.thumbnail}#"
                     alt="thumbnail" width="{$thumbnails_width}" height="{$thumbnails_height}" />
-                  </a>
+                </a>
             </div>
             {/if}
             <div class="linkcontainer">
-                <span class="linktitle">
+                <div class="linktitle">
                     <a href="{$value.real_url}">{$value.title}</a>
-                </span>
-                <br>
+                </div>
+                
                 {if="$value.description"}<div class="linkdescription">{$value.description}</div>{/if}
 
                 <div class="meta">
@@ -111,9 +93,9 @@
             </div>
 
 
-        </li>
-    {/loop}
-    </ul>
+            </li>
+        {/loop}
+        </ul>
 
     <div id="plugin_zone_end_linklist" class="plugin_zone">
         {loop="$plugin_end_zone"}

@@ -18,6 +18,10 @@
             {if="$previous_page_url"}<a href="{$previous_page_url}">{/if}later »{if="$previous_page_url"}</a>{/if}
         </nav>
         <span class="item-count">
+        {if="(!empty($links) and !empty($search_term)) or $search_tags !== '' or !empty($visibility) or $untaggedonly"}
+            {$result_count} results out of 
+        {/if}
+        
         {if="!empty($linkcount)"}
         {$linkcount} {function="t('bookmark', 'bookmarks', $linkcount)"}
             {if="$privateLinkcount>0 && $is_logged_in"}
