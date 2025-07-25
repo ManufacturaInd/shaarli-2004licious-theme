@@ -17,7 +17,7 @@
             {if="$next_page_url"}<a href="{$next_page_url}">{/if}« earlier{if="$next_page_url"}</a>{/if} |
             {if="$previous_page_url"}<a href="{$previous_page_url}">{/if}later »{if="$previous_page_url"}</a>{/if}
         </nav>
-        <span class="paging-linksperpage">
+        <span class="item-count">
         {if="!empty($linkcount)"}
         {$linkcount} {function="t('bookmark', 'bookmarks', $linkcount)"}
             {if="$privateLinkcount>0 && $is_logged_in"}

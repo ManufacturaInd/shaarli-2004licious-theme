@@ -209,24 +209,12 @@ nav {
     padding: 4px 0 5px 5px;
 }
 
-.paging {
-    clear: both;
-    padding: 5px;
-    padding-left: 0;
-    text-align: center;
+.paging, .tag-sort {
+    padding: 5px 0;
 }
 
-.paging-linksperpage {
-    margin: 0 10px 2px 15px;
-    padding-right: 5px;
-}
-
-.paging-linksperpage form.linksperpage {
-    display: inline;
-}
-
-.paging-linksperpage form.linksperpage input {
-    height: 15px;
+.item-count {
+    margin: 0 15px;
 }
 
 #headerform {
@@ -885,13 +873,6 @@ ul.errors {
 #pageheader a:active {
     color: var(--main-color);
     text-decoration: initial;
-}
-
-
-.paging {
-    background-color: transparent;
-    color: inherit;
-    text-align: left;
 }
 
 .paging a:link {
