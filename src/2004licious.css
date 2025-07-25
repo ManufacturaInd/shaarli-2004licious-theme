@@ -1,4 +1,5 @@
-@import url("reset.css");
+/* @import url("reset.css"); */
+@import-normalize;
 
 :root {
   /* Main theme colors. Will be overwritten by the default colors plugin */
@@ -16,8 +17,10 @@
 body {
     background-color: var(--background-color);
     font-family: arial, sans-serif;
-    font-size: 10pt;
     word-wrap: break-word;
+    padding: 0;
+    margin: 0;
+    font-size: 11pt;
 }
 
 input, textarea {
@@ -58,10 +61,18 @@ strong {
     font-weight: bold;
 }
 
-td, tr, th {
-  border: 1px solid #666;
-  border-width: 1px 0;
+table {
+  border-collapse: collapse;
+}
+
+td, th {
   padding: 5px;
+}
+
+tr  {
+  border: 1px solid;
+  border-left: 0;
+  border-right: 0;
 }
 
 th {
@@ -72,6 +83,7 @@ h1 {
     font-size: 1.6em;
     font-style: italic;
     font-weight: bold;
+    margin-bottom: 0;
 }
 
 h2 {
@@ -89,6 +101,14 @@ h4 {
   line-height: 1.3em;
 }
 
+li {
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+}
+
 nav {
   display: inline-block;
   margin-left: 10px;
@@ -96,12 +116,6 @@ nav {
 
 .hidden {
     display: none;
-}
-
-.linkeditbuttons {
-    border-radius: 0 6px 6px 0;
-    left: 2px;
-    padding: 4px 2px 2px;
 }
 
 #pageheader #menu {
@@ -153,11 +167,8 @@ nav {
 }
 
 .linksperpage, .tagfilter, .searchform, .addform {
-    background-color: #dedede;
     border: none;
     border-radius: 3px;
-    box-shadow: 0 1px 2px rgb(0 0 0 / 50%);
-    color: #cecece;
     display: inline;
     margin: 10px 3px 3px;
     padding: 5px;
@@ -789,7 +800,6 @@ ul.errors {
 #pageheader #links {
     display: inline-block;
     float: right;
-    padding: 10px 5px 3px 0;
     text-align: right;
 }
 
@@ -883,7 +893,7 @@ ul.errors {
 }
 
 .linktitle {
-    font-size: 12pt;
+    font-size: 1.2em;
     font-weight: normal;
 }
 
@@ -999,7 +1009,6 @@ ul.errors {
   font-size: 16px;
   font-weight: bold;
   margin-left: 35px;
-  padding-top: 10px;
 }
 
 #taglist h5,
