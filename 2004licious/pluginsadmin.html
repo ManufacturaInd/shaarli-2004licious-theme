@@ -24,17 +24,17 @@
           <table id="plugin_table">
             <thead>
               <tr>
-                <th class="center">{'Enabled'|t}</th>
+                <th>{'Enabled'|t}</th>
                 <th>{'Name'|t}</th>
                 <th>{'Description'|t}</th>
-                <th class="center">{'Order'|t}</th>
+                <th>{'Order'|t}</th>
               </tr>
             </thead>
             <tbody>
               {loop="$enabledPlugins"}
                 <tr data-line="{$key}" data-order="{$counter}" class="main-row">
                   <td class="center"><input type="checkbox" name="{$key}" id="{$key}" checked="checked"></td>
-                  <td class="center">
+                  <td>
                     <label for="{$key}"><strong>{function="str_replace('_', ' ', $key)"}</strong></label>
                   </td>
                   <td><label for="{$key}">{$value.description}</label></td>
@@ -66,7 +66,7 @@
           <table>
             <thead>
               <tr>
-                <th class="center">{'Enabled'|t}</th>
+                <th>{'Enabled'|t}</th>
                 <th>{'Name'|t}</th>
                 <th>{'Description'|t}</th>
               </tr>
@@ -75,15 +75,12 @@
               {loop="$disabledPlugins"}
                 <tr class="main-row">
                   <td class="center"><input type="checkbox" name="{$key}" id="{$key}"></td>
-                  <td class="center">
+                  <td>
                     <label for="{$key}"><strong>{function="str_replace('_', ' ', $key)"}</strong></label>
                   </td>
                   <td>
                     <label for="{$key}">{$value.description}</label>
                   </td>
-                </tr>
-                <tr>
-                  <td colspan="3"><label for="{$key}">{$value.description}</label></td>
                 </tr>
               {/loop}
             </tbody>
