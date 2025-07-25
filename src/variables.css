@@ -1,0 +1,12 @@
+
+:root {
+  /* Main theme colors. Will be overwritten by the default colors plugin */
+  --main-color: blue;         /* main links */
+  --background-color: white;  /* background */
+  --dark-main-color: purple;  /* visited links */
+
+  /* Fixed or deduced colors from main theme */
+  --secondary-color: rgb( from var(--main-color) r g b / 50% ); /* meta links */
+  --header-background: rgb(213 213 213);
+  --tool-background: rgb(234 234 234);
+}

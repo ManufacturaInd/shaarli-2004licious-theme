@@ -12,7 +12,11 @@
   },
   "scripts": {
     "lint": "npx stylelint \"src/*.css\"",
+    "lint-fix": "npx stylelint --fix \"src/*.css\"",
     "build": "npx postcss src/2004licious.css -o 2004licious/css/2004licious.min.css",
     "watch": "npx postcss -w src/2004licious.css -o 2004licious/css/2004licious.min.css"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   }
 }
