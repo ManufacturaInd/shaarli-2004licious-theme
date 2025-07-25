@@ -5,11 +5,11 @@
 {include="page.header"}
 <div class="toolbox">
 	<form method="GET" action="{$base_path}/admin/shaare" name="addform" class="addform">
-		<div>
-			<label for="shaare">{'URL or leave empty to post a note'|t}</label>
-		</div>
-		<input type="text" name="post" id="shaare" class="autofocus">
-		<input type="submit" value="Add link">
+		<fieldset>
+			<legend>{'URL or leave empty to post a note'|t}</legend>
+			<input type="text" name="post" id="shaare" class="autofocus">
+			<input type="submit" value="Add link">
+		</fieldset>
 	</form>
 </div>
 {include="page.footer"}

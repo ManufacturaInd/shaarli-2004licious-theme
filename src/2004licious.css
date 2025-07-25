@@ -2,12 +2,14 @@
 
 :root {
   /* Main theme colors. Will be overwritten by the default colors plugin */
-  --main-color: blue;
-  --background-color: white;
-  --dark-main-color: purple;
+  --main-color: blue;         /* main links */
+  --background-color: white;  /* background */
+  --dark-main-color: purple;  /* visited links */
 
-  /* These will be deduced from main */
-  --secondary-color: rgb( from var(--main-color) r g b / 50% ); 
+  /* Fixed or deduced colors from main theme */
+  --secondary-color: rgb( from var(--main-color) r g b / 50% ); /* meta links */
+  --header-background: rgb(213, 213, 213);
+  --tool-background: rgb(234, 234, 234);
 }
 
 /* tweaked from shaarli.css */
@@ -130,8 +132,7 @@ nav {
 }
 
 #pageheader {
-    background-color: #333;
-    box-shadow: 0 1px 2px rgb(0 0 0 / 50%);
+    background-color: var(--header-background);
     margin: auto;
     padding: 5px 10px;
     width: auto;
@@ -143,6 +144,7 @@ nav {
 }
 
 .toolbox {
+  background: var(--tool-background);
   padding: 10px;
 }
 
@@ -239,36 +241,12 @@ nav {
     width: 100%;
 }
 
-#editlinkform {
-    clear: left;
-    height: 100%;
-    padding: 5px 5px 5px 15px;
-    width: 80%;
-}
-
-#editlinkform label {
-    color: #fff;
-    cursor: pointer;
-}
-
 #editlinkform textarea, #editlinkform .lf_input {
-    width: 100%;
+    width: 99%;
 }
 
 #linklist li {
-    background-color: #F2F2F2;
-    border-top: 1px solid #bbb;
-    clear: both;
     padding: 4px 10px 15px 20px;
-}
-
-.linkdate {
-    color:#888;
-    font-size:8pt;
-}
-
-.linkdate a {
-    color:#E28E3F;
 }
 
 #linklist li.private {
@@ -311,9 +289,7 @@ nav {
 }
 
 .linktag {
-    background-color: #fff;
     border-radius: 3px;
-    box-shadow: 0 0 2px rgb(0 0 0 / 50%);
     cursor: pointer;
     font-size: 9pt;
     height: 20px;
@@ -836,12 +812,6 @@ ul.errors {
     border-left: 0;
 }
 
-#pageheader {
-    background: #ddd;
-    background-color: #ddd;
-    box-shadow: none;
-}
-
 #pageheader .linkcount {
   padding: 7px 0 0;
   text-align: center;
@@ -1019,7 +989,7 @@ ul.errors {
 }
 
 #taglist {
-  background-color: #eee;
+  background-color: var(--tool-background);
   padding-bottom: 10px;
   padding-top: 10px;
   width: 20%;
