@@ -102,6 +102,21 @@ nav {
     display: none;
 }
 
+#pageheader {
+    background-color: var(--header-background);
+    padding: 5px 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+#pageheader a:visited,
+#pageheader a:hover,
+#pageheader a:active {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
 #pageheader #menu ul {
     float: none;
     margin: auto;
@@ -114,9 +129,21 @@ nav {
     position: relative;
 }
 
-#pageheader {
-    background-color: var(--header-background);
-    padding: 5px 10px;
+
+#shaarli-title {
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.8em;
+    margin-top: 0;
+}
+
+#shaarli-title a {
+    color: var(--main-color);
+}
+
+#searchcriteria {
+    font-weight: bold;
+    padding: 4px 0 5px 5px;
 }
 
 .toolbox {
@@ -148,22 +175,6 @@ nav {
 
 .tagfilter li {
     color: black;
-}
-
-#shaarli-title {
-    font-style: normal;
-    font-weight: bold;
-    line-height: 1.8em;
-    margin-top: 0;
-}
-
-#shaarli-title a {
-    color: var(--main-color);
-}
-
-#searchcriteria {
-    font-weight: bold;
-    padding: 4px 0 5px 5px;
 }
 
 .paging, .tag-sort {
@@ -706,7 +717,6 @@ ul.errors {
 
 #pageheader #links {
     display: inline-block;
-    float: right;
     text-align: right;
 }
 
@@ -721,17 +731,11 @@ ul.errors {
     border-left: 1px solid #000;
     border-radius: 0;
     display: inline-block;
-    line-height: 1;
-    padding-left: 4px;
-}
+    line-height: 1em;
+    padding-left: 5px;
 
 #pageheader #links ul li:nth-child(1) a {
     border-left: 0;
-}
-
-#pageheader .linkcount {
-  padding: 7px 0 0;
-  text-align: center;
 }
 
 .linksperpage, .tagfilter, .searchform, .addform {
@@ -753,13 +757,6 @@ ul.errors {
     margin-left: none;
     max-width: 200px;
     width: 50%;
-}
-
-#pageheader a:visited,
-#pageheader a:hover,
-#pageheader a:active {
-    color: var(--main-color);
-    text-decoration: initial;
 }
 
 .paging a:link {
