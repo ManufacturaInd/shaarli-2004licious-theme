@@ -99,24 +99,27 @@ nav {
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 #pageheader #menu ul {
-    float: none;
-    margin: auto;
-    padding: 7px 0 0;
+  float: none;
+  margin: auto;
+  padding: 7px 0 0;
 }
 
 #pageheader #menu ul li {
-    box-sizing: border-box;
-    display: inline;
-    position: relative;
+  box-sizing: border-box;
+  display: inline;
+  position: relative;
 }
 
 #pageheader {
-    background-color: var(--header-background);
-    padding: 5px 10px;
+  background-color: var(--header-background);
+  padding: 5px 10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 .toolbox {
@@ -706,7 +709,6 @@ ul.errors {
 
 #pageheader #links {
     display: inline-block;
-    float: right;
     text-align: right;
 }
 
