@@ -211,8 +211,7 @@ nav {
 }
 
 .linktitle {
-    font-size: 1.2em;
-    font-weight: bold;
+    font-size: 1.3em;
 }
 
 .linkdate {
@@ -810,11 +809,6 @@ ul.errors {
 
 .meta span.private {  
     color: red;
-}
-
-.linktitle {
-    font-size: 1.2em;
-    font-weight: normal;
 }
 
 .private .linktitle a, 
