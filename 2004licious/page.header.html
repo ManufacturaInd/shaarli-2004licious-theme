@@ -72,14 +72,12 @@
     </ul>
   </div>
   {/if}
-</div>
 
-{if="!empty($plugin_errors) && $is_logged_in"}
-<div id="plugin-errors">
+  {if="!empty($plugin_errors) && $is_logged_in"}
   <ul class="errors">
     {loop="plugin_errors"}
       <li>{$value}</li>
     {/loop}
   </ul>
+  {/if}
 </div>
-{/if}
