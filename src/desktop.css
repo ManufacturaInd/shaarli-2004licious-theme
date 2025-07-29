@@ -13,7 +13,6 @@ input, textarea {
     border-radius: 3px;
     box-shadow: none;
     color: #000;
-    font-size: 8pt;
     padding: 5px;
 }
 
@@ -116,10 +115,10 @@ nav {
 
 #pageheader {
   background-color: var(--header-background);
-  padding: 5px 10px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  padding: 5px 10px;
 }
 
 .toolbox {
