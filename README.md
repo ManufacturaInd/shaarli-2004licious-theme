@@ -17,7 +17,7 @@ Screenshots
 
 Installation
 ------------
-The master branch of this 2004licious theme works with the latest version of Shaarli (v0.14 at the time of this 
+The master branch of this 2004licious theme works with the latest version of Shaarli (v0.15 at the time of this 
 writing).
 
 Copy the `2004licious` folder into the `tpl/` folder of your Shaaril installation then go in the 
@@ -39,6 +39,10 @@ Supported or tested plugins
 ---------------------------
  - qrcode
  - archiveorg
+ 
+Development
+-----------
+The source CSS files in `css/` are built into a minified CSS file in `2004licious`. In order to build the minified CSS, run `npm install` and `npm run build`. (you need npm, the Node package manager, installed on your system)
 
 History of this project
 -----------------------
