@@ -46,10 +46,10 @@ The source CSS files in `css/` are built into a minified CSS file in `2004liciou
 
 History of this project
 -----------------------
-At Manufactura Independiente, both of us were early users of the del.icio.us service, and used it during our 
+At [Manufactura Independente](https://manufacturaindependente.org), both of us were early users of the del.icio.us service, and used it during our 
 college days and beyond to make sense of our web pathways.
 
-[Julien Deswaef](http://xuv.be) was also an active user of del.icio.us until he switched to 
+[Julien Deswaef](https://xuv.be) was also an active user of del.icio.us until he switched to 
 [Shaarli](https://b.xuv.be) in 2012.
 
 Around 2016, the then owner of the del.icio.us domain started injecting ads in the feeds of the long gone users 
