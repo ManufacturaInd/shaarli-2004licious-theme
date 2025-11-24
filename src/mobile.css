@@ -8,6 +8,7 @@
 	#pageheader {
 	  display: flex;
 	  flex-direction: column-reverse;
+		flex-wrap: nowrap;
 	  justify-content: flex-start;
 	}
 	#pageheader #menu {
@@ -17,23 +18,20 @@
 		padding: 5px 0;
 	}
 	#pageheader #menu a {
-		display: flex;
-		gap: 5px;
-		padding: 0;
-		margin: 0;
+		display: inline-block;
 	}
 	#pageheader #shaarli-title {
 		flex: 1 0 auto;
 		line-height: 1;
 	}
-	#pageheader #menu-filter {
+	#pageheader #menu_filter {
 		flex: 1 1 auto;
 	}
 	.searchform {
 		width: 100%;
 		margin: 0;
 	}
-	.searchform input {
+	#pageheader #menu_filter input {
 		width: 100%;
 	}
 	#links {
