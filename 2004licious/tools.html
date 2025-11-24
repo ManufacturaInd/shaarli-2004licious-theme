@@ -4,29 +4,29 @@
 <body>
 {include="page.header"}
 <div class="toolbox">
-	<h2 class="window-title">{'Settings'|t}</h2>
+	<h2 class="window-title">{'settings'|t}</h2>
 	<div class="tools-item">
-		<a href="{$base_path}/admin/configure"><b>Configure your Shaarli</b><span>: Change Title, timezone...</span></a>
+		<a href="{$base_path}/admin/configure"><strong>configure your shaarli</strong></a><span> change title, timezone...</span>
 	</div>
 	<div class="tools-item">
-		<a href="{$base_path}/admin/plugins"><b>Plugin administration</b><span>: Enable, disable and configure plugins.</span></a>
+		<a href="{$base_path}/admin/plugins"><strong>plugin administration</strong></a><span> enable, disable and configure plugins</span>
 	</div>
 	<div class="tools-item">
-	<a href="{$base_path}/admin/server"><b>Server administration</b><span>: Check instance's server configuration</span></a>
+	<a href="{$base_path}/admin/server"><strong>server administration</strong></a><span>: check instance's server configuration</span>
 	</div>
 	{if="!$openshaarli"}
 		<div class="tools-item">
-			<a href="{$base_path}/admin/password"><b>Change password</b><span>: Change your password.</span></a>
+			<a href="{$base_path}/admin/password"><strong>change password</strong></a><span> change your password</span>
 		</div>
 	{/if}
 	<div class="tools-item">
-		<a href="{$base_path}/admin/tags"><b>Manage tags</b><span>: Rename or delete a tag in all links</span></a>
+		<a href="{$base_path}/admin/tags"><strong>manage tags</strong></a><span> rename or delete a tag in all links</span>
 	</div>
 	<div class="tools-item">
-		<a href="{$base_path}/admin/import"><b>Import</b><span>: Import Netscape html bookmarks (as exported from Firefox, Chrome, Opera, delicious...)</span></a>
+		<a href="{$base_path}/admin/import"><strong>import bookmarks</strong></a><span> import netscape html bookmarks (as exported from firefox, chrome, opera, delicious...)</span>
 	</div>
 	<div class="tools-item">
-	<a href="{$base_path}/admin/export"><b>Export</b><span>: Export Netscape html bookmarks (which can be imported in Firefox, Chrome, Opera, delicious...)</span></a>
+	<a href="{$base_path}/admin/export"><strong>export bookmarks</strong></a><span> export netscape html bookmarks (which can be imported in firefox, chrome, opera, delicious...)</span>
 	</div>
 	
 	{loop="$tools_plugin"}
@@ -36,10 +36,10 @@
 	{/loop}
 	
   <div class="page-form page-form-light">
-    <h2 class="window-title">{'Bookmarklets'|t}</h2>
+    <h2 class="window-title">{'bookmarklets'|t}</h2>
     <p>
-      {'Drag one of these button to your bookmarks toolbar or right-click it and "Bookmark This Link"'|t},
-      {'then click on the bookmarklet in any page you want to share.'|t}
+      {'drag one of these buttons to your bookmarks toolbar or right-click it and "Bookmark This Link"'|t},
+      {'then click on the bookmarklet in any page you want to share'|t}
     </p>
     <div class="tools-item">
       <a title="{'Drag this link to your bookmarks toolbar or right-click it and Bookmark This Link'|t},
@@ -62,7 +62,7 @@
             );
           }
         )();">
-        <span class="button">✚ {'Bookmark link'|t}</span>
+        <span class="button">✚ {'bookmark link'|t}</span>
       </a>
     </div>
     <div class="tools-item">
@@ -83,7 +83,7 @@
             );
           }
         )();">
-        <span class="button">✚ {'Add Note'|t}</span>
+        <span class="button">✚ {'add note'|t}</span>
       </a>
     </div>
   </div>
