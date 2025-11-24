@@ -691,7 +691,7 @@ ul.errors {
 #menu_filter input::placeholder {
   color: #999;
   opacity: 1;
-} 
+}
 
 #pageheader a {
     background: 0;
@@ -790,7 +790,7 @@ ul.errors {
 }
 
 #linklist li.private {
-    padding-left: 20px; 
+    padding-left: 20px;
 }
 
 .meta {
@@ -808,17 +808,17 @@ ul.errors {
   display: inline-block;
 }
 
-.meta span.private {  
+.meta span.private {
     color: red;
 }
 
-.private .linktitle a, 
+.private .linktitle a,
 .linktitle a,
 .linktitle a:hover  {
     color: var(--main-color);
 }
 
-.private .linktitle a:visited, 
+.private .linktitle a:visited,
 .linktitle a:visited  {
     color: var(--dark-main-color);
 }
@@ -884,6 +884,10 @@ ul.errors {
   font-weight: bold;
   margin: 0 0 0 35px;
   padding-left: 10px;
+}
+
+#taglist-title a.mobile-tag-menu {
+  display: none;
 }
 
 #taglist ul {
@@ -1013,4 +1017,3 @@ label[for="lf_private"] {
 .rssinfo img {
   vertical-align: bottom;
 }
-
