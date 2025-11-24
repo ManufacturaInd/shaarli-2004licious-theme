@@ -5,12 +5,11 @@ This [Shaarli](https://github.com/shaarli/shaarli) theme is a humble homage to
 the early looks of the [del.icio.us](http://del.icio.us) site.
 
 Created by Joshua Schachter,
-        [del.icio.us](https://en.wikipedia.org/wiki/Delicious_(website)) is one
-        of the monuments of early Web 2.0 socially-oriented platforms. The
-        [original del.icio.us
-        layout](https://www.flickr.com/photos/joshu/albums/72157600740166824/),
-        with its naked but smart HTML look, is a fond memory of the earlier web
-        days. This theme tries its best to recreate that feeling.
+[del.icio.us](https://en.wikipedia.org/wiki/Delicious_(website)) is one of the
+monuments of early Web 2.0 socially-oriented platforms. The [original
+del.icio.us layout](https://www.flickr.com/photos/joshu/albums/72157600740166824/), 
+with its naked but smart HTML look, is a fond memory of the earlier web days.
+This theme tries its best to recreate that feeling.
 
 Screenshots
 -----------
