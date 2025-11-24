@@ -10,22 +10,23 @@
 	  flex-direction: column-reverse;
 	  justify-content: flex-start;
 	}
-	#menu {
+	#pageheader #menu {
 		display: flex;
+		align-content: baseline;
 		gap: 5px;
 		padding: 5px 0;
 	}
-	#menu a {
+	#pageheader #menu a {
 		display: flex;
 		gap: 5px;
 		padding: 0;
 		margin: 0;
 	}
-	#shaarli-title {
+	#pageheader #shaarli-title {
 		flex: 1 0 auto;
 		line-height: 1;
 	}
-	#menu-filter {
+	#pageheader #menu-filter {
 		flex: 1 1 auto;
 	}
 	.searchform {
@@ -41,7 +42,7 @@
 
 	.main-wrapper {
 		display: flex;
-		flex-direction: row-reverse;
+		flex-direction: column-reverse;
 	}
 
 	#linklist,
@@ -54,6 +55,12 @@
 		margin: 0 10px;
 	}
 
+	.linklist-pages {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-space-between;
+	}
+
 	.paging nav {
 		margin-left: 0;
 	}
@@ -61,10 +68,9 @@
 	.item-count {
 		font-size: 80%;
 	}
-
-
-	.mobile-tag-menu {
-	  display: block;
+	#taglist-title span,
+	#taglist-title a.taglist-toggle {
+	  display: inline-block;
 	}
 
 

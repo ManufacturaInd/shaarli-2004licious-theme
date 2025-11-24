@@ -886,7 +886,7 @@ ul.errors {
   padding-left: 10px;
 }
 
-#taglist-title a.mobile-tag-menu {
+#taglist-title a.taglist-toggle {
   display: none;
 }
 
