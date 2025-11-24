@@ -14,6 +14,7 @@
 	#pageheader #menu {
 		display: flex;
 		align-content: baseline;
+		flex-wrap: nowrap;
 		gap: 5px;
 		padding: 5px 0;
 	}
@@ -32,7 +33,7 @@
 		margin: 0;
 	}
 	#pageheader #menu_filter input {
-		width: 100%;
+		width: calc(100% - 10px);
 	}
 	#links {
 		margin: 5px 0 10px;
