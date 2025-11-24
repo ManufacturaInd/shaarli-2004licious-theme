@@ -66,9 +66,24 @@
 	.item-count {
 		font-size: 80%;
 	}
-	#taglist-title span,
-	#taglist-title a.taglist-toggle {
+
+	#taglist-title {
+		margin: 0;
+	}
+	#taglist-title span {
 	  display: inline-block;
+	}
+	#taglist-title span.taglist-toggle {
+	  display: inline-block;
+		cursor: pointer;
+		font-size: 80%;
+		font-weight: 400;
+	}
+	#taglist .taglist-ul {
+		display: none
+	}
+	#taglist .taglist-ul.is-visible {
+		display: block;
 	}
 
 

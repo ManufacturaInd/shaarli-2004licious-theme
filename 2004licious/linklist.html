@@ -123,7 +123,7 @@
           <div id="taglist">
             <h5 id="taglist-title">
               <span>all tags</span>
-              <a class="taglist-toggle" href="#">Show</a>
+              <span class="taglist-toggle">Show</span>
             </h5>
             <ul class="taglist-ul">
               <li class="filter">
@@ -155,6 +155,14 @@
   taglistToggle.onclick = function() {
     taglistToggle.classList.toggle('is-visible');
     taglistList.classList.toggle('is-visible');
+
+    var toggleText = event.target.textContent;
+    if (toggleText == "Show") {
+      event.target.textContent = "Hide";
+    }
+    else {
+      event.target.textContent = "Show";
+    }
   }
 </script>
 
