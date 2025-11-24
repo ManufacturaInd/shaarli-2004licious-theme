@@ -9,18 +9,18 @@
     <table id="configuration_table">
 
       <tr>
-        <td><b>Page title:</b></td>
+        <td><strong>page title</strong></td>
         <td><input type="text" name="title" id="title" size="50" value="{$title}"></td>
       </tr>
 
       <tr>
-        <td><b>Home link:</b></td>
+        <td><strong>home link</strong></td>
         <td><input type="text" name="titleLink" id="titleLink" size="50" value="{$titleLink}"><br/><label
             for="titleLink">(default value is: ?)</label></td>
       </tr>
 
       <tr>
-        <td><b>Theme:</b></td>
+        <td><strong>theme</strong></td>
         <td>
           <select name="theme" id="theme">
             {loop="$theme_available"}
@@ -33,7 +33,7 @@
       </tr>
 
       <tr>
-        <td><b>Timezone:</b></td>
+        <td><strong>timezone</strong></td>
         <td>
           <select id="continent" name="continent">
             {loop="$continents"}
@@ -59,7 +59,7 @@
       </tr>
 
       <tr>
-        <td><b>Redirector</b></td>
+        <td><strong>redirector</strong></td>
         <td>
           <input type="text" name="redirector" id="redirector" size="50" value="{$redirector}"><br>
           (e.g. <i>http://anonym.to/?</i> will mask the HTTP_REFERER)
@@ -67,92 +67,92 @@
       </tr>
 
       <tr>
-        <td><b>Security:</b></td>
+        <td><strong>security</strong></td>
         <td>
           <input type="checkbox" name="disablesessionprotection" id="disablesessionprotection"
                    {if="$session_protection_disabled"}checked{/if}>
           <label
-            for="disablesessionprotection">&nbsp;Disable session cookie hijacking protection (Check this if you get
-            disconnected often or if your IP address changes often.)</label>
+            for="disablesessionprotection">&nbsp;disable session cookie hijacking protection (check this if you get
+            disconnected often or if your ip address changes often)</label>
         </td>
       </tr>
 
       <tr>
-        <td valign="top"><b>New link:</b></td>
+        <td valign="top"><strong>new link</strong></td>
         <td>
           <input type="checkbox" name="privateLinkByDefault" id="privateLinkByDefault"
                  {if="$private_links_default"}checked{/if}/>
           <label for="privateLinkByDefault">
-            &nbsp;All new links are private by default
+            &nbsp;all new links are private by default
           </label>
         </td>
       </tr>
       <tr>
-        <td valign="top"><b>RSS direct links</b></td>
+        <td valign="top"><strong>rss direct links</strong></td>
         <td>
           <input type="checkbox" name="enableRssPermalinks" id="enableRssPermalinks"
                  {if="$enable_rss_permalinks"}checked{/if}/>
           <label for="enableRssPermalinks">
-            &nbsp;Disable it to use permalinks in RSS feed instead of direct links to your shaared links. Currently <b>
-            {if="$enable_rss_permalinks"}enabled{else}disabled{/if}.</b>
+            &nbsp;disable it to use permalinks in rss feeds instead of direct links to your shaared links. Currently <strong>
+            {if="$enable_rss_permalinks"}enabled{else}disabled{/if}.</strong>
           </label>
         </td>
       </tr>
       <tr>
-        <td valign="top"><b>Hide public links</b></td>
+        <td valign="top"><strong>hide public links</strong></td>
         <td>
           <input type="checkbox" name="hidePublicLinks" id="hidePublicLinks"
                  {if="$hide_public_links"}checked{/if}/>
-          <label for="hidePublicLinks">&nbsp;Do not show any links if the user is not logged in.</label>
+          <label for="hidePublicLinks">&nbsp;do not show any links if the user is not logged in</label>
         </td>
       </tr>
       <tr>
-        <td valign="top"><b>Update:</b></td>
+        <td valign="top"><strong>update</strong></td>
         <td>
           <input type="checkbox" name="updateCheck" id="updateCheck"
                  {if="$enable_update_check"}checked{/if}/>
-          <label for="updateCheck">&nbsp;Notify me when a new release is ready</label>
+          <label for="updateCheck">&nbsp;notify me when a new release is ready</label>
         </td>
       </tr>
       <tr>
-        <td valign="top"><b>Retreive description:</b></td>
+        <td valign="top"><strong>retrieve description</strong></td>
         <td>
           <input type="checkbox" name="retrieveDescription" id="retrieveDescription"
                  {if="$retrieve_description"}checked{/if}/>
-          <label for="updateCheck">&nbsp;Automatically retrieve description for new bookmarks</label>
+          <label for="updateCheck">&nbsp;automatically retrieve description for new bookmarks</label>
         </td>
       </tr>
       <tr>
-        <td valign="top"><b>Enable REST API</b></td>
+        <td valign="top"><strong>enable rest api</strong></td>
         <td>
           <input type="checkbox" name="enableApi" id="enableApi"
                  {if="$api_enabled"}checked{/if}/>
-          <label for="enableApi">&nbsp;Allow third party software to use Shaarli such as mobile application.</label>
+          <label for="enableApi">&nbsp;allow third party software such as mobile apps to access and use Shaarli</label>
         </td>
       </tr>
       <tr>
-        <td valign="top"><b>API secret</b></td>
+        <td valign="top"><strong>api secret</strong></td>
         <td>
           <input type="text" name="apiSecret" id="apiSecret" size="50" value="{$api_secret}" />
         </td>
       </tr>
       <tr>
-        <td valign="top"><b>Enable thumbnails</b></td>
+        <td valign="top"><strong>enable thumbnails</strong></td>
         <td>
           <select name="enableThumbnails" id="enableThumbnails" class="align">
             <option value="all"    {if="$thumbnails_mode=='all'"}selected{/if}>
-              All
+              all
             </option>
             <option value="common" {if="$thumbnails_mode=='common'"}selected{/if}>
-              Only common media hosts
+              only common media hosts
             </option>
             <option value="none"   {if="$thumbnails_mode=='none'"}selected{/if}>
-              None
+              none
             </option>
           </select>
           <label for="enableApi">&nbsp;
             {if="! $gd_enabled"}
-              {'You need to enable the extension <code>php-gd</code> to use thumbnails.'|t}
+              {'you need to enable the extension <code>php-gd</code> to use thumbnails'|t}
             {elseif="$thumbnails_enabled"} 
               <a href="{$base_path}/admin/thumbnails">Synchronize thumbnails</a>
             {/if}
@@ -162,7 +162,7 @@
 
       <tr>
         <td></td>
-        <td><input type="submit" name="Save" value="Save config"></td>
+        <td><input type="submit" name="Save" value="save settings"></td>
       </tr>
     </table>
   </form>
