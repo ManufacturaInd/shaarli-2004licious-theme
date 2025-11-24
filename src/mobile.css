@@ -1,6 +1,78 @@
-@media handheld, only screen and (width <= 480px), only screen and (device-width <= 854px) {
-	/* A few fixes for mobile devices (far from perfect). */
+@media screen and (width <= 640px) {
+	/* A better layout for tiny screens */
 
+	.nomobile {
+		display: none;
+	}
+
+	#pageheader {
+	  display: flex;
+	  flex-direction: column-reverse;
+	  justify-content: flex-start;
+	}
+	#menu {
+		display: flex;
+		gap: 5px;
+		padding: 5px 0;
+	}
+	#menu a {
+		display: flex;
+		gap: 5px;
+		padding: 0;
+		margin: 0;
+	}
+	#shaarli-title {
+		flex: 1 0 auto;
+		line-height: 1;
+	}
+	#menu-filter {
+		flex: 1 1 auto;
+	}
+	.searchform {
+		width: 100%;
+		margin: 0;
+	}
+	.searchform input {
+		width: 100%;
+	}
+	#links {
+		margin: 5px 0 10px;
+	}
+
+	.main-wrapper {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+
+	#linklist,
+	#taglist {
+		width: 100%;
+		float: none;
+	}
+
+	.paging {
+		margin: 0 10px;
+	}
+
+	.paging nav {
+		margin-left: 0;
+	}
+
+	.item-count {
+		font-size: 80%;
+	}
+
+
+	.mobile-tag-menu {
+	  display: block;
+	}
+
+
+}
+
+@media only screen and (device-width <= 854px) {
+	/* A few fixes for mobile devices (far from perfect). */
+/*
 	.tagfilter div.awesomplete {
 			width: 70%;
 	}
@@ -18,7 +90,6 @@
 	}
 
 	#pageheader #menu a {
-		border-radius: 3px;
 		margin: 3px;
 		padding: 5px;
 	}
@@ -88,7 +159,7 @@
 	}
 
 	#cloudtag {
-		padding: 0;	
+		padding: 0;
 	}
 
 	div.dailyAbout {
@@ -127,5 +198,5 @@
 	div.dailyEntryDescription {
 		font-size: 10pt;
 	}
-
+*/
 }

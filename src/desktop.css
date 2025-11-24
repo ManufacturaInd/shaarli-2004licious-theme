@@ -8,18 +8,10 @@ body {
 }
 
 input, textarea {
-    background-color: var(--background-color);
-    border: 1px solid #666;
-    border-radius: 3px;
-    box-shadow: none;
-    color: #000;
     padding: 5px;
 }
 
 input[type="submit"] {
-    background: rgb(202 198 187);
-    border: 2px outset;
-    border-radius: 0;
     min-width: 80px;
 }
 
@@ -53,7 +45,6 @@ td, th {
 }
 
 tr  {
-  border: 1px solid var(--header-background);
   border-left: 0;
   border-right: 0;
 }
@@ -71,7 +62,7 @@ h1 {
 
 h2 {
   font-size: 1.5em;
-  line-height: 2em;
+  margin-bottom: 10px;
 }
 
 h3 {
@@ -122,8 +113,8 @@ nav {
 }
 
 .toolbox {
-  background: var(--tool-background);
-  padding: 10px;
+  /* background: var(--tool-background); */
+  padding: 20px;
 }
 
 .tools-item {
@@ -138,10 +129,14 @@ nav {
     padding: 5px;
 }
 
-.tagfilter input, .searchform input, .addform input {
+.tagfilter input, .searchform input {
     border: none;
     box-shadow: none;
     padding: 5px;
+}
+
+.addform {
+  padding: 10px;
 }
 
 .tagfilter {
@@ -199,6 +194,15 @@ nav {
 
 #editlinkform textarea, #editlinkform .lf_input {
     width: 99%;
+}
+
+#lf_tags {
+  width: 500px !important;
+}
+
+.created-date {
+  color: #666;
+  margin-bottom: 10px;
 }
 
 #linklist li {
@@ -663,12 +667,7 @@ ul.errors {
 
 /* Buttons */
 .bigbutton {
-    background: #fff;
-    background-color: transparent;
-    border-radius: 0;
-    box-shadow: none;
     color: #606060;
-    margin-left: 0;
 }
 
 #pageheader #menu,
@@ -692,7 +691,7 @@ ul.errors {
 #menu_filter input::placeholder {
   color: #999;
   opacity: 1;
-} 
+}
 
 #pageheader a {
     background: 0;
@@ -735,7 +734,7 @@ ul.errors {
   text-align: center;
 }
 
-.linksperpage, .tagfilter, .searchform, .addform {
+.linksperpage, .tagfilter, .searchform {
     background: inherit;
     border-radius: 0;
     box-shadow: none;
@@ -773,6 +772,8 @@ ul.errors {
 
 #editlinkform, #headerform {
     background: #eee;
+    padding: 10px 20px;
+    margin: 10px;
 }
 
 #linklist li {
@@ -789,7 +790,7 @@ ul.errors {
 }
 
 #linklist li.private {
-    padding-left: 20px; 
+    padding-left: 20px;
 }
 
 .meta {
@@ -807,17 +808,17 @@ ul.errors {
   display: inline-block;
 }
 
-.meta span.private {  
+.meta span.private {
     color: red;
 }
 
-.private .linktitle a, 
+.private .linktitle a,
 .linktitle a,
 .linktitle a:hover  {
     color: var(--main-color);
 }
 
-.private .linktitle a:visited, 
+.private .linktitle a:visited,
 .linktitle a:visited  {
     color: var(--dark-main-color);
 }
@@ -829,6 +830,11 @@ ul.errors {
 .linksperpage, .rssinfo {
   margin-left: 10px;
 }
+
+.rssinfo {
+  margin-top: 20px;
+}
+
 
 #footer a,
 #footer a:hover {
@@ -880,6 +886,10 @@ ul.errors {
   padding-left: 10px;
 }
 
+#taglist-title a.mobile-tag-menu {
+  display: none;
+}
+
 #taglist ul {
   padding-left: 10px;
 }
@@ -905,7 +915,7 @@ ul.errors {
     color: #555;
     display: block;
     font-weight: bold;
-    padding: 5px 0;
+    margin: 5px 0;
 }
 
 #private-checkbox {
@@ -915,6 +925,16 @@ ul.errors {
 
 #private-checkbox label {
   display: inline-block;
+}
+
+#lf_private {
+  /* display: block; */
+  padding-bottom: 15px;
+  margin-top: 15px;
+}
+
+label[for="lf_private"] {
+  display: inline !important;
 }
 
 /* Tools pages */
@@ -927,17 +947,17 @@ ul.errors {
 }
 
 /* cloudtag */
-#cloudtag {
-    padding-left: 10px;
-    padding-right: 10px;
+#cloud-tag {
+    padding: 20px;
     text-align: left;
 }
 
-#cloudtag .count {
-    display: #999;
+#cloud-tag .count {
+    color: #999;
+    padding: 0 6px 0 2px;
 }
 
-#cloudtag a {
+#cloud-tag a {
     color: var(--main-color);
 }
 
@@ -997,4 +1017,3 @@ ul.errors {
 .rssinfo img {
   vertical-align: bottom;
 }
-
